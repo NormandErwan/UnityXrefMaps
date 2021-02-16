@@ -16,7 +16,7 @@ DocFX will set clickable all the references of the Unity API on your documentati
     ```diff
      "build": {
          "xref": [
-    +        "https://normanderwan.github.io/UnityXrefMaps/Unity/xrefmap.yml"
+    +        "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
          ],
      }
     ```
