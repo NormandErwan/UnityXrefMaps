@@ -32,9 +32,7 @@ jobs:
             ${{ runner.os }}-unitycsreference
 
       - name: Run
-        run: |
-          cd UnityXrefMaps
-          dotnet run
+        run: dotnet run
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
