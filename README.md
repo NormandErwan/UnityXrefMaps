@@ -11,15 +11,29 @@ DocFX will set clickable all the references of the Unity API on your documentati
 1. Make sure you have setup a DocFX documentation.
    You can follow the [DocFxForUnity](https://github.com/NormandErwan/DocFxForUnity) instructions otherwise.
 
-2. Add these lines to your `docfx.json`:
+2. Add this line to your `docfx.json`:
 
-    ```diff
-     "build": {
-         "xref": [
-    +        "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
-         ],
-     }
-    ```
+    - If you want to reference the latest stable version of Unity:
+
+        ```diff
+        "build": {
+            "xref": [
+        +        "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
+            ],
+        }
+        ```
+
+    - If you want to reference a specific version of Unity:
+
+        ```diff
+        "build": {
+            "xref": [
+        +        "https://normanderwan.github.io/UnityXrefMaps/<version>/xrefmap.yml"
+            ],
+        }
+        ```
+
+    where `<version>` is a Unity version in the form of `YYYY.x` (*e.g.* 2018.4, 2019.3, 2020.1).
 
 3. Generate your documentation!
 
