@@ -1,7 +1,8 @@
-Temp/
+.vscode/
+_site/
 bin/
 gh-pages/
 obj/
+Temp/
 UnityCsReference/
-_site/
 *.cache
