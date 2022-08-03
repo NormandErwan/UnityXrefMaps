@@ -33,9 +33,23 @@ DocFX will set clickable all the references of the Unity API on your documentati
         }
         ```
 
-    where `<version>` is a Unity version in the form of `YYYY.x` (*e.g.* 2018.4, 2019.3, 2020.1).
+      where `<version>` is a Unity version in the form of `YYYY.x` (*e.g.* 2018.4, 2019.3, 2020.1).
+
+   - If you prefer relying in a offline file:
+   
+        ```diff
+        "build": {
+            "xref": [
+        +        "UnityXrefMap.yml"
+            ],
+        }
+        ```
+        
+      where `UnityXrefMap.yml` has been downloaded from one of the link above and placed next to your `docfx.json`. 
 
 3. Generate your documentation!
+
+
 
 ## Contribute
 
