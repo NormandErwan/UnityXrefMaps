@@ -9,7 +9,7 @@
       ],
       "filter": "filterConfig.yml",
       "properties": {
-        "TargetFramework": "net35"
+        "TargetFramework": "netstandard2.1"
       },
       "dest": "Temp/ScriptReference"
     }
