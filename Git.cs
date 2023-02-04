@@ -1,6 +1,6 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using LibGit2Sharp;
 
@@ -22,7 +22,7 @@ namespace DocFxForUnity
             bool clone = !Directory.Exists(path);
             if (clone)
             {
-                Console.WriteLine($"Clonning {sourceUrl} to {path}");
+                Console.WriteLine($"Cloning {sourceUrl} to {path}");
 
                 var options = new CloneOptions() { BranchName = branch };
                 Repository.Clone(sourceUrl, path, options);
@@ -39,7 +39,7 @@ namespace DocFxForUnity
 
                 Console.WriteLine($"Fetching changes from 'origin' in '{path}'");
                 var remote = repository.Network.Remotes["origin"];
-                Commands.Fetch(repository, remote.Name, new string[0], null, null); // WTF is this API libgit2sharp?
+                Commands.Fetch(repository, remote.Name, Array.Empty<string>(), null, null); // WTF is this API libgit2sharp?
 
                 Console.WriteLine($"Checking out '{path}' to '{branch}' branch");
                 var remoteBranch = $"origin/{branch}";
