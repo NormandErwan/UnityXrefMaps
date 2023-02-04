@@ -11,7 +11,7 @@ namespace DocFxForUnity
         /// <summary>
         /// Client for send HTTP requests and receiving HTTP responses.
         /// </summary>
-        private static readonly HttpClient httpClient = new HttpClient();
+        private static readonly HttpClient httpClient = new();
 
         /// <summary>
         /// Copy a source file to a destination file. Intermediate folders will be automatically created.
@@ -34,26 +34,24 @@ namespace DocFxForUnity
         /// <param name="error">The function to call with the error data of the command.</param>
         public static void RunCommand(string command, Action<string> output, Action<string> error)
         {
-            using (var process = new Process())
+            using var process = new Process();
+            process.StartInfo = new ProcessStartInfo()
             {
-                process.StartInfo = new ProcessStartInfo()
-                {
-                    FileName = command,
-                    UseShellExecute = false,
-                    CreateNoWindow = true,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true
-                };
+                FileName = command,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true
+            };
 
-                process.OutputDataReceived += (sender, args) => output(args.Data);
-                process.ErrorDataReceived += (sender, args) => error(args.Data);
+            process.OutputDataReceived += (sender, args) => output(args.Data);
+            process.ErrorDataReceived += (sender, args) => error(args.Data);
 
-                process.Start();
-                process.BeginOutputReadLine();
-                process.BeginErrorReadLine();
+            process.Start();
+            process.BeginOutputReadLine();
+            process.BeginErrorReadLine();
 
-                process.WaitForExit();
-            }
+            process.WaitForExit();
         }
 
         /// <summary>

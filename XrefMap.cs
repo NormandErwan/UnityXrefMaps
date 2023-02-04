@@ -11,8 +11,8 @@ namespace DocFxForUnity
     /// </summary>
     public sealed class XrefMap
     {
-        private static readonly Deserializer Deserializer = new Deserializer();
-        private static readonly Serializer Serializer = new Serializer();
+        private static readonly Deserializer Deserializer = new();
+        private static readonly Serializer Serializer = new();
 
         public bool sorted { get; set; }
 
@@ -64,8 +64,7 @@ namespace DocFxForUnity
         /// <param name="filePath">The path of the file.</param>
         public void Save(string filePath)
         {
-            string xrefMapText = "### YamlMime:XRefMap\n"
-                + Serializer.Serialize(this);
+            string xrefMapText = "### YamlMime:XRefMap\n" + Serializer.Serialize(this);
             File.WriteAllText(filePath, xrefMapText);
         }
     }

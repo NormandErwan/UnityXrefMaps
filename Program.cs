@@ -68,43 +68,41 @@ namespace DocFxForUnity
         /// </summary>
         public static void Main()
         {
-            using (var unityRepo = Git.GetSyncRepository(UnityRepoUrl, UnityRepoPath, branch: "master"))
+            using var unityRepo = Git.GetSyncRepository(UnityRepoUrl, UnityRepoPath, branch: "master");
+            var versions = GetLatestVersions(unityRepo);
+            var latestVersion = versions
+                .OrderByDescending(version => version.name)
+                .First(version => version.release.Contains('f'));
+
+            foreach (var version in versions)
             {
-                var versions = GetLatestVersions(unityRepo);
-                var latestVersion = versions
-                    .OrderByDescending(version => version.name)
-                    .First(version => version.release.Contains('f'));
+                string filePath = Path.Combine(GeneratedDocsPath, XrefMapFileName);
+                string copyPath = Path.Combine(XrefMapsPath, version.name, XrefMapFileName); // ./<version>/xrefmap.yml
+                string apiUrl = GetUnityApiUrl(version.name);
 
-                foreach (var version in versions)
+                Console.WriteLine($"Generating Unity {version.name} xref map to '{copyPath}'");
+                GenerateXrefMap(unityRepo, version.release);
+                Utils.CopyFile(filePath, copyPath);
+
+                Console.WriteLine($"Fixing hrefs in '{copyPath}'");
+                var xrefMap = XrefMap.Load(copyPath);
+                xrefMap.FixHrefs(apiUrl);
+                xrefMap.Save(copyPath);
+
+                // Set the last version's xref map as the default one
+                if (version == latestVersion)
                 {
-                    string filePath = Path.Combine(GeneratedDocsPath, XrefMapFileName);
-                    string copyPath = Path.Combine(XrefMapsPath, version.name, XrefMapFileName); // ./<version>/xrefmap.yml
-                    string apiUrl = GetUnityApiUrl(version.name);
+                    string rootPath = Path.Combine(XrefMapsPath, XrefMapFileName); // ./xrefmap.yml
 
-                    Console.WriteLine($"Generating Unity {version.name} xref map to '{copyPath}'");
-                    GenerateXrefMap(unityRepo, version.release);
-                    Utils.CopyFile(filePath, copyPath);
+                    Console.WriteLine($"Copy '{copyPath}' to '{rootPath}'");
+                    Utils.CopyFile(filePath, rootPath);
 
-                    Console.WriteLine($"Fixing hrefs in '{copyPath}'");
-                    var xrefMap = XrefMap.Load(copyPath);
-                    xrefMap.FixHrefs(apiUrl);
-                    xrefMap.Save(copyPath);
-
-                    // Set the last version's xref map as the default one
-                    if (version == latestVersion)
-                    {
-                        string rootPath = Path.Combine(XrefMapsPath, XrefMapFileName); // ./xrefmap.yml
-
-                        Console.WriteLine($"Copy '{copyPath}' to '{rootPath}'");
-                        Utils.CopyFile(filePath, rootPath);
-
-                        xrefMap = XrefMap.Load(rootPath);
-                        xrefMap.FixHrefs(UnityApiUrl);
-                        xrefMap.Save(rootPath);
-                    }
-
-                    Console.WriteLine("\n");
+                    xrefMap = XrefMap.Load(rootPath);
+                    xrefMap.FixHrefs(UnityApiUrl);
+                    xrefMap.Save(rootPath);
                 }
+
+                Console.WriteLine("\n");
             }
         }
 
@@ -139,7 +137,7 @@ namespace DocFxForUnity
             {
                 repository.RemoveUntrackedFiles();
             }
-            catch (LibGit2Sharp.NotFoundException) { }
+            catch (NotFoundException) { }
 
             // Clear DocFx's temp files and previous generated site
             var pathsToClear = new string[] { DocFxMetadataPath, generatedDocsPath };
@@ -161,7 +159,7 @@ namespace DocFxForUnity
 
             // Generate site and xref map
             Console.WriteLine($"Running DocFX on '{commit}'");
-            Utils.RunCommand("docfx", output => Console.WriteLine(output), error => Console.WriteLine(error));
+            Utils.RunCommand("docfx", Console.WriteLine, Console.WriteLine);
         }
 
         /// <summary>
