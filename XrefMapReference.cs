@@ -60,8 +60,6 @@ namespace DocFxForUnity
         /// <param name="apiUrl">The URL of the online API documentation of Unity.</param>
         public void FixHref(string apiUrl)
         {
-            string href;
-
             // Namespaces point to documentation index
             if (commentId.Contains("N:"))
             {
@@ -95,7 +93,7 @@ namespace DocFxForUnity
                 }
             }
 
-            this.href = apiUrl + href + ".html";
+            href = apiUrl + href + ".html";
         }
     }
 }
