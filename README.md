@@ -57,9 +57,9 @@ DocFX will set clickable all the references of the Unity API on your documentati
 
     1. Install [.NET 7.0](https://dotnet.microsoft.com/download/dotnet) SDK.
     2. Clone this repository on your computer.
-    2. Open a terminal on the cloned repository and run:
+    3. Open a terminal on the cloned repository and run:
 
-        ```
+        ```sh
         dotnet run
         ```
 
