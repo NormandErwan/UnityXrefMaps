@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace DocFxForUnity
     ///
     /// </summary>
     /// <remarks>
-    /// [.NET Core](https://dotnet.microsoft.com) >= 2.0 and [DocFX](https://dotnet.github.io/docfx/) must be installed
+    /// [.NET](https://dotnet.microsoft.com) >= 7.0 and [DocFX](https://dotnet.github.io/docfx/) must be installed
     /// on your system.
     /// </remarks>
     class Program
