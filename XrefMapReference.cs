@@ -7,12 +7,24 @@ namespace DocFxForUnity
     /// <summary>
     /// Represents a reference item on a <see cref="XrefMap"/>.
     /// </summary>
-    public sealed class XrefMapReference
+    public sealed partial class XrefMapReference
     {
         /// <summary>
         /// The online API documentation of Unity doesn't show some namespaces.
         /// </summary>
-        private static readonly List<string> HrefNamespacesToTrim = new List<string> { "UnityEditor", "UnityEngine" };
+        private static readonly List<string> HrefNamespacesToTrim = new() { "UnityEditor", "UnityEngine" };
+
+        [GeneratedRegex("`{2}\\d")]
+        private static partial Regex GenericHrefRegex();
+
+        [GeneratedRegex("\\*$")]
+        private static partial Regex MethodHrefPointerRegex();
+
+        [GeneratedRegex("\\(.*\\)")]
+        private static partial Regex MethodHrefRegex();
+
+        [GeneratedRegex("\\.([a-z].*)$")]
+        private static partial Regex PropertyHrefRegex();
 
         public string uid { get; set; }
 
@@ -69,17 +81,17 @@ namespace DocFxForUnity
                 href = href.Replace(".#ctor", "-ctor");
 
                 // Fix href of generics
-                href = Regex.Replace(href, @"`{2}\d", "");
+                href = GenericHrefRegex().Replace(href, "");
                 href = href.Replace("`", "_");
 
                 // Fix href of methods
-                href = Regex.Replace(href, @"\*$", "");
-                href = Regex.Replace(href, @"\(.*\)", "");
+                href = MethodHrefPointerRegex().Replace(href, "");
+                href = MethodHrefRegex().Replace(href, "");
 
                 // Fix href of properties
                 if (commentId.Contains("P:") || commentId.Contains("M:"))
                 {
-                    href = Regex.Replace(href, @"\.([a-z].*)$", "-$1");
+                    href = PropertyHrefRegex().Replace(href, "-$1");
                 }
             }
 

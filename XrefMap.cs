@@ -9,10 +9,13 @@ namespace DocFxForUnity
     /// <summary>
     /// Represents a xref map file of Unity.
     /// </summary>
-    public sealed class XrefMap
+    public sealed partial class XrefMap
     {
         private static readonly Deserializer Deserializer = new();
         private static readonly Serializer Serializer = new();
+
+        [GeneratedRegex("(\\d):")]
+        private static partial Regex ZeroStringsRegex();
 
         public bool sorted { get; set; }
 
@@ -28,7 +31,7 @@ namespace DocFxForUnity
             string xrefMapText = File.ReadAllText(filePath);
 
             // Remove `0:` strings on the xrefmap that make crash Deserializer
-            xrefMapText = Regex.Replace(xrefMapText, @"(\d):", "$1");
+            xrefMapText = ZeroStringsRegex().Replace(xrefMapText, "$1");
 
             return Deserializer.Deserialize<XrefMap>(xrefMapText);
         }

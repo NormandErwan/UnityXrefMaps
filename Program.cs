@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace DocFxForUnity
     /// [.NET](https://dotnet.microsoft.com) >= 7.0 and [DocFX](https://dotnet.github.io/docfx/) must be installed
     /// on your system.
     /// </remarks>
-    class Program
+    partial class Program
     {
         /// <summary>
         /// The path where the metadata files of DocFx of the Unity repository will be generated.
@@ -33,6 +33,9 @@ namespace DocFxForUnity
         /// Gets the URL of the online API documentation of Unity.
         /// </summary>
         private const string UnityApiUrl = "https://docs.unity3d.com/ScriptReference/";
+
+        [GeneratedRegex("\\d{4}\\.\\d")]
+        private static partial Regex UnityVersionRegex();
 
         /// <summary>
         /// The path of the Unity's csproj.
@@ -170,7 +173,7 @@ namespace DocFxForUnity
         private static IEnumerable<(string name, string release)> GetLatestVersions(Repository unityRepository)
         {
             return Git.GetTags(unityRepository)
-                .Select(release => (name: Regex.Match(release, @"\d{4}\.\d").Value, release))
+                .Select(release => (name: UnityVersionRegex().Match(release).Value, release))
                 .GroupBy(version => version.name)
                 .Select(version => version.First());
         }
