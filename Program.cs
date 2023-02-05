@@ -126,14 +126,7 @@ namespace DocFxForUnity
             repository.HardReset(commit);
 
             // Clear DocFx's temp files and previous generated site
-            var pathsToClear = new string[] { DocFxMetadataPath, generatedDocsPath };
-            foreach (var path in pathsToClear)
-            {
-                if (Directory.Exists(path))
-                {
-                    Directory.Delete(path, recursive: true);
-                }
-            }
+            Utils.DeleteDirectories(DocFxMetadataPath, generatedDocsPath);
 
             // Generate site and xref map
             Console.WriteLine($"Running DocFX on '{commit}'");

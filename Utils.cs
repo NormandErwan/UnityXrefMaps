@@ -27,6 +27,21 @@ namespace DocFxForUnity
         }
 
         /// <summary>
+        /// Deletes the specified directories if they exist.
+        /// </summary>
+        /// <param name="paths">The path of the directories to delete.</param>
+        public static void DeleteDirectories(params string[] paths)
+        {
+            foreach (var path in paths)
+            {
+                if (Directory.Exists(path))
+                {
+                    Directory.Delete(path, recursive: true);
+                }
+            }
+        }
+
+        /// <summary>
         /// Run a command in a hidden window and returns its output.
         /// </summary>
         /// <param name="command">The command to run.</param>
