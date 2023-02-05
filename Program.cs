@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -110,17 +110,6 @@ namespace DocFxForUnity
         }
 
         /// <summary>
-        /// Fix the specified csproj to be able to generate its metadata with DocFX.
-        /// </summary>
-        /// <param name="csprojPath">The path of the csproj.</param>
-        private static void FixCsprojForDocFx(string csprojPath)
-        {
-            string text = File.ReadAllText(csprojPath);
-            text = text.Replace("ItemGroup Condition=\" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' \"", "ItemGroup");
-            File.WriteAllText(csprojPath, text);
-        }
-
-        /// <summary>
         /// Generate the documentation and the associated xref map of a specified repository with DocFx.
         /// </summary>
         /// <param name="repository">The repository to generate docs from.</param>
@@ -150,14 +139,6 @@ namespace DocFxForUnity
                 {
                     Directory.Delete(path, recursive: true);
                 }
-            }
-
-            // Fix the csproj
-            Console.WriteLine($"Fixing the csproj of '{commit}'");
-            foreach (string csprojFilePath in UnityCsprojPaths)
-            {
-                string fullFilePath = Path.Combine(UnityRepoPath, csprojFilePath);
-                FixCsprojForDocFx(fullFilePath);
             }
 
             // Generate site and xref map
