@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -123,13 +123,7 @@ namespace DocFxForUnity
         {
             // Hard reset the repository
             Console.WriteLine($"Hard reset '{repository.Info.WorkingDirectory}' to '{commit}'");
-            repository.Reset(ResetMode.Hard, commit);
-
-            try
-            {
-                repository.RemoveUntrackedFiles();
-            }
-            catch (NotFoundException) { }
+            repository.HardReset(commit);
 
             // Clear DocFx's temp files and previous generated site
             var pathsToClear = new string[] { DocFxMetadataPath, generatedDocsPath };
