@@ -3,14 +3,10 @@
     {
       "src": [
         {
-          "src": "UnityCsReference/Projects/CSharp/",
-          "files": [ "*.csproj" ]
+          "files": [ "UnityCsReference.csproj" ]
         }
       ],
       "filter": "filterConfig.yml",
-      "properties": {
-        "TargetFramework": "net35"
-      },
       "dest": "Temp/ScriptReference"
     }
   ],
