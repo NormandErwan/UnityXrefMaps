@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using LibGit2Sharp;
 
 namespace DocFxForUnity
@@ -49,18 +47,6 @@ namespace DocFxForUnity
             Console.WriteLine();
 
             return repository;
-        }
-
-        /// <summary>
-        /// Returns a collection of the latest tags of a specified repository.
-        /// </summary>
-        /// <param name="repository">The repository to use.</param>
-        /// <returns>The collection of tags.</returns>
-        public static IEnumerable<string> GetTags(Repository repository)
-        {
-            return repository.Tags
-                .OrderByDescending(tag => (tag.Target as Commit).Author.When)
-                .Select(tag => tag.FriendlyName);
         }
     }
 }

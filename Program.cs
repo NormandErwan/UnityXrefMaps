@@ -147,7 +147,8 @@ namespace DocFxForUnity
         /// <returns>The latest versions.</returns>
         private static IEnumerable<(string name, string release)> GetLatestVersions(Repository unityRepository)
         {
-            return Git.GetTags(unityRepository)
+            return unityRepository
+                .GetTags()
                 .Select(release => (name: UnityVersionRegex().Match(release).Value, release))
                 .GroupBy(version => version.name)
                 .Select(version => version.First());
