@@ -7,7 +7,7 @@
         }
       ],
       "filter": "filterConfig.yml",
-      "dest": "Temp/ScriptReference"
+      "dest": "UnityCsReference/_api"
     }
   ],
   "build":
@@ -15,9 +15,9 @@
     "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
     "content": [
       {
-        "src": "Temp/ScriptReference",
+        "src": "UnityCsReference/_api",
         "files": [ "*.yml" ],
-        "dest": "ScriptReference"
+        "dest": "UnityCsReference/_api"
       }
     ],
     "dest": "UnityCsReference/_site"
