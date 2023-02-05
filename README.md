@@ -36,7 +36,7 @@ DocFX will set clickable all the references of the Unity API on your documentati
       where `<version>` is a Unity version in the form of `YYYY.x` (*e.g.* 2018.4, 2019.3, 2020.1).
 
    - If you prefer relying in a offline file:
-   
+
         ```diff
         "build": {
             "xref": [
@@ -44,8 +44,8 @@ DocFX will set clickable all the references of the Unity API on your documentati
             ],
         }
         ```
-        
-      where `UnityXrefMap.yml` has been downloaded from one of the link above and placed next to your `docfx.json`. 
+
+      where `UnityXrefMap.yml` has been downloaded from one of the link above and placed next to your `docfx.json`.
 
 3. Generate your documentation!
 
@@ -62,7 +62,7 @@ DocFX will set clickable all the references of the Unity API on your documentati
     5. Open a terminal on the cloned repository and run:
 
         ```sh
-        dotnet run
+        dotnet run --project UnityXrefMaps.csproj
         ```
 
 - For any question or comment, please [open a new issue](https://github.com/NormandErwan/UnityXrefMaps/issues/new).
