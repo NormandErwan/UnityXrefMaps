@@ -85,6 +85,12 @@ namespace DocFxForUnity
                 Utils.RunCommand("docfx", Console.WriteLine, Console.WriteLine);
 
                 Console.WriteLine($"Fixing hrefs in '{xrefMapPath}'");
+                if (!File.Exists(xrefMapPath))
+                {
+                    Console.WriteLine($"Error: '{xrefMapPath}' not generated");
+                    continue;
+                }
+
                 Utils.CopyFile(GeneratedXrefMapPath, xrefMapPath);
                 var xrefMap = XrefMap.Load(xrefMapPath);
                 xrefMap.FixHrefs(apiUrl: $"https://docs.unity3d.com/{version.name}/Documentation/ScriptReference/");
