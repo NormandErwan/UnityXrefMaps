@@ -9,16 +9,12 @@ on:
     - cron: '0 5 * * 0' # At 05:00 on Sunday
 
 jobs:
+  # Generate the xref maps
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 7.x
 
       - name: Install DocFX
         run: dotnet tool install -g docfx
@@ -33,6 +29,25 @@ jobs:
 
       - name: Run
         run: dotnet run
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: _site
+          path: _site
+
+  # Deploy the generated xref maps to the gh-pages branch
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download site artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: _site
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
