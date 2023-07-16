@@ -34,6 +34,6 @@ public static class RepositoryExtensions
         {
             repository.RemoveUntrackedFiles();
         }
-        catch (NotFoundException) { }
+        catch (System.Exception) { }
     }
 }
