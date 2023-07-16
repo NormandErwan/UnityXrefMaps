@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "files": [ "UnityCsReference.csproj" ]
+          "files": [ "UnityCsReference/Projects/CSharp/*.csproj" ]
         }
       ],
       "filter": "filterConfig.yml",

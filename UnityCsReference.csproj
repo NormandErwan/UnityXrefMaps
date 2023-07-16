@@ -1,8 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <DefaultItemExcludes>$(DefaultItemExcludes);*.cs</DefaultItemExcludes>
-  </PropertyGroup>
-
-</Project>

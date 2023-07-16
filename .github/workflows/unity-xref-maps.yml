@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-unitycsreference
 
       - name: Run
-        run: dotnet run --project UnityXrefMaps.csproj
+        run: dotnet run
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
