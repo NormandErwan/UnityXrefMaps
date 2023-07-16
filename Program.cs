@@ -30,6 +30,11 @@ namespace DocFxForUnity
         private static readonly string GeneratedXrefMapPath = Path.Combine(GeneratedDocsPath, XrefMapFileName);
 
         /// <summary>
+        /// The path of the default xref map, pointing at <see cref="UnityApiUrl"/>.
+        /// </summary>
+        private static readonly string DefaultXrefMapPath = Path.Combine(XrefMapsPath, XrefMapFileName);
+
+        /// <summary>
         /// Gets the URL of the online API documentation of Unity.
         /// </summary>
         private const string UnityApiUrl = "https://docs.unity3d.com/ScriptReference/";
@@ -72,7 +77,7 @@ namespace DocFxForUnity
 
             foreach (var version in versions)
             {
-                Console.WriteLine($"Generating Unity {version.name} xref map");
+                Console.WriteLine($"Generating Unity '{version.name}' xref map");
                 unityRepo.HardReset(version.release);
                 string xrefMapPath = Path.Combine(XrefMapsPath, version.name, XrefMapFileName); // ./<version>/xrefmap.yml
 
@@ -88,10 +93,11 @@ namespace DocFxForUnity
                 // Set the last version's xref map as the default one
                 if (version == latestVersion)
                 {
-                    Console.WriteLine($"Fixing hrefs in '{GeneratedXrefMapPath}' as being the default xref map");
-                    xrefMap = XrefMap.Load(GeneratedXrefMapPath);
+                    Console.WriteLine($"Fixing hrefs in '{DefaultXrefMapPath}'");
+                    Utils.CopyFile(GeneratedXrefMapPath, DefaultXrefMapPath);
+                    xrefMap = XrefMap.Load(DefaultXrefMapPath);
                     xrefMap.FixHrefs(UnityApiUrl);
-                    xrefMap.Save(GeneratedXrefMapPath);
+                    xrefMap.Save(DefaultXrefMapPath);
                 }
 
                 Console.WriteLine("\n");
