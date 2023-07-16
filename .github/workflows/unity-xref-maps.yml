@@ -20,8 +20,8 @@ jobs:
         with:
           dotnet-version: |
             3.5
-            4.0
-            7.0
+            4
+            7
 
       - name: Install DocFX
         run: dotnet tool install -g docfx
