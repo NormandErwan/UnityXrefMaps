@@ -30,11 +30,6 @@ namespace DocFxForUnity
         private static readonly string GeneratedXrefMapPath = Path.Combine(GeneratedDocsPath, XrefMapFileName);
 
         /// <summary>
-        /// The path of the default xref map, pointing at <see cref="UnityApiUrl"/>.
-        /// </summary>
-        private static readonly string DefaultXrefMapPath = Path.Combine(GeneratedDocsPath, XrefMapFileName);
-
-        /// <summary>
         /// Gets the URL of the online API documentation of Unity.
         /// </summary>
         private const string UnityApiUrl = "https://docs.unity3d.com/ScriptReference/";
@@ -79,14 +74,13 @@ namespace DocFxForUnity
             {
                 Console.WriteLine($"Generating Unity {version.name} xref map");
                 unityRepo.HardReset(version.release);
+                string xrefMapPath = Path.Combine(XrefMapsPath, version.name, XrefMapFileName); // ./<version>/xrefmap.yml
 
                 Console.WriteLine($"Running DocFX on '{version.release}'");
                 Utils.RunCommand("docfx", Console.WriteLine, Console.WriteLine);
 
-                string xrefMapPath = Path.Combine(XrefMapsPath, version.name, XrefMapFileName); // ./<version>/xrefmap.yml
-                Utils.CopyFile(GeneratedXrefMapPath, xrefMapPath);
-
                 Console.WriteLine($"Fixing hrefs in '{xrefMapPath}'");
+                Utils.CopyFile(GeneratedXrefMapPath, xrefMapPath);
                 var xrefMap = XrefMap.Load(xrefMapPath);
                 xrefMap.FixHrefs(apiUrl: $"https://docs.unity3d.com/{version.name}/Documentation/ScriptReference/");
                 xrefMap.Save(xrefMapPath);
@@ -94,12 +88,10 @@ namespace DocFxForUnity
                 // Set the last version's xref map as the default one
                 if (version == latestVersion)
                 {
-                    Console.WriteLine($"Copy '{xrefMapPath}' to '{DefaultXrefMapPath}'");
-                    Utils.CopyFile(GeneratedXrefMapPath, DefaultXrefMapPath);
-
-                    xrefMap = XrefMap.Load(DefaultXrefMapPath);
+                    Console.WriteLine($"Fixing hrefs in '{GeneratedXrefMapPath}' as being the default xref map");
+                    xrefMap = XrefMap.Load(GeneratedXrefMapPath);
                     xrefMap.FixHrefs(UnityApiUrl);
-                    xrefMap.Save(DefaultXrefMapPath);
+                    xrefMap.Save(GeneratedXrefMapPath);
                 }
 
                 Console.WriteLine("\n");
