@@ -15,14 +15,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: |
-            3.5
-            4
-            7
-
       - name: Install DocFX
         run: dotnet tool install -g docfx
 
