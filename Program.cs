@@ -87,6 +87,7 @@ namespace DocFxForUnity
                 if (!File.Exists(GeneratedXrefMapPath))
                 {
                     Console.WriteLine($"Error: '{GeneratedXrefMapPath}' not generated");
+                    Console.WriteLine("\n");
                     continue;
                 }
 
