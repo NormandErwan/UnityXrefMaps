@@ -49,8 +49,6 @@ DocFX will set clickable all the references of the Unity API on your documentati
 
 3. Generate your documentation!
 
-
-
 ## Contribute
 
 - To run this program:
@@ -62,7 +60,7 @@ DocFX will set clickable all the references of the Unity API on your documentati
     5. Open a terminal on the cloned repository and run:
 
         ```sh
-        dotnet run --project UnityXrefMaps.csproj
+        dotnet run
         ```
 
 - For any question or comment, please [open a new issue](https://github.com/NormandErwan/UnityXrefMaps/issues/new).
