@@ -45,14 +45,14 @@ namespace DocFxForUnity
         /// Run a command in a hidden window and returns its output.
         /// </summary>
         /// <param name="command">The command to run.</param>
+        /// <param name="arguments">The arguments of the command.</param>
         /// <param name="output">The function to call with the output data of the command.</param>
         /// <param name="error">The function to call with the error data of the command.</param>
-        public static void RunCommand(string command, Action<string> output, Action<string> error)
+        public static void RunCommand(string command, string arguments, Action<string> output, Action<string> error)
         {
             using var process = new Process();
-            process.StartInfo = new ProcessStartInfo()
+            process.StartInfo = new ProcessStartInfo(command, arguments)
             {
-                FileName = command,
                 UseShellExecute = false,
                 CreateNoWindow = true,
                 RedirectStandardOutput = true,

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -82,7 +82,7 @@ namespace DocFxForUnity
                 string xrefMapPath = Path.Combine(XrefMapsPath, version.name, XrefMapFileName); // ./<version>/xrefmap.yml
 
                 Console.WriteLine($"Running DocFX on '{version.release}'");
-                Utils.RunCommand("docfx", Console.WriteLine, Console.WriteLine);
+                Utils.RunCommand("dotnet", "docfx", Console.WriteLine, Console.WriteLine);
 
                 if (!File.Exists(GeneratedXrefMapPath))
                 {
