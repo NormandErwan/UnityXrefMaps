@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -86,7 +86,7 @@ namespace DocFxForUnity
 
                 if (!File.Exists(GeneratedXrefMapPath))
                 {
-                    Console.WriteLine($"Error: '{GeneratedXrefMapPath}' not generated");
+                    Console.WriteLine($"Error: '{GeneratedXrefMapPath}' for Unity '{version.name}' not generated");
                     Console.WriteLine("\n");
                     continue;
                 }
