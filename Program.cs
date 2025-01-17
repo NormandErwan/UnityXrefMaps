@@ -14,7 +14,7 @@ namespace DocFxForUnity
     ///
     /// </summary>
     /// <remarks>
-    /// [.NET](https://dotnet.microsoft.com) >= 7.0 and [DocFX](https://dotnet.github.io/docfx/) must be installed
+    /// [.NET](https://dotnet.microsoft.com) >= 9.0 and [DocFX](https://dotnet.github.io/docfx/) must be installed
     /// on your system.
     /// </remarks>
     partial class Program
