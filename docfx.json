@@ -9,7 +9,10 @@
       "filter": "filterConfig.yml",
       "dest": "UnityCsReference/_api",
       "disableGitFeatures": true,
-      "noRestore": true
+      "noRestore": true,
+      "properties": {
+          "Configuration": "Debug"
+      }
     }
   ],
   "build":
