@@ -8,7 +8,8 @@
       ],
       "filter": "filterConfig.yml",
       "dest": "UnityCsReference/_api",
-      "disableGitFeatures": true
+      "disableGitFeatures": true,
+      "noRestore": true
     }
   ],
   "build":
