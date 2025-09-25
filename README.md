@@ -3,7 +3,7 @@
 > Automatically add clickable links to the Unity API on a DocFX documentation
 
 Generates references of the Unity API to use with DocFX (the
-[cross reference maps](https://dotnet.github.io/docfx/tutorial/links_and_cross_references.html#cross-reference-between-projects)).
+[cross reference maps](https://dotnet.github.io/docfx/docs/links-and-cross-references.html#cross-reference-to-net-basic-class-library)).
 DocFX will set clickable all the references of the Unity API on your documentation.
 
 ## Usage

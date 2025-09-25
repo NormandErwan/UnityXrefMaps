@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace DocFxForUnity;
+namespace UnityXrefMaps.DocFX;
 
 // https://github.com/dotnet/docfx/blob/main/src/Docfx.App/Config/BuildJsonConfig.cs
 public class DocFxConfigurationBuild
