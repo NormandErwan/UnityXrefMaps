@@ -54,7 +54,7 @@ DocFX will set clickable all the references of the Unity API on your documentati
 - To run this program:
 
     1. Install Visual Studio 2022.
-    2. Install [.NET 7.0](https://dotnet.microsoft.com/download/dotnet) SDK.
+    2. Install [.NET 9.0](https://dotnet.microsoft.com/download/dotnet) SDK.
     3. Clone this repository on your computer.
     4. Open a terminal on the cloned repository and run:
 

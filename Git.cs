@@ -4,7 +4,7 @@ using LibGit2Sharp;
 
 namespace DocFxForUnity
 {
-    public sealed class Git
+    public static class Git
     {
         /// <summary>
         /// Fetches changes and hard resets the specified repository to the latest commit of a specified branch. If no
@@ -36,11 +36,11 @@ namespace DocFxForUnity
                 repository.RemoveUntrackedFiles();
 
                 Console.WriteLine($"Fetching changes from 'origin' in '{path}'");
-                var remote = repository.Network.Remotes["origin"];
-                Commands.Fetch(repository, remote.Name, Array.Empty<string>(), null, null); // WTF is this API libgit2sharp?
+                Remote remote = repository.Network.Remotes["origin"];
+                Commands.Fetch(repository, remote.Name, [], null, null); // WTF is this API libgit2sharp?
 
                 Console.WriteLine($"Checking out '{path}' to '{branch}' branch");
-                var remoteBranch = $"origin/{branch}";
+                string remoteBranch = $"origin/{branch}";
                 Commands.Checkout(repository, remoteBranch);
             }
 
