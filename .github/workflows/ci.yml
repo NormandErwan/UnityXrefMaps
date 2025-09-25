@@ -19,4 +19,4 @@ jobs:
         run: dotnet tool restore
 
       - name: Build & test (Release)
-        run: dotnet test -c Release --logger "console;verbosity=normal"
+        run: dotnet test -c Release

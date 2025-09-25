@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\README.md" Link="README.md" Pack="true" />
-    <None Include="..\LICENSE.txt" Link="LICENSE.txt" Pack="true" />
+    <None Include="..\README.md" Link="README.md" Pack="true" PackagePath="/" />
+    <None Include="..\LICENSE.txt" Link="LICENSE.txt" Pack="true" PackagePath="/" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">

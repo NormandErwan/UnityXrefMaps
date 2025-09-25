@@ -120,7 +120,7 @@ apiRules:
 
             IReadOnlyList<FakeLogRecord> logRecords = fakeLogCollector.GetSnapshot();
 
-            Assert.Equal(2, logRecords.Count(l => l.Message.Equals("XRef map exported.")));
+            Assert.Equal(2, logRecords.Count(l => l.Message.Contains("XRef map exported.", StringComparison.OrdinalIgnoreCase)));
 
             foreach (string testedVersion in testedVersions)
             {
@@ -139,9 +139,19 @@ apiRules:
             {
                 fakeLogCollector.Clear();
 
+                string xrefFilePath = $"{xrefDirectoryPath}/{xrefDirectoryName}/{testedVersion}/{xrefFileName}";
+
+                XrefMap xrefMap = await XrefMap.Load(xrefFilePath, TestContext.Current.CancellationToken);
+
+                Assert.Equal(3, xrefMap.References!.Length);
+
+                Assert.Equal("UnityEngine", xrefMap.References[0].Uid);
+                Assert.Equal("UnityEngine.Vector2", xrefMap.References[1].Uid);
+                Assert.Equal("UnityEngine.Vector3", xrefMap.References[2].Uid);
+
                 string[] testArgs = [
                     "--xrefPath",
-                    $"{xrefDirectoryPath}/{xrefDirectoryName}/{testedVersion}/{xrefFileName}"
+                    xrefFilePath
                 ];
 
                 Assert.Equal(
