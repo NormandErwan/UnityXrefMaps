@@ -3,7 +3,7 @@
 > Automatically add clickable links to the Unity API on a DocFX documentation
 
 Generates references of the Unity API to use with DocFX (the
-[cross reference maps](https://dotnet.github.io/docfx/tutorial/links_and_cross_references.html#cross-reference-between-projects)).
+[cross reference maps](https://dotnet.github.io/docfx/docs/links-and-cross-references.html#cross-reference-to-net-basic-class-library)).
 DocFX will set clickable all the references of the Unity API on your documentation.
 
 ## Usage
@@ -54,7 +54,7 @@ DocFX will set clickable all the references of the Unity API on your documentati
 - To run this program:
 
     1. Install Visual Studio 2022.
-    2. Install [.NET 7.0](https://dotnet.microsoft.com/download/dotnet) SDK.
+    2. Install [.NET 9.0](https://dotnet.microsoft.com/download/dotnet) SDK.
     3. Clone this repository on your computer.
     4. Open a terminal on the cloned repository and run:
 

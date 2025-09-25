@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityXrefMaps", "UnityXrefMaps\UnityXrefMaps.csproj", "{97BE34CD-6988-1F05-D1B2-EBF906DAA098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityXrefMaps.Tests", "UnityXrefMaps.Tests\UnityXrefMaps.Tests.csproj", "{2A7A5BA2-A0E4-D775-C22B-0C5A6B68260B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97BE34CD-6988-1F05-D1B2-EBF906DAA098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BE34CD-6988-1F05-D1B2-EBF906DAA098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BE34CD-6988-1F05-D1B2-EBF906DAA098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BE34CD-6988-1F05-D1B2-EBF906DAA098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7A5BA2-A0E4-D775-C22B-0C5A6B68260B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7A5BA2-A0E4-D775-C22B-0C5A6B68260B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7A5BA2-A0E4-D775-C22B-0C5A6B68260B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7A5BA2-A0E4-D775-C22B-0C5A6B68260B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCDA8159-7FB5-4653-8EBE-A68917137BBC}
+	EndGlobalSection
+EndGlobal

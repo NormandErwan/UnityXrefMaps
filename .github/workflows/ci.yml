@@ -1,0 +1,22 @@
+---
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install DocFX
+        run: dotnet tool restore
+
+      - name: Build & test (Release)
+        run: dotnet test -c Release
