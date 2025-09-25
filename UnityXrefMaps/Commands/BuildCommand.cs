@@ -53,6 +53,10 @@ internal sealed partial class BuildCommand : RootCommand
                 $"the Unity package version (example: {string.Format(Constants.DefaultXrefMapsPath, "1.0.0")}) in the case of a package.",
             DefaultValueFactory = _ => Constants.DefaultXrefMapsPath
         };
+        Option<string[]> trimNamespacesOption = new("--trimNamespaces")
+        {
+            Description = "Namespaces for trimming."
+        };
 
         Options.Add(repositoryUrlOption);
         Options.Add(repositoryBranchOption);
@@ -61,6 +65,7 @@ internal sealed partial class BuildCommand : RootCommand
         Options.Add(apiUrlOption);
         Options.Add(docFxConfigurationFilePathOption);
         Options.Add(xrefMapsPathOption);
+        Options.Add(trimNamespacesOption);
 
         SetAction(async (parseResult, cancellationToken) =>
         {
@@ -73,6 +78,7 @@ internal sealed partial class BuildCommand : RootCommand
             string? apiUrl = parseResult.GetValue(apiUrlOption);
             string? docFxFilePath = parseResult.GetValue(docFxConfigurationFilePathOption);
             string? xrefMapsPath = parseResult.GetValue(xrefMapsPathOption);
+            string[]? trimNamespaces = parseResult.GetValue(trimNamespacesOption);
 
             using Stream docFxStream = File.OpenRead(docFxFilePath!);
 
@@ -132,7 +138,7 @@ internal sealed partial class BuildCommand : RootCommand
 
                 XrefMap xrefMap = await XrefMap.Load(xrefMapPath, cancellationToken);
 
-                xrefMap.FixHrefs(apiUrl: string.Format(apiUrl!, shortVersion));
+                xrefMap.FixHrefs(string.Format(apiUrl!, shortVersion), trimNamespaces!);
 
                 await xrefMap.Save(xrefMapPath, cancellationToken);
             }

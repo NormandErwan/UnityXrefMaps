@@ -40,7 +40,7 @@ public sealed partial class XrefMap
     /// Fix the <see cref="XrefMapReference.Href"/> of <see cref="References"/> of this <see cref="XrefMap"/>.
     /// </summary>
     /// <param name="apiUrl">The URL of the online API documentation of Unity.</param>
-    public void FixHrefs(string apiUrl)
+    public void FixHrefs(string apiUrl, IEnumerable<string> hrefNamespacesToTrim)
     {
         var fixedReferences = new List<XrefMapReference>();
 
@@ -51,7 +51,7 @@ public sealed partial class XrefMap
                 continue;
             }
 
-            reference.FixHref(apiUrl);
+            reference.FixHref(apiUrl, hrefNamespacesToTrim);
             fixedReferences.Add(reference);
         }
 

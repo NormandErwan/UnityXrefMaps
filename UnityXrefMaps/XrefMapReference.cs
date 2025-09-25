@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using YamlDotNet.Serialization;
 
@@ -8,11 +9,6 @@ namespace UnityXrefMaps;
 /// </summary>
 public sealed partial class XrefMapReference
 {
-    /// <summary>
-    /// The online API documentation of Unity doesn't show some namespaces.
-    /// </summary>
-    private static readonly string[] s_hrefNamespacesToTrim = ["UnityEditor", "UnityEngine"];
-
     [YamlMember(Alias = "uid")]
     public string? Uid { get; set; }
 
@@ -53,7 +49,7 @@ public sealed partial class XrefMapReference
     /// Sets <see cref="Href"/> to link to the online API documentation of Unity.
     /// </summary>
     /// <param name="apiUrl">The URL of the online API documentation of Unity.</param>
-    public void FixHref(string apiUrl)
+    public void FixHref(string apiUrl, IEnumerable<string> hrefNamespacesToTrim)
     {
         // Namespaces point to documentation index
         if (CommentId!.StartsWith("N:"))
@@ -64,8 +60,7 @@ public sealed partial class XrefMapReference
         {
             Href = Uid;
 
-            // Trim UnityEngine and UnityEditor namespaces from href
-            foreach (string hrefNamespaceToTrim in s_hrefNamespacesToTrim)
+            foreach (string hrefNamespaceToTrim in hrefNamespacesToTrim)
             {
                 Href = Href!.Replace(hrefNamespaceToTrim + ".", string.Empty);
             }
