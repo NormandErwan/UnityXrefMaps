@@ -10,4 +10,4 @@ ILoggerFactory factory = LoggerFactory.Create(builder =>
 RootCommand rootCommand = new BuildCommand(factory.CreateLogger<BuildCommand>());
 rootCommand.Subcommands.Add(new TestCommand(factory.CreateLogger<TestCommand>()));
 
-await rootCommand.Parse(args).InvokeAsync();
+return await rootCommand.Parse(args).InvokeAsync();
