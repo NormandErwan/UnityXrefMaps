@@ -90,7 +90,9 @@ internal sealed partial class BuildCommand : RootCommand
 
             DocFxConfiguration? docFxConfiguration = await JsonSerializer.DeserializeAsync<DocFxConfiguration>(docFxStream, cancellationToken: cancellationToken);
 
-            string generatedDocsPath = docFxConfiguration!.Build!.Destination!;
+            string docFxFileDirectoryPath = Path.GetDirectoryName(docFxFilePath)!;
+
+            string generatedDocsPath = Path.Combine(docFxFileDirectoryPath, docFxConfiguration!.Build!.Destination!);
             string generatedXrefMapPath = Path.Combine(generatedDocsPath, Constants.DefaultXrefMapFileName!);
 
             logger.LogInformation("Sync the Unity repository in '{RepositoryPath}'", Path.GetFullPath(repositoryPath!));
