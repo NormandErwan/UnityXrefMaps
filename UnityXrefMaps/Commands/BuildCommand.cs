@@ -46,6 +46,10 @@ internal sealed partial class BuildCommand : RootCommand
             Description = "The path to the DocFX configuration file.",
             DefaultValueFactory = _ => Constants.DefaultDocFxConfigurationFilePath
         };
+        Option<string> docFxAdditionalArgumentsOption = new("--docFxAdditionalArguments")
+        {
+            Description = "Additional arguments for DocFX."
+        };
         Option<string> xrefMapsPathOption = new("--xrefMapsPath")
         {
             Description = $"The path where the final {Constants.DefaultXrefMapFileName} files will be generated. " +
@@ -64,6 +68,7 @@ internal sealed partial class BuildCommand : RootCommand
         Options.Add(repositoryTagsOption);
         Options.Add(apiUrlOption);
         Options.Add(docFxConfigurationFilePathOption);
+        Options.Add(docFxAdditionalArgumentsOption);
         Options.Add(xrefMapsPathOption);
         Options.Add(trimNamespacesOption);
 
@@ -77,6 +82,7 @@ internal sealed partial class BuildCommand : RootCommand
             string[]? repositoryTags = parseResult.GetValue(repositoryTagsOption);
             string? apiUrl = parseResult.GetValue(apiUrlOption);
             string? docFxFilePath = parseResult.GetValue(docFxConfigurationFilePathOption);
+            string? docFxAdditionalArguments = parseResult.GetValue(docFxAdditionalArgumentsOption);
             string? xrefMapsPath = parseResult.GetValue(xrefMapsPathOption);
             string[]? trimNamespaces = parseResult.GetValue(trimNamespacesOption);
 
@@ -90,6 +96,13 @@ internal sealed partial class BuildCommand : RootCommand
             logger.LogInformation("Sync the Unity repository in '{RepositoryPath}'", Path.GetFullPath(repositoryPath!));
 
             using Repository repository = Git.GetSyncRepository(repositoryUrl!, repositoryPath!, repositoryBranch!, logger);
+
+            string docFxArguments = docFxFilePath!;
+
+            if (!string.IsNullOrEmpty(docFxAdditionalArguments))
+            {
+                docFxArguments += ' ' + docFxAdditionalArguments;
+            }
 
             foreach (string repositoryTag in repositoryTags!)
             {
@@ -106,7 +119,7 @@ internal sealed partial class BuildCommand : RootCommand
                 logger.LogInformation("Running DocFX on '{RepositoryTag}'", repositoryTag);
 
                 await Utils.RunCommand(
-                    "dotnet", $"docfx {docFxFilePath}",
+                    "docfx", docFxArguments,
                     value =>
                     {
                         if (!string.IsNullOrEmpty(value))
