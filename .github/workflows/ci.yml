@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Install DocFX
-        run: dotnet tool restore
+        run: dotnet tool install --global docfx
 
       - name: Build & test (Release)
         run: dotnet test -c Release
