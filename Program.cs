@@ -14,7 +14,7 @@ namespace DocFxForUnity
     ///
     /// </summary>
     /// <remarks>
-    /// [.NET](https://dotnet.microsoft.com) >= 9.0 and [DocFX](https://dotnet.github.io/docfx/) must be installed
+    /// [.NET](https://dotnet.microsoft.com) >= 7.0 and [DocFX](https://dotnet.github.io/docfx/) must be installed
     /// on your system.
     /// </remarks>
     partial class Program
@@ -92,32 +92,23 @@ namespace DocFxForUnity
                 }
 
                 Console.WriteLine($"Fixing hrefs in '{xrefMapPath}'");
-                FixHrefs(xrefMapPath, apiUrl: $"https://docs.unity3d.com/{version.name}/Documentation/ScriptReference/");
+                Utils.CopyFile(GeneratedXrefMapPath, xrefMapPath);
+                var xrefMap = XrefMap.Load(xrefMapPath);
+                xrefMap.FixHrefs(apiUrl: $"https://docs.unity3d.com/{version.name}/Documentation/ScriptReference/");
+                xrefMap.Save(xrefMapPath);
 
                 // Set the last version's xref map as the default one
                 if (version == latestVersion)
                 {
                     Console.WriteLine($"Fixing hrefs in '{DefaultXrefMapPath}'");
-                    FixHrefs(DefaultXrefMapPath, UnityApiUrl);
+                    Utils.CopyFile(GeneratedXrefMapPath, DefaultXrefMapPath);
+                    xrefMap = XrefMap.Load(DefaultXrefMapPath);
+                    xrefMap.FixHrefs(UnityApiUrl);
+                    xrefMap.Save(DefaultXrefMapPath);
                 }
 
                 Console.WriteLine("\n");
             }
-        }
-
-        /// <summary>
-        /// Copies the generated xref map to <see cref="XrefMapsPath"/> and fixes its hrefs.
-        /// </summary>
-        /// <param name="xrefMapPath">Where to copy the xref map.</param>
-        /// <param name="apiUrl">The URL of the API documentation of this xref map.</param>
-        /// </summary>
-        private static void FixHrefs(string xrefMapPath, string apiUrl)
-        {
-            Utils.CopyFile(GeneratedXrefMapPath, xrefMapPath);
-
-            var xrefMap = XrefMap.Load(xrefMapPath);
-            xrefMap.FixHrefs(apiUrl);
-            xrefMap.Save(xrefMapPath);
         }
 
         /// <summary>
