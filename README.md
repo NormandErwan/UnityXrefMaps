@@ -109,7 +109,8 @@ unityXrefMaps test \
     4. Open a terminal on the cloned repository and run:
 
         ```sh
-        dotnet run --project UnityXrefMaps/UnityXrefMaps.csproj
+        cd UnityXrefMaps
+        dotnet run
         ```
 
 - For any question or comment, please [open a new issue](https://github.com/NormandErwan/UnityXrefMaps/issues/new).
