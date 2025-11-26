@@ -103,14 +103,13 @@ unityXrefMaps test \
 
 - To run this program:
 
-    1. Install Visual Studio 2022.
-    2. Install [.NET 9.0](https://dotnet.microsoft.com/download/dotnet) SDK.
-    3. Install [DocFX](https://www.nuget.org/packages/docfx).
-    4. Clone this repository on your computer.
-    5. Open a terminal on the cloned repository and run:
+    1. Install [.NET 9.0](https://dotnet.microsoft.com/download/dotnet) SDK.
+    2. Install [DocFX](https://www.nuget.org/packages/docfx).
+    3. Clone this repository on your computer.
+    4. Open a terminal on the cloned repository and run:
 
         ```sh
-        dotnet run
+        dotnet run --project UnityXrefMaps/UnityXrefMaps.csproj
         ```
 
 - For any question or comment, please [open a new issue](https://github.com/NormandErwan/UnityXrefMaps/issues/new).
