@@ -209,6 +209,7 @@ jobs:
             --repositoryTags "$($version.Raw)" `
             --trimNamespaces UnityEditor `
             --trimNamespaces UnityEngine `
+            --docFxConfigurationFilePath '${{ runner.temp }}/Work/docfx.json' `
             --xrefMapsPath "${{ runner.temp }}/_site/$($version.ShortVersion)/xrefmap.yml"
 
           Write-Output "shortVersion=$($version.ShortVersion)" >> $env:GITHUB_OUTPUT
