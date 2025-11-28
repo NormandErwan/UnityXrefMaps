@@ -21,28 +21,31 @@ namespace UnityXrefMaps.Tests
 
         private class CustomStringWriter : StringWriter
         {
-            private readonly ILogger logger;
-            private readonly LogLevel logLevel;
+            private readonly ILogger _logger;
+            private readonly LogLevel _logLevel;
 
             public CustomStringWriter(ILogger logger, LogLevel logLevel)
             {
-                this.logger = logger;
-                this.logLevel = logLevel;
+                _logger = logger;
+                _logLevel = logLevel;
             }
 
             public override void Write(string? value)
             {
                 base.Write(value);
 
-                logger.Log(logLevel, "{Message}", value);
+                if (_logger.IsEnabled(_logLevel))
+                {
+                    _logger.Log(_logLevel, "{Message}", value);
+                }
             }
         }
 
-        private readonly ITestOutputHelper output;
+        private readonly ITestOutputHelper _output;
 
         public CommandTests(ITestOutputHelper output)
         {
-            this.output = output;
+            _output = output;
         }
 
         [Fact]
@@ -75,7 +78,7 @@ apiRules:
             {
                 builder.SetMinimumLevel(LogLevel.Trace);
                 builder.AddFakeLogging();
-                builder.Services.AddSingleton<ILoggerProvider>(new XUnitLoggerProvider(output, appendScope: false));
+                builder.Services.AddSingleton<ILoggerProvider>(new XUnitLoggerProvider(_output, appendScope: false));
             });
 
             await using ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
@@ -132,7 +135,10 @@ apiRules:
 
                 string xrefFileContent = await File.ReadAllTextAsync(xrefFilePath, TestContext.Current.CancellationToken);
 
-                logger.LogInformation("{FilePath}:\n\n{FileContent}", xrefFilePath, xrefFileContent);
+                if (logger.IsEnabled(LogLevel.Information))
+                {
+                    logger.LogInformation("{FilePath}:\n\n{FileContent}", xrefFilePath, xrefFileContent);
+                }
             }
 
             TestCommand testCommand = new(loggerFactory.CreateLogger<TestCommand>());
@@ -199,7 +205,7 @@ apiRules:
             {
                 builder.SetMinimumLevel(LogLevel.Trace);
                 builder.AddFakeLogging();
-                builder.Services.AddSingleton<ILoggerProvider>(new XUnitLoggerProvider(output, appendScope: false));
+                builder.Services.AddSingleton<ILoggerProvider>(new XUnitLoggerProvider(_output, appendScope: false));
             });
 
             await using ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
@@ -258,7 +264,10 @@ apiRules:
 
                 string xrefFileContent = await File.ReadAllTextAsync(xrefFilePath, TestContext.Current.CancellationToken);
 
-                logger.LogInformation("{FilePath}:\n\n{FileContent}", xrefFilePath, xrefFileContent);
+                if (logger.IsEnabled(LogLevel.Information))
+                {
+                    logger.LogInformation("{FilePath}:\n\n{FileContent}", xrefFilePath, xrefFileContent);
+                }
             }
 
             TestCommand testCommand = new(loggerFactory.CreateLogger<TestCommand>());
@@ -353,29 +362,29 @@ apiRules:
             {
                 try
                 {
-                    output.WriteLine($"Trying to delete directory: {directoryPath}");
+                    _output.WriteLine($"Trying to delete directory: {directoryPath}");
 
                     DeleteDirectory(directoryPath);
 
-                    output.WriteLine($"Directory deleted: {directoryPath}");
+                    _output.WriteLine($"Directory deleted: {directoryPath}");
 
                     break;
                 }
                 catch (Exception e)
                 {
-                    output.WriteLine($"Error deleting directory: {directoryPath}. Error: {e}");
+                    _output.WriteLine($"Error deleting directory: {directoryPath}. Error: {e}");
 
                     retries++;
 
                     if (retries < maxRetries)
                     {
-                        output.WriteLine($"Retrying in {delay}ms...");
+                        _output.WriteLine($"Retrying in {delay}ms...");
 
                         await Task.Delay(delay);
                     }
                     else
                     {
-                        output.WriteLine("Retry limit reached.");
+                        _output.WriteLine("Retry limit reached.");
                     }
                 }
             }

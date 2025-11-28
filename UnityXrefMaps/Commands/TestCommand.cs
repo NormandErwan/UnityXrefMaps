@@ -29,7 +29,10 @@ internal sealed class TestCommand : Command
                 {
                     result = false;
 
-                    logger.LogWarning("Invalid URL {Href} for {Uid} uid", reference.Href, reference.Uid);
+                    if (logger.IsEnabled(LogLevel.Warning))
+                    {
+                        logger.LogWarning("Invalid URL {Href} for {Uid} uid", reference.Href, reference.Uid);
+                    }
                 }
             }
 

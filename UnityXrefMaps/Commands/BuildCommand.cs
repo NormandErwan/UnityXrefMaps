@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using LibGit2Sharp;
 using Microsoft.Extensions.Logging;
 using UnityXrefMaps.DocFX;
+using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace UnityXrefMaps.Commands;
 
@@ -95,7 +96,10 @@ internal sealed partial class BuildCommand : RootCommand
             string generatedDocsPath = Path.Combine(docFxFileDirectoryPath, docFxConfiguration!.Build!.Destination!);
             string generatedXrefMapPath = Path.Combine(generatedDocsPath, Constants.DefaultXrefMapFileName!);
 
-            logger.LogInformation("Sync the Unity repository in '{RepositoryPath}'", Path.GetFullPath(repositoryPath!));
+            if (logger.IsEnabled(LogLevel.Information))
+            {
+                logger.LogInformation("Sync the Unity repository in '{RepositoryPath}'", Path.GetFullPath(repositoryPath!));
+            }
 
             using Repository repository = Git.GetSyncRepository(repositoryUrl!, repositoryPath!, repositoryBranch!, logger);
 
@@ -112,13 +116,19 @@ internal sealed partial class BuildCommand : RootCommand
 
                 string shortVersion = $"{versionMatch.Groups["majorVersion"].Value}.{versionMatch.Groups["minorVersion"].Value}";
 
-                logger.LogInformation("Generating Unity '{ShortVersion}' xref map", shortVersion);
+                if (logger.IsEnabled(LogLevel.Information))
+                {
+                    logger.LogInformation("Generating Unity '{ShortVersion}' xref map", shortVersion);
+                }
 
                 repository.HardReset(repositoryTag, logger);
 
                 string xrefMapPath = string.Format(xrefMapsPath!, repositoryTag); // ./<version>/xrefmap.yml
 
-                logger.LogInformation("Running DocFX on '{RepositoryTag}'", repositoryTag);
+                if (logger.IsEnabled(LogLevel.Information))
+                {
+                    logger.LogInformation("Running DocFX on '{RepositoryTag}'", repositoryTag);
+                }
 
                 await Utils.RunCommand(
                     "docfx", docFxArguments,
@@ -126,14 +136,20 @@ internal sealed partial class BuildCommand : RootCommand
                     {
                         if (!string.IsNullOrEmpty(value))
                         {
-                            logger.LogInformation("{Message}", value);
+                            if (logger.IsEnabled(LogLevel.Information))
+                            {
+                                logger.LogInformation("{Message}", value);
+                            }
                         }
                     },
                     value =>
                     {
                         if (!string.IsNullOrEmpty(value))
                         {
-                            logger.LogError("{Message}", value);
+                            if (logger.IsEnabled(LogLevel.Error))
+                            {
+                                logger.LogError("{Message}", value);
+                            }
                         }
                     },
                     cancellationToken);
@@ -142,12 +158,18 @@ internal sealed partial class BuildCommand : RootCommand
                 {
                     result = false;
 
-                    logger.LogError("Error: '{XrefMapFilePath}' for Unity '{RepositoryTag}' not generated", generatedXrefMapPath, repositoryTag);
+                    if (logger.IsEnabled(LogLevel.Error))
+                    {
+                        logger.LogError("Error: '{XrefMapFilePath}' for Unity '{RepositoryTag}' not generated", generatedXrefMapPath, repositoryTag);
+                    }
 
                     continue;
                 }
 
-                logger.LogInformation("Fixing hrefs in '{XrefMapFilePath}'", Path.GetFullPath(xrefMapPath));
+                if (logger.IsEnabled(LogLevel.Information))
+                {
+                    logger.LogInformation("Fixing hrefs in '{XrefMapFilePath}'", Path.GetFullPath(xrefMapPath));
+                }
 
                 await Utils.CopyFile(generatedXrefMapPath, xrefMapPath, cancellationToken);
 
