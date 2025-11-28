@@ -200,15 +200,18 @@ jobs:
             exit 1
           }
 
+          New-Item -Path ${{ runner.temp }}/Work -ItemType Directory
+
+          Copy-Item ${{ github.workspace }}/.github/workflows/resources/* {{ runner.temp }}/Work
+
           dotnet ${{ runner.temp }}/UnityXrefMaps/UnityXrefMaps.dll `
-            --repositoryPath '${{ runner.temp }}/UnityCsReference' `
+            --repositoryPath '${{ runner.temp }}/Work/UnityCsReference' `
             --repositoryTags "$($version.Raw)" `
             --trimNamespaces UnityEditor `
             --trimNamespaces UnityEngine `
             --xrefMapsPath "${{ runner.temp }}/_site/$($version.ShortVersion)/xrefmap.yml"
 
           Write-Output "shortVersion=$($version.ShortVersion)" >> $env:GITHUB_OUTPUT
-        working-directory: ${{ github.workspace }}/.github/workflows/resources
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
