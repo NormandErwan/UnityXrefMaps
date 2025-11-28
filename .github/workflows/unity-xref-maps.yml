@@ -189,7 +189,7 @@ jobs:
         working-directory: UnityXrefMaps
 
       - name: Generate Xref map
-        id: generate-xref-map
+        shell: pwsh
         run: |
           $versions = '${{ needs.get-unity-versions.outputs.unityResolvedVersions }}' | ConvertFrom-Json
 
