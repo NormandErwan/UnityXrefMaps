@@ -1,4 +1,4 @@
-﻿using Meziantou.Extensions.Logging.Xunit.v3;
+using Meziantou.Extensions.Logging.Xunit.v3;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Testing;

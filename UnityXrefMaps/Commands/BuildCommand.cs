@@ -1,4 +1,4 @@
-﻿using System.CommandLine;
+using System.CommandLine;
 using System.IO;
 using System.Text.Json;
 using System.Text.RegularExpressions;

@@ -1,4 +1,4 @@
-﻿using System.CommandLine;
+using System.CommandLine;
 using Microsoft.Extensions.Logging;
 
 namespace UnityXrefMaps.Commands;

@@ -1,4 +1,4 @@
-﻿namespace UnityXrefMaps;
+namespace UnityXrefMaps;
 
 internal static class Constants
 {
