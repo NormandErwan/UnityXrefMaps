@@ -203,7 +203,7 @@ jobs:
           dotnet UnityXrefMaps.dll `
             --repositoryPath '${{ runner.temp }}/UnityCsReference' `
             --repositoryTags "$($version.Raw)" `
-            --docFxConfigurationFilePath "$($env:GITHUB_WORKSPACE)/.github/resources/docfx.json" `
+            --docFxConfigurationFilePath '${{ github.workspace }}/.github/workflows/resources/docfx.json' `
             --trimNamespaces UnityEditor `
             --trimNamespaces UnityEngine `
             --xrefMapsPath "${{ runner.temp }}/_site/$($version.ShortVersion)/xrefmap.yml"
