@@ -202,7 +202,7 @@ jobs:
 
           New-Item -Path ${{ runner.temp }}/Work -ItemType Directory
 
-          Copy-Item ${{ github.workspace }}/.github/workflows/resources/* {{ runner.temp }}/Work
+          Copy-Item ${{ github.workspace }}/.github/workflows/resources/* ${{ runner.temp }}/Work
 
           dotnet ${{ runner.temp }}/UnityXrefMaps/UnityXrefMaps.dll `
             --repositoryPath '${{ runner.temp }}/Work/UnityCsReference' `
