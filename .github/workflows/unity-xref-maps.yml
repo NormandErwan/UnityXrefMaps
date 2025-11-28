@@ -10,8 +10,168 @@ on:
     - cron: '0 5 * * 0' # At 05:00 on Sunday
 
 jobs:
-  build:
+  get-unity-versions:
+    name: Get Unity Versions
+
     runs-on: ubuntu-latest
+
+    outputs:
+      unityReleasesShortVersions: ${{ steps.set-unity-releases-versions.outputs.shortVersions }}
+      unityResolvedVersions: ${{ steps.resolve-versions.outputs.versions }}
+
+    steps:
+      - name: Clone UnityCsReference repository
+        shell: pwsh
+        id: clone-unity-cs-reference-repository
+        run: |
+          $repositoryPath = '${{ runner.temp }}/UnityCsReference'
+
+          git clone https://github.com/Unity-Technologies/UnityCsReference.git $repositoryPath
+
+          Write-Output "repositoryPath=$repositoryPath" >> $env:GITHUB_OUTPUT
+
+      - name: Get UnityCsReference repository tags
+        shell: pwsh
+        id: get-unity-repository-tags
+        run: |
+          $repositoryPath = '${{ steps.clone-unity-cs-reference-repository.outputs.repositoryPath }}'
+
+          Push-Location $repositoryPath
+
+          $sortedRepositoryTagObjects = git tag
+            | ForEach-Object {
+              $match = [regex]::Match($_, '(?<Version>(?<ShortVersion>(\d+)\.(\d+))\.(\d+))')
+
+              @{
+                Raw = $_
+                Version = New-Object System.Version ($match.Groups['Version'].Value)
+              }
+            }
+            | Sort-Object -Property Version -Descending
+
+          Write-Output "tags=$($sortedRepositoryTagObjects | Select-Object -ExpandProperty Raw | ConvertTo-Json -Compress)" >> $env:GITHUB_OUTPUT
+
+      - name: Get Unity repository versions and filter
+        shell: pwsh
+        id: set-unity-repository-versions
+        run: |
+          $tagsString = '${{ steps.get-unity-repository-tags.outputs.tags }}' | ConvertFrom-Json
+
+          $repositoryVersions = $tagsString
+            | ForEach-Object {
+              $match = [regex]::Match($_, '(?<Version>(?<ShortVersion>(\d+)\.(\d+))\.(\d+))')
+
+              @{
+                RawString = $_
+                VersionString = $match.Groups['Version'].Value
+                ShortVersionString = $match.Groups['ShortVersion'].Value
+                Version = New-Object System.Version ($match.Groups['Version'].Value)
+              }
+            }
+            | Group-Object -Property ShortVersionString
+            | ForEach-Object {
+              [array] $sortedVersions = $_.Group | Sort-Object -Property Version -Descending
+
+              @{
+                ShortVersion = New-Object System.Version ($_.Name)
+                RawString = $sortedVersions[0].RawString
+                VersionString = $sortedVersions[0].VersionString
+                ShortVersionString = $sortedVersions[0].ShortVersionString
+              }
+            }
+            | Sort-Object -Property ShortVersion -Descending
+            | ForEach-Object {
+              @{
+                Raw = $_.RawString
+                ShortVersion = $_.ShortVersionString
+              }
+            }
+
+          Write-Output "shortVersions=$($repositoryVersions | Select-Object -ExpandProperty ShortVersion | ConvertTo-Json -Compress)" >> $env:GITHUB_OUTPUT
+          Write-Output "versions=$($repositoryVersions | ConvertTo-Json -Compress)" >> $env:GITHUB_OUTPUT
+
+      - name: Get Unity releases versions and filter
+        shell: pwsh
+        id: set-unity-releases-versions
+        run: |
+          $url = 'https://services.api.unity.com/unity/editor/release/v1/releases?' + `
+            'architecture=X86_64&' + `
+            'platform=WINDOWS&' + `
+            'limit=25&' + `
+            'stream=LTS&' + `
+            'stream=SUPPORTED&' + `
+            'stream=TECH'
+
+          $response = Invoke-RestMethod $url
+
+          $versions = $response.results
+            | Select-Object -ExpandProperty version
+            | ForEach-Object {
+              $match = [regex]::Match($_, '(?<Version>(?<ShortVersion>(\d+)\.(\d+))\.(\d+))')
+
+              @{
+                RawString = $_
+                VersionString = $match.Groups['Version'].Value
+                ShortVersionString = $match.Groups['ShortVersion'].Value
+                Version = New-Object System.Version ($match.Groups['Version'].Value)
+              }
+            }
+            | Group-Object -Property ShortVersionString
+            | ForEach-Object {
+              [array] $sortedVersions = $_.Group | Sort-Object -Property Version -Descending
+
+              @{
+                ShortVersion = New-Object System.Version ($_.Name)
+                RawString = $sortedVersions[0].RawString
+                VersionString = $sortedVersions[0].VersionString
+                ShortVersionString = $sortedVersions[0].ShortVersionString
+              }
+            }
+            | Sort-Object -Property ShortVersion -Descending
+            | ForEach-Object {
+              @{
+                Raw = $_.RawString
+                ShortVersion = $_.ShortVersionString
+              }
+            }
+
+          Write-Output "shortVersions=$($versions | Select-Object -ExpandProperty ShortVersion | ConvertTo-Json -Compress)" >> $env:GITHUB_OUTPUT
+          Write-Output "versions=$($versions | ConvertTo-Json -Compress)" >> $env:GITHUB_OUTPUT
+
+      - name: Resolve versions
+        shell: pwsh
+        id: resolve-versions
+        run: |
+          $repositoryVersions = '${{ steps.set-unity-repository-versions.outputs.versions }}' | ConvertFrom-Json
+          $versions = '${{ steps.set-unity-releases-versions.outputs.versions }}' | ConvertFrom-Json
+
+          $resolvedVersions = @()
+
+          foreach ($version in $versions)
+          {
+            $repositoryVersion = $repositoryVersions | Where-Object { $_.ShortVersion -eq $version.ShortVersion } | Select-Object -First 1
+
+            Write-Host "Version $($version.Raw) (Unity Releases API) has been resolved with $($repositoryVersion.Raw) (UnityCsReference repository)."
+
+            $resolvedVersions += $repositoryVersion
+          }
+
+          Write-Host "The git tags in the UnityCsReference repository are not synchronized and always lag behind the releases."
+
+          Write-Output "versions=$($resolvedVersions | ConvertTo-Json -Compress)" >> $env:GITHUB_OUTPUT
+
+  generate-xref-maps:
+    name: Generate Unity Xref Maps
+
+    runs-on: ubuntu-latest
+
+    needs: get-unity-versions
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        shortVersion: ${{ fromJson(needs.get-unity-versions.outputs.unityReleasesShortVersions) }}
 
     steps:
       - name: Checkout
@@ -28,13 +188,32 @@ jobs:
         run: dotnet build --no-restore --configuration Release --output ${{ runner.temp }}/UnityXrefMaps
         working-directory: UnityXrefMaps
 
-      - name: Run
-        run: ${{ runner.temp }}/UnityXrefMaps/UnityXrefMaps.dll
-        working-directory: UnityXrefMaps
+      - name: Generate Xref map
+        id: generate-xref-map
+        run: |
+          $versions = '${{ needs.get-unity-versions.outputs.unityResolvedVersions }}' | ConvertFrom-Json
+
+          $version = $versions | Where-Object { $_.ShortVersion -eq '${{ matrix.shortVersion }}' } | Select-Object -First 1
+
+          if ($version -eq $null)
+          {
+            exit 1
+          }
+
+          dotnet UnityXrefMaps.dll `
+            --repositoryPath '${{ runner.temp }}/UnityCsReference' `
+            --repositoryTags "$($version.Raw)" `
+            --docFxConfigurationFilePath "$($env:GITHUB_WORKSPACE)/.github/resources/docfx.json" `
+            --trimNamespaces UnityEditor `
+            --trimNamespaces UnityEngine `
+            --xrefMapsPath "${{ runner.temp }}/_site/$($version.ShortVersion)/xrefmap.yml"
+
+          Write-Output "shortVersion=$($version.ShortVersion)" >> $env:GITHUB_OUTPUT
+        working-directory: ${{ runner.temp }}/UnityXrefMaps
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _site
+          publish_dir: ${{ runner.temp }}/_site
           keep_files: true
