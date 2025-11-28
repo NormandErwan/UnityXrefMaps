@@ -200,16 +200,15 @@ jobs:
             exit 1
           }
 
-          dotnet UnityXrefMaps.dll `
+          dotnet ${{ runner.temp }}/UnityXrefMaps/UnityXrefMaps.dll `
             --repositoryPath '${{ runner.temp }}/UnityCsReference' `
             --repositoryTags "$($version.Raw)" `
-            --docFxConfigurationFilePath '${{ github.workspace }}/.github/workflows/resources/docfx.json' `
             --trimNamespaces UnityEditor `
             --trimNamespaces UnityEngine `
             --xrefMapsPath "${{ runner.temp }}/_site/$($version.ShortVersion)/xrefmap.yml"
 
           Write-Output "shortVersion=$($version.ShortVersion)" >> $env:GITHUB_OUTPUT
-        working-directory: ${{ runner.temp }}/UnityXrefMaps
+        working-directory: ${{ github.workspace }}/.github/workflows/resources
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
