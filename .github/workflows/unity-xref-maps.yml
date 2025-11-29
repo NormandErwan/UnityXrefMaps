@@ -233,12 +233,12 @@ jobs:
         uses: actions/download-artifact@v6
         with:
           pattern: xref_*
-          path: artifacts
+          path: ${{ runner.temp }}/xref_artifacts
           merge-multiple: true
 
       - name: Deploy pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./artifacts
+          publish_dir: ${{ runner.temp }}/xref_artifacts
           keep_files: true
