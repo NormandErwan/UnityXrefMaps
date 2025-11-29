@@ -167,6 +167,8 @@ jobs:
 
     needs: get-unity-versions
 
+    continue-on-error: true
+
     strategy:
       fail-fast: false
 
@@ -212,11 +214,12 @@ jobs:
             --docFxConfigurationFilePath '${{ runner.temp }}/Work/docfx.json' `
             --xrefMapsPath "${{ runner.temp }}/_site/$($version.ShortVersion)/xrefmap.yml"
 
-      - name: upload artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v5
         with:
           name: xref_${{ matrix.shortVersion }}
           path: ${{ runner.temp }}/_site
+          retention-days: 1
 
   deploy:
     name: Deploy
@@ -226,12 +229,13 @@ jobs:
     needs: generate-xref-maps
 
     steps:
-      - uses: actions/download-artifact@v6
+      - name: Download artifacts
+        uses: actions/download-artifact@v6
         with:
           pattern: xref_*
           path: artifacts
 
-      - name: Deploy
+      - name: Deploy pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
