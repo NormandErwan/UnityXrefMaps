@@ -1,0 +1,28 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "UnityCsReference/Projects/CSharp/*.csproj" ]
+        }
+      ],
+      "filter": "filterConfig.yml",
+      "dest": "UnityCsReference/_api",
+      "disableGitFeatures": true,
+      "allowCompilationErrors": true
+    }
+  ],
+  "build": {
+    "xref": [
+      "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
+    ],
+    "content": [
+      {
+        "src": "UnityCsReference/_api",
+        "files": [ "*.yml" ],
+        "dest": "UnityCsReference/_api"
+      }
+    ],
+    "dest": "UnityCsReference/_site"
+  }
+}
