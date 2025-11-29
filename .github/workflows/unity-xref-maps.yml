@@ -212,11 +212,28 @@ jobs:
             --docFxConfigurationFilePath '${{ runner.temp }}/Work/docfx.json' `
             --xrefMapsPath "${{ runner.temp }}/_site/$($version.ShortVersion)/xrefmap.yml"
 
-          Write-Output "shortVersion=$($version.ShortVersion)" >> $env:GITHUB_OUTPUT
+      - name: upload artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: xref_${{ matrix.shortVersion }}
+          path: ${{ runner.temp }}/_site
+
+  deploy:
+    name: Deploy
+
+    runs-on: ubuntu-latest
+
+    needs: generate-xref-maps
+
+    steps:
+      - uses: actions/download-artifact@v6
+        with:
+          pattern: xref_*
+          path: artifacts
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ runner.temp }}/_site
+          publish_dir: ./artifacts
           keep_files: true
