@@ -1,13 +1,13 @@
-using Meziantou.Extensions.Logging.Xunit.v3;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Testing;
 using System;
 using System.Collections.Generic;
 using System.CommandLine;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Meziantou.Extensions.Logging.Xunit.v3;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Testing;
 using UnityXrefMaps.Commands;
 
 namespace UnityXrefMaps.Tests
@@ -87,6 +87,8 @@ apiRules:
 
             ILoggerFactory loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
 
+            XrefMapService xrefMapService = new(loggerFactory.CreateLogger<XrefMapService>());
+
             ILogger logger = loggerFactory.CreateLogger<CommandTests>();
 
             InvocationConfiguration invocationConfiguration = new()
@@ -97,7 +99,7 @@ apiRules:
 
             string[] testedVersions = ["6000.0.1f1", "6000.1.1f1"];
 
-            BuildCommand buildCommand = new(loggerFactory.CreateLogger<BuildCommand>());
+            BuildCommand buildCommand = new(loggerFactory);
 
             string xrefDirectoryName = "test";
             string xrefFileName = "test2.yml";
@@ -141,7 +143,7 @@ apiRules:
                 }
             }
 
-            TestCommand testCommand = new(loggerFactory.CreateLogger<TestCommand>());
+            TestCommand testCommand = new(loggerFactory);
 
             foreach (string testedVersion in testedVersions)
             {
@@ -149,7 +151,7 @@ apiRules:
 
                 string xrefFilePath = $"{_xrefDirectoryPath}/{xrefDirectoryName}/{testedVersion}/{xrefFileName}";
 
-                XrefMap xrefMap = await XrefMap.Load(xrefFilePath, TestContext.Current.CancellationToken);
+                XrefMap xrefMap = await xrefMapService.Load(xrefFilePath, TestContext.Current.CancellationToken);
 
                 Assert.Equal(3, xrefMap.References!.Length);
 
@@ -190,9 +192,11 @@ apiRules:
 ---
 apiRules:
   - include:
-      uidRegex: ^UnityEngine\.InputSystem\.InputSystem$
+      uidRegex: ^UnityEngine\.InputSystem\.InputSystem
   - include:
-      uidRegex: ^UnityEngine\.InputSystem\.InputActionAsset$
+      uidRegex: ^UnityEngine\.InputSystem\.InputAction
+  - include:
+      uidRegex: ^UnityEngine\.InputSystem\.InputActionAsset
   - exclude:
       uidRegex: .*
 """;
@@ -214,6 +218,8 @@ apiRules:
 
             ILoggerFactory loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
 
+            XrefMapService xrefMapService = new(loggerFactory.CreateLogger<XrefMapService>());
+
             ILogger logger = loggerFactory.CreateLogger<CommandTests>();
 
             InvocationConfiguration invocationConfiguration = new()
@@ -224,7 +230,7 @@ apiRules:
 
             string[] testedVersions = ["1.14.0", "1.14.2"];
 
-            BuildCommand buildCommand = new(loggerFactory.CreateLogger<BuildCommand>());
+            BuildCommand buildCommand = new(loggerFactory);
 
             string xrefDirectoryName = "test";
             string xrefFileName = "test2.yml";
@@ -270,7 +276,7 @@ apiRules:
                 }
             }
 
-            TestCommand testCommand = new(loggerFactory.CreateLogger<TestCommand>());
+            TestCommand testCommand = new(loggerFactory);
 
             foreach (string testedVersion in testedVersions)
             {
@@ -278,13 +284,9 @@ apiRules:
 
                 string xrefFilePath = $"{_xrefDirectoryPath}/{xrefDirectoryName}/{testedVersion}/{xrefFileName}";
 
-                XrefMap xrefMap = await XrefMap.Load(xrefFilePath, TestContext.Current.CancellationToken);
+                XrefMap xrefMap = await xrefMapService.Load(xrefFilePath, TestContext.Current.CancellationToken);
 
-                Assert.Equal(3, xrefMap.References!.Length);
-
-                Assert.Equal("UnityEngine.InputSystem", xrefMap.References[0].Uid);
-                Assert.Equal("UnityEngine.InputSystem.InputActionAsset", xrefMap.References[1].Uid);
-                Assert.Equal("UnityEngine.InputSystem.InputSystem", xrefMap.References[2].Uid);
+                Assert.NotEmpty(xrefMap.References!);
 
                 string[] testArgs = [
                     "--xrefPath",

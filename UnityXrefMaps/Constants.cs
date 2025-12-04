@@ -37,4 +37,9 @@ internal static class Constants
     /// The default DocFX config file path.
     /// </summary>
     public const string DefaultDocFxConfigurationFilePath = "docfx.json";
+
+    /// <summary>
+    /// The default regular expression to check if it is a package.
+    /// </summary>
+    public const string DefaultPackageRegex = @"https://docs.unity3d.com/Packages/";
 }

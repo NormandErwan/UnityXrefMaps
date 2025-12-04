@@ -5,7 +5,7 @@ namespace UnityXrefMaps.Commands;
 
 internal sealed class TestCommand : Command
 {
-    public TestCommand(ILogger<TestCommand> logger) : base("test", $"Check that the links in the {Constants.DefaultXrefMapFileName} file are valid.")
+    public TestCommand(ILoggerFactory loggerFactory) : base("test", $"Check that the links in the {Constants.DefaultXrefMapFileName} file are valid.")
     {
         Option<string> xrefPathOption = new("--xrefPath")
         {
@@ -19,9 +19,13 @@ internal sealed class TestCommand : Command
         {
             bool result = true;
 
+            XrefMapService xrefMapService = new(loggerFactory.CreateLogger<XrefMapService>());
+
+            ILogger logger = loggerFactory.CreateLogger<BuildCommand>();
+
             string? xrefPath = parseResult.GetValue(xrefPathOption);
 
-            XrefMap xrefMap = await XrefMap.Load(xrefPath!, cancellationToken);
+            XrefMap xrefMap = await xrefMapService.Load(xrefPath!, cancellationToken);
 
             foreach (XrefMapReference reference in xrefMap.References!)
             {

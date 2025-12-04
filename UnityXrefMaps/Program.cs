@@ -7,7 +7,7 @@ ILoggerFactory factory = LoggerFactory.Create(builder =>
     builder.AddConsole();
 });
 
-RootCommand rootCommand = new BuildCommand(factory.CreateLogger<BuildCommand>());
-rootCommand.Subcommands.Add(new TestCommand(factory.CreateLogger<TestCommand>()));
+RootCommand rootCommand = new BuildCommand(factory);
+rootCommand.Subcommands.Add(new TestCommand(factory));
 
 return await rootCommand.Parse(args).InvokeAsync();

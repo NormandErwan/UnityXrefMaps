@@ -1,5 +1,6 @@
 using System.CommandLine;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using LibGit2Sharp;
@@ -11,7 +12,7 @@ namespace UnityXrefMaps.Commands;
 
 internal sealed partial class BuildCommand : RootCommand
 {
-    public BuildCommand(ILogger<BuildCommand> logger)
+    public BuildCommand(ILoggerFactory loggerFactory)
     {
         Option<string> repositoryUrlOption = new("--repositoryUrl")
         {
@@ -62,6 +63,11 @@ internal sealed partial class BuildCommand : RootCommand
         {
             Description = "Namespaces for trimming."
         };
+        Option<string> packageRegexOption = new("--packageRegex")
+        {
+            Description = "The regular expression to check if it is a package.",
+            DefaultValueFactory = _ => Constants.DefaultPackageRegex
+        };
 
         Options.Add(repositoryUrlOption);
         Options.Add(repositoryBranchOption);
@@ -72,10 +78,13 @@ internal sealed partial class BuildCommand : RootCommand
         Options.Add(docFxAdditionalArgumentsOption);
         Options.Add(xrefMapsPathOption);
         Options.Add(trimNamespacesOption);
+        Options.Add(packageRegexOption);
 
         SetAction(async (parseResult, cancellationToken) =>
         {
             bool result = true;
+
+            XrefMapService xrefMapService = new(loggerFactory.CreateLogger<XrefMapService>());
 
             string? repositoryUrl = parseResult.GetValue(repositoryUrlOption);
             string? repositoryBranch = parseResult.GetValue(repositoryBranchOption);
@@ -86,6 +95,9 @@ internal sealed partial class BuildCommand : RootCommand
             string? docFxAdditionalArguments = parseResult.GetValue(docFxAdditionalArgumentsOption);
             string? xrefMapsPath = parseResult.GetValue(xrefMapsPathOption);
             string[]? trimNamespaces = parseResult.GetValue(trimNamespacesOption);
+            string? packageRegex = parseResult.GetValue(packageRegexOption);
+
+            bool isPackage = Regex.IsMatch(apiUrl!, packageRegex!);
 
             using Stream docFxStream = File.OpenRead(docFxFilePath!);
 
@@ -95,6 +107,8 @@ internal sealed partial class BuildCommand : RootCommand
 
             string generatedDocsPath = Path.Combine(docFxFileDirectoryPath, docFxConfiguration!.Build!.Destination!);
             string generatedXrefMapPath = Path.Combine(generatedDocsPath, Constants.DefaultXrefMapFileName!);
+
+            ILogger logger = loggerFactory.CreateLogger<BuildCommand>();
 
             if (logger.IsEnabled(LogLevel.Information))
             {
@@ -173,11 +187,11 @@ internal sealed partial class BuildCommand : RootCommand
 
                 await Utils.CopyFile(generatedXrefMapPath, xrefMapPath, cancellationToken);
 
-                XrefMap xrefMap = await XrefMap.Load(xrefMapPath, cancellationToken);
+                XrefMap xrefMap = await xrefMapService.Load(xrefMapPath, cancellationToken);
 
-                xrefMap.FixHrefs(string.Format(apiUrl!, shortVersion), trimNamespaces!);
+                xrefMap.References = [.. xrefMapService.Process(string.Format(apiUrl!, shortVersion), xrefMap.References!, trimNamespaces!, isPackage)];
 
-                await xrefMap.Save(xrefMapPath, cancellationToken);
+                await xrefMapService.Save(xrefMapPath, xrefMap, cancellationToken);
             }
 
             return result ? 0 : 1;
