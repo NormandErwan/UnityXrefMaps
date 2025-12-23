@@ -32,9 +32,9 @@ internal sealed partial class BuildCommand : RootCommand
         };
         Option<string[]> repositoryTagsOption = new("--repositoryTags")
         {
-            Description = "The repository tags to use to generate the documentation. " +
-                "That is, the versions of the Unity editor (6000.0.1f1, 6000.1.1f1) or the versions of the Unity package (1.0.0, 1.1.0).",
-            Required = true
+            Description = "The repository tags to use to generate the xrefmap file. " +
+                "That is, the versions of the Unity editor (6000.0.1f1, 6000.1.1f1) or the versions of the Unity package (1.0.0, 1.1.0). " +
+                "If not set, it will resolve all tags in the repository and generate a xrefmap file for each x.y (examples: 6000.0, 6000.1) based on the most recent patch."
         };
         Option<string> apiUrlOption = new("--apiUrl")
         {
@@ -124,7 +124,12 @@ internal sealed partial class BuildCommand : RootCommand
                 docFxArguments += ' ' + docFxAdditionalArguments;
             }
 
-            foreach (string repositoryTag in repositoryTags!)
+            if (repositoryTags == null || repositoryTags.Length == 0)
+            {
+                repositoryTags = [.. repository.GetLatestVersions().Select(v => v.release)];
+            }
+
+            foreach (string repositoryTag in repositoryTags)
             {
                 Match versionMatch = VersionRegex().Match(repositoryTag);
 
