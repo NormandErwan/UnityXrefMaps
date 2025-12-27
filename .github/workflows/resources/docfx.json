@@ -9,15 +9,16 @@
       "filter": "filterConfig.yml",
       "dest": "UnityCsReference/_api",
       "disableGitFeatures": true,
-      "noRestore": true,
+      "allowCompilationErrors": true,
       "properties": {
-          "Configuration": "Debug"
+        "AllowUnsafeBlocks": "true"
       }
     }
   ],
-  "build":
-  {
-    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+  "build": {
+    "xref": [
+      "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
+    ],
     "content": [
       {
         "src": "UnityCsReference/_api",

@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "DocFxForUnity": {
+      "commandName": "Project",
+      "commandLineArgs": "--repositoryTags 6000.0.1f1 --docFxAdditionalArguments \"--verbose\" --trimNamespaces UnityEditor --trimNamespaces UnityEngine"
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json"
+}
