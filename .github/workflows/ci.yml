@@ -7,6 +7,12 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
