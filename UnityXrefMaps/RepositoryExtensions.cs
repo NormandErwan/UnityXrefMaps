@@ -20,8 +20,18 @@ internal static partial class RepositoryExtensions
     public static IEnumerable<string> GetTags(this Repository repository)
     {
         return repository.Tags
-            .OrderByDescending(tag => (tag.Target as Commit)!.Author.When)
+            .OrderByDescending(tag => GetTaggedCommit(tag)?.Author.When ?? DateTimeOffset.MinValue)
             .Select(tag => tag.FriendlyName);
+    }
+
+    // Lightweight tags point directly to a Commit; annotated tags point to a TagAnnotation
+    // whose own Target is the Commit (possibly through multiple layers of annotation).
+    private static Commit? GetTaggedCommit(Tag tag)
+    {
+        GitObject target = tag.Target;
+        while (target is TagAnnotation annotation)
+            target = annotation.Target;
+        return target as Commit;
     }
 
     /// <summary>
