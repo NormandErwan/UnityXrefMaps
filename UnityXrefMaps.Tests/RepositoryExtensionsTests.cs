@@ -29,7 +29,7 @@ public sealed class RepositoryExtensionsTests : IDisposable
     {
         // Arrange: one commit + one annotated tag (tag.Target is TagAnnotation, not Commit)
         File.WriteAllText(Path.Combine(_tempPath, "file.txt"), "content");
-        Commands.Stage(_repository, "*");
+        Commands.Stage(_repository, "file.txt");
         var signature = new Signature("test", "test@test.com", DateTimeOffset.UtcNow);
         Commit commit = _repository.Commit("Initial commit", signature, signature);
         _repository.Tags.Add("6000.0.1f1", commit, signature, "Unity 6000.0.1f1 release");
