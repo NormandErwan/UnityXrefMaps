@@ -72,5 +72,76 @@ namespace UnityXrefMaps.Tests
 
             Assert.Equal(expected, XRefHrefFixer.Fix(apiUrl, xrefMapReference, Array.Empty<string>(), true));
         }
+
+        /// <summary>
+        /// The regex that extracts the bare method name requires a '(' character to match.
+        /// When the display name has no parentheses — e.g. Name = "MyMethod" — the regex
+        /// fails, producing an empty string. The code then called uid.Substring(0, -1),
+        /// which throws ArgumentOutOfRangeException.
+        /// </summary>
+        [Fact]
+        public void Fix_PackageMethodWithNoParenthesesInName_DoesNotThrow()
+        {
+            XrefMapReference xrefMapReference = new()
+            {
+                CommentId = "M:MyNamespace.MyClass.MyMethod",
+                Name = "MyMethod",
+            };
+
+            string result = XRefHrefFixer.Fix(
+                "https://docs.unity3d.com/Packages/test@1.0/api/",
+                xrefMapReference,
+                Array.Empty<string>(),
+                isPackage: true);
+
+            Assert.StartsWith("https://docs.unity3d.com/Packages/test@1.0/api/", result);
+        }
+
+        /// <summary>
+        /// When the method name extracted from the display name — e.g. "DifferentMethod" from
+        /// "DifferentMethod()" — does not appear in the uid, e.g.
+        /// "MyNamespace.MyClass.ActualMethod", IndexOf returns -1. The code then called
+        /// uid.Substring(0, -2), which throws ArgumentOutOfRangeException.
+        /// </summary>
+        [Fact]
+        public void Fix_PackageMethodNameAbsentFromUid_DoesNotThrow()
+        {
+            XrefMapReference xrefMapReference = new()
+            {
+                CommentId = "M:MyNamespace.MyClass.ActualMethod",
+                Name = "DifferentMethod()",
+            };
+
+            string result = XRefHrefFixer.Fix(
+                "https://docs.unity3d.com/Packages/test@1.0/api/",
+                xrefMapReference,
+                Array.Empty<string>(),
+                isPackage: true);
+
+            Assert.StartsWith("https://docs.unity3d.com/Packages/test@1.0/api/", result);
+        }
+
+        /// <summary>
+        /// When the property name — e.g. "DifferentProperty" — does not appear in the uid,
+        /// e.g. "MyNamespace.MyClass.ActualProperty", IndexOf returns -1. The code then called
+        /// uid.Substring(0, -2), which throws ArgumentOutOfRangeException.
+        /// </summary>
+        [Fact]
+        public void Fix_PackagePropertyNameAbsentFromUid_DoesNotThrow()
+        {
+            XrefMapReference xrefMapReference = new()
+            {
+                CommentId = "P:MyNamespace.MyClass.ActualProperty",
+                Name = "DifferentProperty",
+            };
+
+            string result = XRefHrefFixer.Fix(
+                "https://docs.unity3d.com/Packages/test@1.0/api/",
+                xrefMapReference,
+                Array.Empty<string>(),
+                isPackage: true);
+
+            Assert.StartsWith("https://docs.unity3d.com/Packages/test@1.0/api/", result);
+        }
     }
 }
