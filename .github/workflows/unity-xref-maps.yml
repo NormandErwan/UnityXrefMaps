@@ -94,7 +94,7 @@ jobs:
         shell: pwsh
         id: set-unity-releases-versions
         run: |
-          $baseUrl = 'https://services.api.unity.com/unity/editor/release/v1/releases?' + `
+          $url = 'https://services.api.unity.com/unity/editor/release/v1/releases?' + `
             'architecture=X86_64&' + `
             'platform=WINDOWS&' + `
             'limit=25&' + `
@@ -102,17 +102,9 @@ jobs:
             'stream=SUPPORTED&' + `
             'stream=TECH'
 
-          $allResults = @()
-          $offset = 0
+          $response = Invoke-RestMethod $url
 
-          do
-          {
-            $response = Invoke-RestMethod "$baseUrl&offset=$offset"
-            $allResults += $response.results
-            $offset += 25
-          } while ($response.results.Count -gt 0)
-
-          $versions = $allResults
+          $versions = $response.results
             | Select-Object -ExpandProperty version
             | ForEach-Object {
               $match = [regex]::Match($_, '(?<Version>(?<ShortVersion>(\d+)\.(\d+))\.(\d+))')
@@ -221,8 +213,6 @@ jobs:
             --trimNamespaces UnityEngine `
             --docFxConfigurationFilePath '${{ runner.temp }}/Work/docfx.json' `
             --xrefMapsPath "${{ runner.temp }}/_site/$($version.ShortVersion)/xrefmap.yml"
-
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Upload artifact
         uses: actions/upload-artifact@v5
