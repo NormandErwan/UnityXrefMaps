@@ -39,15 +39,30 @@ namespace UnityXrefMaps
                 case "M":
                     Match methodNameMatch = MethodNameRegex().Match(name);
 
-                    string methodName = name.Substring(0, methodNameMatch.Groups[1].Value.Length);
+                    // regex requires '(' — fall back to the full name when it does not match
+                    string methodName = methodNameMatch.Success
+                        ? name.Substring(0, methodNameMatch.Groups[1].Value.Length)
+                        : name;
 
-                    classFullName = uid.Substring(0, uid.IndexOf(methodName) - 1);
+                    int methodIdx = uid.IndexOf(methodName);
+                    if (methodIdx < 0)
+                    {
+                        return $"{apiUrl}{NonWordCharRegex().Replace(uid, "_")}.html";
+                    }
+
+                    classFullName = uid.Substring(0, methodIdx - 1);
 
                     return $"{apiUrl}{classFullName}.html#{NonWordCharRegex().Replace(uid, "_")}";
                 case "P":
                 case "F":
                 default:
-                    classFullName = uid.Substring(0, uid.IndexOf(name) - 1);
+                    int nameIdx = uid.IndexOf(name);
+                    if (nameIdx < 0)
+                    {
+                        return $"{apiUrl}{NonWordCharRegex().Replace(uid, "_")}.html";
+                    }
+
+                    classFullName = uid.Substring(0, nameIdx - 1);
 
                     return $"{apiUrl}{classFullName}.html#{NonWordCharRegex().Replace(uid, "_")}";
             }
