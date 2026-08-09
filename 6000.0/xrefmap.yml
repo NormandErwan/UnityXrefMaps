@@ -17681,6 +17681,36 @@ references:
   fullName.vb: 
   nameWithType: AndroidDeviceFilterData.vulkanApiVersionString
   nameWithType.vb: 
+- uid: UnityEditor.AndroidDisplayOptions
+  name: AndroidDisplayOptions
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AndroidDisplayOptions.html
+  commentId: T:UnityEditor.AndroidDisplayOptions
+  isSpec: 
+  fullName: UnityEditor.AndroidDisplayOptions
+  fullName.vb: 
+  nameWithType: AndroidDisplayOptions
+  nameWithType.vb: 
+- uid: UnityEditor.AndroidDisplayOptions.DetectPresentationDisplay
+  name: DetectPresentationDisplay
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AndroidDisplayOptions.DetectPresentationDisplay.html
+  commentId: F:UnityEditor.AndroidDisplayOptions.DetectPresentationDisplay
+  isSpec: 
+  fullName: UnityEditor.AndroidDisplayOptions.DetectPresentationDisplay
+  fullName.vb: 
+  nameWithType: AndroidDisplayOptions.DetectPresentationDisplay
+  nameWithType.vb: 
+- uid: UnityEditor.AndroidDisplayOptions.None
+  name: None
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AndroidDisplayOptions.None.html
+  commentId: F:UnityEditor.AndroidDisplayOptions.None
+  isSpec: 
+  fullName: UnityEditor.AndroidDisplayOptions.None
+  fullName.vb: 
+  nameWithType: AndroidDisplayOptions.None
+  nameWithType.vb: 
 - uid: UnityEditor.AndroidETC2Fallback
   name: AndroidETC2Fallback
   name.vb: 
@@ -18100,6 +18130,16 @@ references:
   fullName: UnityEditor.AndroidSdkVersions.AndroidApiLevel36
   fullName.vb: 
   nameWithType: AndroidSdkVersions.AndroidApiLevel36
+  nameWithType.vb: 
+- uid: UnityEditor.AndroidSdkVersions.AndroidApiLevel37
+  name: AndroidApiLevel37
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AndroidSdkVersions.AndroidApiLevel37.html
+  commentId: F:UnityEditor.AndroidSdkVersions.AndroidApiLevel37
+  isSpec: 
+  fullName: UnityEditor.AndroidSdkVersions.AndroidApiLevel37
+  fullName.vb: 
+  nameWithType: AndroidSdkVersions.AndroidApiLevel37
   nameWithType.vb: 
 - uid: UnityEditor.AndroidSdkVersions.AndroidApiLevelAuto
   name: AndroidApiLevelAuto
@@ -22881,6 +22921,26 @@ references:
   fullName.vb: UnityEditor.AssetDatabase.ExtractAsset(UnityEngine.Object, String)
   nameWithType: AssetDatabase.ExtractAsset(Object, string)
   nameWithType.vb: AssetDatabase.ExtractAsset(Object, String)
+- uid: UnityEditor.AssetDatabase.FindAssetGUIDs(System.String)
+  name: FindAssetGUIDs(string)
+  name.vb: FindAssetGUIDs(String)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AssetDatabase.FindAssetGUIDs.html
+  commentId: M:UnityEditor.AssetDatabase.FindAssetGUIDs(System.String)
+  isSpec: 
+  fullName: UnityEditor.AssetDatabase.FindAssetGUIDs(string)
+  fullName.vb: UnityEditor.AssetDatabase.FindAssetGUIDs(String)
+  nameWithType: AssetDatabase.FindAssetGUIDs(string)
+  nameWithType.vb: AssetDatabase.FindAssetGUIDs(String)
+- uid: UnityEditor.AssetDatabase.FindAssetGUIDs(System.String,System.String[])
+  name: FindAssetGUIDs(string, string[])
+  name.vb: FindAssetGUIDs(String, String())
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AssetDatabase.FindAssetGUIDs.html
+  commentId: M:UnityEditor.AssetDatabase.FindAssetGUIDs(System.String,System.String[])
+  isSpec: 
+  fullName: UnityEditor.AssetDatabase.FindAssetGUIDs(string, string[])
+  fullName.vb: UnityEditor.AssetDatabase.FindAssetGUIDs(String, String())
+  nameWithType: AssetDatabase.FindAssetGUIDs(string, string[])
+  nameWithType.vb: AssetDatabase.FindAssetGUIDs(String, String())
 - uid: UnityEditor.AssetDatabase.FindAssets(System.String)
   name: FindAssets(string)
   name.vb: FindAssets(String)
@@ -23741,6 +23801,26 @@ references:
   fullName.vb: UnityEditor.AssetDatabase.LoadAssetAtPath(Of T)(String)
   nameWithType: AssetDatabase.LoadAssetAtPath<T>(string)
   nameWithType.vb: AssetDatabase.LoadAssetAtPath(Of T)(String)
+- uid: UnityEditor.AssetDatabase.LoadAssetByGUID(UnityEditor.GUID,System.Type)
+  name: LoadAssetByGUID(GUID, Type)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AssetDatabase.LoadAssetByGUID.html
+  commentId: M:UnityEditor.AssetDatabase.LoadAssetByGUID(UnityEditor.GUID,System.Type)
+  isSpec: 
+  fullName: UnityEditor.AssetDatabase.LoadAssetByGUID(UnityEditor.GUID, System.Type)
+  fullName.vb: 
+  nameWithType: AssetDatabase.LoadAssetByGUID(GUID, Type)
+  nameWithType.vb: 
+- uid: UnityEditor.AssetDatabase.LoadAssetByGUID``1(UnityEditor.GUID)
+  name: LoadAssetByGUID<T>(GUID)
+  name.vb: LoadAssetByGUID(Of T)(GUID)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AssetDatabase.LoadAssetByGUID.html
+  commentId: M:UnityEditor.AssetDatabase.LoadAssetByGUID``1(UnityEditor.GUID)
+  isSpec: 
+  fullName: UnityEditor.AssetDatabase.LoadAssetByGUID<T>(UnityEditor.GUID)
+  fullName.vb: UnityEditor.AssetDatabase.LoadAssetByGUID(Of T)(UnityEditor.GUID)
+  nameWithType: AssetDatabase.LoadAssetByGUID<T>(GUID)
+  nameWithType.vb: AssetDatabase.LoadAssetByGUID(Of T)(GUID)
 - uid: UnityEditor.AssetDatabase.LoadMainAssetAtPath(System.String)
   name: LoadMainAssetAtPath(string)
   name.vb: LoadMainAssetAtPath(String)
@@ -30471,6 +30551,16 @@ references:
   fullName.vb: 
   nameWithType: NamedBuildTarget.NintendoSwitch
   nameWithType.vb: 
+- uid: UnityEditor.Build.NamedBuildTarget.NintendoSwitch2
+  name: NintendoSwitch2
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Build.NamedBuildTarget.NintendoSwitch2.html
+  commentId: F:UnityEditor.Build.NamedBuildTarget.NintendoSwitch2
+  isSpec: 
+  fullName: UnityEditor.Build.NamedBuildTarget.NintendoSwitch2
+  fullName.vb: 
+  nameWithType: NamedBuildTarget.NintendoSwitch2
+  nameWithType.vb: 
 - uid: UnityEditor.Build.NamedBuildTarget.PS4
   name: PS4
   name.vb: 
@@ -33411,16 +33501,6 @@ references:
   fullName.vb: 
   nameWithType: BuildTarget.QNX
   nameWithType.vb: 
-- uid: UnityEditor.BuildTarget.ReservedCFE
-  name: ReservedCFE
-  name.vb: 
-  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/BuildTarget.ReservedCFE.html
-  commentId: F:UnityEditor.BuildTarget.ReservedCFE
-  isSpec: 
-  fullName: UnityEditor.BuildTarget.ReservedCFE
-  fullName.vb: 
-  nameWithType: BuildTarget.ReservedCFE
-  nameWithType.vb: 
 - uid: UnityEditor.BuildTarget.SamsungTV
   name: SamsungTV
   name.vb: 
@@ -33540,6 +33620,16 @@ references:
   fullName: UnityEditor.BuildTarget.Switch
   fullName.vb: 
   nameWithType: BuildTarget.Switch
+  nameWithType.vb: 
+- uid: UnityEditor.BuildTarget.Switch2
+  name: Switch2
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/BuildTarget.Switch2.html
+  commentId: F:UnityEditor.BuildTarget.Switch2
+  isSpec: 
+  fullName: UnityEditor.BuildTarget.Switch2
+  fullName.vb: 
+  nameWithType: BuildTarget.Switch2
   nameWithType.vb: 
 - uid: UnityEditor.BuildTarget.Tizen
   name: Tizen
@@ -33871,16 +33961,6 @@ references:
   fullName.vb: 
   nameWithType: BuildTargetGroup.QNX
   nameWithType.vb: 
-- uid: UnityEditor.BuildTargetGroup.ReservedCFE
-  name: ReservedCFE
-  name.vb: 
-  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/BuildTargetGroup.ReservedCFE.html
-  commentId: F:UnityEditor.BuildTargetGroup.ReservedCFE
-  isSpec: 
-  fullName: UnityEditor.BuildTargetGroup.ReservedCFE
-  fullName.vb: 
-  nameWithType: BuildTargetGroup.ReservedCFE
-  nameWithType.vb: 
 - uid: UnityEditor.BuildTargetGroup.SamsungTV
   name: SamsungTV
   name.vb: 
@@ -33920,6 +34000,16 @@ references:
   fullName: UnityEditor.BuildTargetGroup.Switch
   fullName.vb: 
   nameWithType: BuildTargetGroup.Switch
+  nameWithType.vb: 
+- uid: UnityEditor.BuildTargetGroup.Switch2
+  name: Switch2
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/BuildTargetGroup.Switch2.html
+  commentId: F:UnityEditor.BuildTargetGroup.Switch2
+  isSpec: 
+  fullName: UnityEditor.BuildTargetGroup.Switch2
+  fullName.vb: 
+  nameWithType: BuildTargetGroup.Switch2
   nameWithType.vb: 
 - uid: UnityEditor.BuildTargetGroup.Tizen
   name: Tizen
@@ -38570,6 +38660,36 @@ references:
   fullName: UnityEditor.DecoratorDrawer.attribute
   fullName.vb: 
   nameWithType: DecoratorDrawer.attribute
+  nameWithType.vb: 
+- uid: UnityEditor.DeeplinkHandlerAttribute
+  name: DeeplinkHandlerAttribute
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/DeeplinkHandlerAttribute.html
+  commentId: T:UnityEditor.DeeplinkHandlerAttribute
+  isSpec: 
+  fullName: UnityEditor.DeeplinkHandlerAttribute
+  fullName.vb: 
+  nameWithType: DeeplinkHandlerAttribute
+  nameWithType.vb: 
+- uid: UnityEditor.DeeplinkHandlerAttribute.#ctor(System.String)
+  name: DeeplinkHandlerAttribute(string)
+  name.vb: New(String)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/DeeplinkHandlerAttribute-ctor.html
+  commentId: M:UnityEditor.DeeplinkHandlerAttribute.#ctor(System.String)
+  isSpec: 
+  fullName: UnityEditor.DeeplinkHandlerAttribute.DeeplinkHandlerAttribute(string)
+  fullName.vb: UnityEditor.DeeplinkHandlerAttribute.New(String)
+  nameWithType: DeeplinkHandlerAttribute.DeeplinkHandlerAttribute(string)
+  nameWithType.vb: DeeplinkHandlerAttribute.New(String)
+- uid: UnityEditor.DeeplinkHandlerAttribute.HandlerNamespace
+  name: HandlerNamespace
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/DeeplinkHandlerAttribute.HandlerNamespace.html
+  commentId: P:UnityEditor.DeeplinkHandlerAttribute.HandlerNamespace
+  isSpec: 
+  fullName: UnityEditor.DeeplinkHandlerAttribute.HandlerNamespace
+  fullName.vb: 
+  nameWithType: DeeplinkHandlerAttribute.HandlerNamespace
   nameWithType.vb: 
 - uid: UnityEditor.DefaultAsset
   name: DefaultAsset
@@ -48561,6 +48681,16 @@ references:
   fullName.vb: 
   nameWithType: EditorSettings.externalVersionControl
   nameWithType.vb: 
+- uid: UnityEditor.EditorSettings.forceAssetUnloadAndGCOnSceneLoad
+  name: forceAssetUnloadAndGCOnSceneLoad
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/EditorSettings-forceAssetUnloadAndGCOnSceneLoad.html
+  commentId: P:UnityEditor.EditorSettings.forceAssetUnloadAndGCOnSceneLoad
+  isSpec: 
+  fullName: UnityEditor.EditorSettings.forceAssetUnloadAndGCOnSceneLoad
+  fullName.vb: 
+  nameWithType: EditorSettings.forceAssetUnloadAndGCOnSceneLoad
+  nameWithType.vb: 
 - uid: UnityEditor.EditorSettings.gameObjectNamingDigits
   name: gameObjectNamingDigits
   name.vb: 
@@ -50761,6 +50891,16 @@ references:
   fullName.vb: 
   nameWithType: EditorUserBuildSettings.switchNVNAftermath
   nameWithType.vb: 
+- uid: UnityEditor.EditorUserBuildSettings.switchNVNAftermathLevel
+  name: switchNVNAftermathLevel
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/EditorUserBuildSettings-switchNVNAftermathLevel.html
+  commentId: P:UnityEditor.EditorUserBuildSettings.switchNVNAftermathLevel
+  isSpec: 
+  fullName: UnityEditor.EditorUserBuildSettings.switchNVNAftermathLevel
+  fullName.vb: 
+  nameWithType: EditorUserBuildSettings.switchNVNAftermathLevel
+  nameWithType.vb: 
 - uid: UnityEditor.EditorUserBuildSettings.switchNVNDrawValidation
   name: switchNVNDrawValidation
   name.vb: 
@@ -52161,6 +52301,16 @@ references:
   fullName.vb: UnityEditor.EditorUtility.WarnPrefab(UnityEngine.Object, String, String, String)
   nameWithType: EditorUtility.WarnPrefab(Object, string, string, string)
   nameWithType.vb: EditorUtility.WarnPrefab(Object, String, String, String)
+- uid: UnityEditor.EditorUtility.activePlayModeTint
+  name: activePlayModeTint
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/EditorUtility-activePlayModeTint.html
+  commentId: P:UnityEditor.EditorUtility.activePlayModeTint
+  isSpec: 
+  fullName: UnityEditor.EditorUtility.activePlayModeTint
+  fullName.vb: 
+  nameWithType: EditorUtility.activePlayModeTint
+  nameWithType.vb: 
 - uid: UnityEditor.EditorUtility.audioMasterMute
   name: audioMasterMute
   name.vb: 
@@ -53170,6 +53320,36 @@ references:
   fullName: UnityEditor.Embree.GpuBvhPrimitiveDescriptor.upperBound
   fullName.vb: 
   nameWithType: GpuBvhPrimitiveDescriptor.upperBound
+  nameWithType.vb: 
+- uid: UnityEditor.EngineDiagnostics
+  name: UnityEditor.EngineDiagnostics
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/index.html
+  commentId: N:UnityEditor.EngineDiagnostics
+  isSpec: 
+  fullName: UnityEditor.EngineDiagnostics
+  fullName.vb: 
+  nameWithType: UnityEditor.EngineDiagnostics
+  nameWithType.vb: 
+- uid: UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings
+  name: EngineDiagnosticsSettings
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/EngineDiagnostics.EngineDiagnosticsSettings.html
+  commentId: T:UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings
+  isSpec: 
+  fullName: UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings
+  fullName.vb: 
+  nameWithType: EngineDiagnosticsSettings
+  nameWithType.vb: 
+- uid: UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings.enabled
+  name: enabled
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/EngineDiagnostics.EngineDiagnosticsSettings-enabled.html
+  commentId: P:UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings.enabled
+  isSpec: 
+  fullName: UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings.enabled
+  fullName.vb: 
+  nameWithType: EngineDiagnosticsSettings.enabled
   nameWithType.vb: 
 - uid: UnityEditor.EnterPlayModeOptions
   name: EnterPlayModeOptions
@@ -55851,6 +56031,36 @@ references:
   fullName.vb: UnityEditor.Experimental.GraphView.EdgeConnector(Of TEdge).OnMouseUp(UnityEngine.UIElements.MouseUpEvent)
   nameWithType: EdgeConnector<TEdge>.OnMouseUp(MouseUpEvent)
   nameWithType.vb: EdgeConnector(Of TEdge).OnMouseUp(MouseUpEvent)
+- uid: UnityEditor.Experimental.GraphView.EdgeConnector`1.OnPointerDown(UnityEngine.UIElements.PointerDownEvent)
+  name: OnPointerDown(PointerDownEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeConnector_1.OnPointerDown.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeConnector`1.OnPointerDown(UnityEngine.UIElements.PointerDownEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeConnector<TEdge>.OnPointerDown(UnityEngine.UIElements.PointerDownEvent)
+  fullName.vb: UnityEditor.Experimental.GraphView.EdgeConnector(Of TEdge).OnPointerDown(UnityEngine.UIElements.PointerDownEvent)
+  nameWithType: EdgeConnector<TEdge>.OnPointerDown(PointerDownEvent)
+  nameWithType.vb: EdgeConnector(Of TEdge).OnPointerDown(PointerDownEvent)
+- uid: UnityEditor.Experimental.GraphView.EdgeConnector`1.OnPointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  name: OnPointerMove(PointerMoveEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeConnector_1.OnPointerMove.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeConnector`1.OnPointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeConnector<TEdge>.OnPointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  fullName.vb: UnityEditor.Experimental.GraphView.EdgeConnector(Of TEdge).OnPointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  nameWithType: EdgeConnector<TEdge>.OnPointerMove(PointerMoveEvent)
+  nameWithType.vb: EdgeConnector(Of TEdge).OnPointerMove(PointerMoveEvent)
+- uid: UnityEditor.Experimental.GraphView.EdgeConnector`1.OnPointerUp(UnityEngine.UIElements.PointerUpEvent)
+  name: OnPointerUp(PointerUpEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeConnector_1.OnPointerUp.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeConnector`1.OnPointerUp(UnityEngine.UIElements.PointerUpEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeConnector<TEdge>.OnPointerUp(UnityEngine.UIElements.PointerUpEvent)
+  fullName.vb: UnityEditor.Experimental.GraphView.EdgeConnector(Of TEdge).OnPointerUp(UnityEngine.UIElements.PointerUpEvent)
+  nameWithType: EdgeConnector<TEdge>.OnPointerUp(PointerUpEvent)
+  nameWithType.vb: EdgeConnector(Of TEdge).OnPointerUp(PointerUpEvent)
 - uid: UnityEditor.Experimental.GraphView.EdgeConnector`1.RegisterCallbacksOnTarget
   name: RegisterCallbacksOnTarget()
   name.vb: 
@@ -56161,6 +56371,36 @@ references:
   fullName.vb: 
   nameWithType: EdgeDragHelper.HandleMouseUp(MouseUpEvent)
   nameWithType.vb: 
+- uid: UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerDown(UnityEngine.UIElements.PointerDownEvent)
+  name: HandlePointerDown(PointerDownEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeDragHelper.HandlePointerDown.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerDown(UnityEngine.UIElements.PointerDownEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerDown(UnityEngine.UIElements.PointerDownEvent)
+  fullName.vb: 
+  nameWithType: EdgeDragHelper.HandlePointerDown(PointerDownEvent)
+  nameWithType.vb: 
+- uid: UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  name: HandlePointerMove(PointerMoveEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeDragHelper.HandlePointerMove.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  fullName.vb: 
+  nameWithType: EdgeDragHelper.HandlePointerMove(PointerMoveEvent)
+  nameWithType.vb: 
+- uid: UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerUp(UnityEngine.UIElements.PointerUpEvent)
+  name: HandlePointerUp(PointerUpEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeDragHelper.HandlePointerUp.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerUp(UnityEngine.UIElements.PointerUpEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeDragHelper.HandlePointerUp(UnityEngine.UIElements.PointerUpEvent)
+  fullName.vb: 
+  nameWithType: EdgeDragHelper.HandlePointerUp(PointerUpEvent)
+  nameWithType.vb: 
 - uid: UnityEditor.Experimental.GraphView.EdgeDragHelper.Reset(System.Boolean)
   name: Reset(bool)
   name.vb: Reset(Boolean)
@@ -56241,6 +56481,36 @@ references:
   fullName.vb: UnityEditor.Experimental.GraphView.EdgeDragHelper(Of TEdge).HandleMouseUp(UnityEngine.UIElements.MouseUpEvent)
   nameWithType: EdgeDragHelper<TEdge>.HandleMouseUp(MouseUpEvent)
   nameWithType.vb: EdgeDragHelper(Of TEdge).HandleMouseUp(MouseUpEvent)
+- uid: UnityEditor.Experimental.GraphView.EdgeDragHelper`1.HandlePointerDown(UnityEngine.UIElements.PointerDownEvent)
+  name: HandlePointerDown(PointerDownEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeDragHelper_1.HandlePointerDown.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeDragHelper`1.HandlePointerDown(UnityEngine.UIElements.PointerDownEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeDragHelper<TEdge>.HandlePointerDown(UnityEngine.UIElements.PointerDownEvent)
+  fullName.vb: UnityEditor.Experimental.GraphView.EdgeDragHelper(Of TEdge).HandlePointerDown(UnityEngine.UIElements.PointerDownEvent)
+  nameWithType: EdgeDragHelper<TEdge>.HandlePointerDown(PointerDownEvent)
+  nameWithType.vb: EdgeDragHelper(Of TEdge).HandlePointerDown(PointerDownEvent)
+- uid: UnityEditor.Experimental.GraphView.EdgeDragHelper`1.HandlePointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  name: HandlePointerMove(PointerMoveEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeDragHelper_1.HandlePointerMove.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeDragHelper`1.HandlePointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeDragHelper<TEdge>.HandlePointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  fullName.vb: UnityEditor.Experimental.GraphView.EdgeDragHelper(Of TEdge).HandlePointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  nameWithType: EdgeDragHelper<TEdge>.HandlePointerMove(PointerMoveEvent)
+  nameWithType.vb: EdgeDragHelper(Of TEdge).HandlePointerMove(PointerMoveEvent)
+- uid: UnityEditor.Experimental.GraphView.EdgeDragHelper`1.HandlePointerUp(UnityEngine.UIElements.PointerUpEvent)
+  name: HandlePointerUp(PointerUpEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeDragHelper_1.HandlePointerUp.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeDragHelper`1.HandlePointerUp(UnityEngine.UIElements.PointerUpEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeDragHelper<TEdge>.HandlePointerUp(UnityEngine.UIElements.PointerUpEvent)
+  fullName.vb: UnityEditor.Experimental.GraphView.EdgeDragHelper(Of TEdge).HandlePointerUp(UnityEngine.UIElements.PointerUpEvent)
+  nameWithType: EdgeDragHelper<TEdge>.HandlePointerUp(PointerUpEvent)
+  nameWithType.vb: EdgeDragHelper(Of TEdge).HandlePointerUp(PointerUpEvent)
 - uid: UnityEditor.Experimental.GraphView.EdgeDragHelper`1.Reset(System.Boolean)
   name: Reset(bool)
   name.vb: Reset(Boolean)
@@ -56380,6 +56650,36 @@ references:
   fullName: UnityEditor.Experimental.GraphView.EdgeManipulator.OnMouseUp(UnityEngine.UIElements.MouseUpEvent)
   fullName.vb: 
   nameWithType: EdgeManipulator.OnMouseUp(MouseUpEvent)
+  nameWithType.vb: 
+- uid: UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerDown(UnityEngine.UIElements.PointerDownEvent)
+  name: OnPointerDown(PointerDownEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeManipulator.OnPointerDown.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerDown(UnityEngine.UIElements.PointerDownEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerDown(UnityEngine.UIElements.PointerDownEvent)
+  fullName.vb: 
+  nameWithType: EdgeManipulator.OnPointerDown(PointerDownEvent)
+  nameWithType.vb: 
+- uid: UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  name: OnPointerMove(PointerMoveEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeManipulator.OnPointerMove.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerMove(UnityEngine.UIElements.PointerMoveEvent)
+  fullName.vb: 
+  nameWithType: EdgeManipulator.OnPointerMove(PointerMoveEvent)
+  nameWithType.vb: 
+- uid: UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerUp(UnityEngine.UIElements.PointerUpEvent)
+  name: OnPointerUp(PointerUpEvent)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Experimental.GraphView.EdgeManipulator.OnPointerUp.html
+  commentId: M:UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerUp(UnityEngine.UIElements.PointerUpEvent)
+  isSpec: 
+  fullName: UnityEditor.Experimental.GraphView.EdgeManipulator.OnPointerUp(UnityEngine.UIElements.PointerUpEvent)
+  fullName.vb: 
+  nameWithType: EdgeManipulator.OnPointerUp(PointerUpEvent)
   nameWithType.vb: 
 - uid: UnityEditor.Experimental.GraphView.EdgeManipulator.RegisterCallbacksOnTarget
   name: RegisterCallbacksOnTarget()
@@ -66960,6 +67260,16 @@ references:
   fullName: UnityEditor.HierarchyProperty.ancestors
   fullName.vb: 
   nameWithType: HierarchyProperty.ancestors
+  nameWithType.vb: 
+- uid: UnityEditor.HierarchyProperty.assetGUID
+  name: assetGUID
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/HierarchyProperty-assetGUID.html
+  commentId: P:UnityEditor.HierarchyProperty.assetGUID
+  isSpec: 
+  fullName: UnityEditor.HierarchyProperty.assetGUID
+  fullName.vb: 
+  nameWithType: HierarchyProperty.assetGUID
   nameWithType.vb: 
 - uid: UnityEditor.HierarchyProperty.colorCode
   name: colorCode
@@ -81411,6 +81721,16 @@ references:
   fullName.vb: 
   nameWithType: ModelImporter.resampleRotations
   nameWithType.vb: 
+- uid: UnityEditor.ModelImporter.searchTexturesGlobally
+  name: searchTexturesGlobally
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/ModelImporter-searchTexturesGlobally.html
+  commentId: P:UnityEditor.ModelImporter.searchTexturesGlobally
+  isSpec: 
+  fullName: UnityEditor.ModelImporter.searchTexturesGlobally
+  fullName.vb: 
+  nameWithType: ModelImporter.searchTexturesGlobally
+  nameWithType.vb: 
 - uid: UnityEditor.ModelImporter.secondaryUVAngleDistortion
   name: secondaryUVAngleDistortion
   name.vb: 
@@ -88941,6 +89261,16 @@ references:
   fullName.vb: 
   nameWithType: PlayerSettings.Android.androidVulkanDenyFilterList
   nameWithType.vb: 
+- uid: UnityEditor.PlayerSettings.Android.appCategory
+  name: appCategory
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PlayerSettings.Android-appCategory.html
+  commentId: P:UnityEditor.PlayerSettings.Android.appCategory
+  isSpec: 
+  fullName: UnityEditor.PlayerSettings.Android.appCategory
+  fullName.vb: 
+  nameWithType: PlayerSettings.Android.appCategory
+  nameWithType.vb: 
 - uid: UnityEditor.PlayerSettings.Android.applicationEntry
   name: applicationEntry
   name.vb: 
@@ -89030,6 +89360,16 @@ references:
   fullName: UnityEditor.PlayerSettings.Android.disableDepthAndStencilBuffers
   fullName.vb: 
   nameWithType: PlayerSettings.Android.disableDepthAndStencilBuffers
+  nameWithType.vb: 
+- uid: UnityEditor.PlayerSettings.Android.displayOptions
+  name: displayOptions
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PlayerSettings.Android-displayOptions.html
+  commentId: P:UnityEditor.PlayerSettings.Android.displayOptions
+  isSpec: 
+  fullName: UnityEditor.PlayerSettings.Android.displayOptions
+  fullName.vb: 
+  nameWithType: PlayerSettings.Android.displayOptions
   nameWithType.vb: 
 - uid: UnityEditor.PlayerSettings.Android.enableArmv9SecurityFeatures
   name: enableArmv9SecurityFeatures
@@ -95170,6 +95510,16 @@ references:
   fullName: UnityEditor.PlayerSettings.assemblyVersionValidation
   fullName.vb: 
   nameWithType: PlayerSettings.assemblyVersionValidation
+  nameWithType.vb: 
+- uid: UnityEditor.PlayerSettings.audioSpatialExperience
+  name: audioSpatialExperience
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PlayerSettings-audioSpatialExperience.html
+  commentId: P:UnityEditor.PlayerSettings.audioSpatialExperience
+  isSpec: 
+  fullName: UnityEditor.PlayerSettings.audioSpatialExperience
+  fullName.vb: 
+  nameWithType: PlayerSettings.audioSpatialExperience
   nameWithType.vb: 
 - uid: UnityEditor.PlayerSettings.bakeCollisionMeshes
   name: bakeCollisionMeshes
@@ -105471,6 +105821,56 @@ references:
   fullName.vb: 
   nameWithType: IRenderPipelineGraphicsSettingsContextMenu.priority
   nameWithType.vb: 
+- uid: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2
+  name: IRenderPipelineGraphicsSettingsContextMenu2
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.IRenderPipelineGraphicsSettingsContextMenu2.html
+  commentId: T:UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2
+  isSpec: 
+  fullName: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2
+  fullName.vb: 
+  nameWithType: IRenderPipelineGraphicsSettingsContextMenu2
+  nameWithType.vb: 
+- uid: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2.PopulateContextMenu(UnityEngine.Rendering.IRenderPipelineGraphicsSettings,UnityEditor.SerializedProperty,UnityEditor.GenericMenu@)
+  name: PopulateContextMenu(IRenderPipelineGraphicsSettings, SerializedProperty, ref GenericMenu)
+  name.vb: PopulateContextMenu(IRenderPipelineGraphicsSettings, SerializedProperty, GenericMenu)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.IRenderPipelineGraphicsSettingsContextMenu2.PopulateContextMenu.html
+  commentId: M:UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2.PopulateContextMenu(UnityEngine.Rendering.IRenderPipelineGraphicsSettings,UnityEditor.SerializedProperty,UnityEditor.GenericMenu@)
+  isSpec: 
+  fullName: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2.PopulateContextMenu(UnityEngine.Rendering.IRenderPipelineGraphicsSettings, UnityEditor.SerializedProperty, ref UnityEditor.GenericMenu)
+  fullName.vb: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2.PopulateContextMenu(UnityEngine.Rendering.IRenderPipelineGraphicsSettings, UnityEditor.SerializedProperty, UnityEditor.GenericMenu)
+  nameWithType: IRenderPipelineGraphicsSettingsContextMenu2.PopulateContextMenu(IRenderPipelineGraphicsSettings, SerializedProperty, ref GenericMenu)
+  nameWithType.vb: IRenderPipelineGraphicsSettingsContextMenu2.PopulateContextMenu(IRenderPipelineGraphicsSettings, SerializedProperty, GenericMenu)
+- uid: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2.priority
+  name: priority
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.IRenderPipelineGraphicsSettingsContextMenu2-priority.html
+  commentId: P:UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2.priority
+  isSpec: 
+  fullName: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2.priority
+  fullName.vb: 
+  nameWithType: IRenderPipelineGraphicsSettingsContextMenu2.priority
+  nameWithType.vb: 
+- uid: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2`1
+  name: IRenderPipelineGraphicsSettingsContextMenu2<T>
+  name.vb: IRenderPipelineGraphicsSettingsContextMenu2(Of T)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.IRenderPipelineGraphicsSettingsContextMenu2_1.html
+  commentId: T:UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2`1
+  isSpec: 
+  fullName: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2<T>
+  fullName.vb: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2(Of T)
+  nameWithType: IRenderPipelineGraphicsSettingsContextMenu2<T>
+  nameWithType.vb: IRenderPipelineGraphicsSettingsContextMenu2(Of T)
+- uid: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2`1.PopulateContextMenu(`0,UnityEditor.SerializedProperty,UnityEditor.GenericMenu@)
+  name: PopulateContextMenu(T, SerializedProperty, ref GenericMenu)
+  name.vb: PopulateContextMenu(T, SerializedProperty, GenericMenu)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.IRenderPipelineGraphicsSettingsContextMenu2_1.PopulateContextMenu.html
+  commentId: M:UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2`1.PopulateContextMenu(`0,UnityEditor.SerializedProperty,UnityEditor.GenericMenu@)
+  isSpec: 
+  fullName: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2<T>.PopulateContextMenu(T, UnityEditor.SerializedProperty, ref UnityEditor.GenericMenu)
+  fullName.vb: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu2(Of T).PopulateContextMenu(T, UnityEditor.SerializedProperty, UnityEditor.GenericMenu)
+  nameWithType: IRenderPipelineGraphicsSettingsContextMenu2<T>.PopulateContextMenu(T, SerializedProperty, ref GenericMenu)
+  nameWithType.vb: IRenderPipelineGraphicsSettingsContextMenu2(Of T).PopulateContextMenu(T, SerializedProperty, GenericMenu)
 - uid: UnityEditor.Rendering.IRenderPipelineGraphicsSettingsContextMenu`1
   name: IRenderPipelineGraphicsSettingsContextMenu<T>
   name.vb: IRenderPipelineGraphicsSettingsContextMenu(Of T)
@@ -105981,16 +106381,6 @@ references:
   fullName.vb: 
   nameWithType: ShaderCompilerPlatform.PS5NGGC
   nameWithType.vb: 
-- uid: UnityEditor.Rendering.ShaderCompilerPlatform.ReservedCFE
-  name: ReservedCFE
-  name.vb: 
-  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.ShaderCompilerPlatform.ReservedCFE.html
-  commentId: F:UnityEditor.Rendering.ShaderCompilerPlatform.ReservedCFE
-  isSpec: 
-  fullName: UnityEditor.Rendering.ShaderCompilerPlatform.ReservedCFE
-  fullName.vb: 
-  nameWithType: ShaderCompilerPlatform.ReservedCFE
-  nameWithType.vb: 
 - uid: UnityEditor.Rendering.ShaderCompilerPlatform.Switch
   name: Switch
   name.vb: 
@@ -106000,6 +106390,16 @@ references:
   fullName: UnityEditor.Rendering.ShaderCompilerPlatform.Switch
   fullName.vb: 
   nameWithType: ShaderCompilerPlatform.Switch
+  nameWithType.vb: 
+- uid: UnityEditor.Rendering.ShaderCompilerPlatform.Switch2
+  name: Switch2
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.ShaderCompilerPlatform.Switch2.html
+  commentId: F:UnityEditor.Rendering.ShaderCompilerPlatform.Switch2
+  isSpec: 
+  fullName: UnityEditor.Rendering.ShaderCompilerPlatform.Switch2
+  fullName.vb: 
+  nameWithType: ShaderCompilerPlatform.Switch2
   nameWithType.vb: 
 - uid: UnityEditor.Rendering.ShaderCompilerPlatform.Vulkan
   name: Vulkan
@@ -144121,6 +144521,16 @@ references:
   fullName.vb: 
   nameWithType: UnityStats.ibUploads
   nameWithType.vb: 
+- uid: UnityEditor.UnityStats.indirectDrawCalls
+  name: indirectDrawCalls
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityStats-indirectDrawCalls.html
+  commentId: P:UnityEditor.UnityStats.indirectDrawCalls
+  isSpec: 
+  fullName: UnityEditor.UnityStats.indirectDrawCalls
+  fullName.vb: 
+  nameWithType: UnityStats.indirectDrawCalls
+  nameWithType.vb: 
 - uid: UnityEditor.UnityStats.instancedBatchedDrawCalls
   name: instancedBatchedDrawCalls
   name.vb: 
@@ -176431,6 +176841,16 @@ references:
   fullName.vb: UnityEngine.AudioSettings.SetSpatializerPluginName(String)
   nameWithType: AudioSettings.SetSpatializerPluginName(string)
   nameWithType.vb: AudioSettings.SetSpatializerPluginName(String)
+- uid: UnityEngine.AudioSettings.audioSpatialExperience
+  name: audioSpatialExperience
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AudioSettings-audioSpatialExperience.html
+  commentId: P:UnityEngine.AudioSettings.audioSpatialExperience
+  isSpec: 
+  fullName: UnityEngine.AudioSettings.audioSpatialExperience
+  fullName.vb: 
+  nameWithType: AudioSettings.audioSpatialExperience
+  nameWithType.vb: 
 - uid: UnityEngine.AudioSettings.driverCapabilities
   name: driverCapabilities
   name.vb: 
@@ -177210,6 +177630,46 @@ references:
   fullName: UnityEngine.AudioSourceCurveType.Spread
   fullName.vb: 
   nameWithType: AudioSourceCurveType.Spread
+  nameWithType.vb: 
+- uid: UnityEngine.AudioSpatialExperience
+  name: AudioSpatialExperience
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AudioSpatialExperience.html
+  commentId: T:UnityEngine.AudioSpatialExperience
+  isSpec: 
+  fullName: UnityEngine.AudioSpatialExperience
+  fullName.vb: 
+  nameWithType: AudioSpatialExperience
+  nameWithType.vb: 
+- uid: UnityEngine.AudioSpatialExperience.Bypassed
+  name: Bypassed
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AudioSpatialExperience.Bypassed.html
+  commentId: F:UnityEngine.AudioSpatialExperience.Bypassed
+  isSpec: 
+  fullName: UnityEngine.AudioSpatialExperience.Bypassed
+  fullName.vb: 
+  nameWithType: AudioSpatialExperience.Bypassed
+  nameWithType.vb: 
+- uid: UnityEngine.AudioSpatialExperience.Fixed
+  name: Fixed
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AudioSpatialExperience.Fixed.html
+  commentId: F:UnityEngine.AudioSpatialExperience.Fixed
+  isSpec: 
+  fullName: UnityEngine.AudioSpatialExperience.Fixed
+  fullName.vb: 
+  nameWithType: AudioSpatialExperience.Fixed
+  nameWithType.vb: 
+- uid: UnityEngine.AudioSpatialExperience.HeadTracked
+  name: HeadTracked
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AudioSpatialExperience.HeadTracked.html
+  commentId: F:UnityEngine.AudioSpatialExperience.HeadTracked
+  isSpec: 
+  fullName: UnityEngine.AudioSpatialExperience.HeadTracked
+  fullName.vb: 
+  nameWithType: AudioSpatialExperience.HeadTracked
   nameWithType.vb: 
 - uid: UnityEngine.AudioSpeakerMode
   name: AudioSpeakerMode
@@ -194821,6 +195281,16 @@ references:
   fullName.vb: 
   nameWithType: SystemInfo.GetRenderTextureSupportedMSAASampleCount(RenderTextureDescriptor)
   nameWithType.vb: 
+- uid: UnityEngine.Device.SystemInfo.GetTiledRenderTargetStorageSize(UnityEngine.Experimental.Rendering.GraphicsFormat,System.Int32)
+  name: GetTiledRenderTargetStorageSize(GraphicsFormat, int)
+  name.vb: GetTiledRenderTargetStorageSize(GraphicsFormat, Integer)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Device.SystemInfo.GetTiledRenderTargetStorageSize.html
+  commentId: M:UnityEngine.Device.SystemInfo.GetTiledRenderTargetStorageSize(UnityEngine.Experimental.Rendering.GraphicsFormat,System.Int32)
+  isSpec: 
+  fullName: UnityEngine.Device.SystemInfo.GetTiledRenderTargetStorageSize(UnityEngine.Experimental.Rendering.GraphicsFormat, int)
+  fullName.vb: UnityEngine.Device.SystemInfo.GetTiledRenderTargetStorageSize(UnityEngine.Experimental.Rendering.GraphicsFormat, Integer)
+  nameWithType: SystemInfo.GetTiledRenderTargetStorageSize(GraphicsFormat, int)
+  nameWithType.vb: SystemInfo.GetTiledRenderTargetStorageSize(GraphicsFormat, Integer)
 - uid: UnityEngine.Device.SystemInfo.IsFormatSupported(UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.FormatUsage)
   name: IsFormatSupported(GraphicsFormat, FormatUsage)
   name.vb: 
@@ -194881,6 +195351,16 @@ references:
   fullName.vb: 
   nameWithType: SystemInfo.SupportsTextureFormat(TextureFormat)
   nameWithType.vb: 
+- uid: UnityEngine.Device.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(UnityEngine.Experimental.Rendering.GraphicsFormat,System.Boolean)
+  name: SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(GraphicsFormat, bool)
+  name.vb: SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(GraphicsFormat, Boolean)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Device.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat.html
+  commentId: M:UnityEngine.Device.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(UnityEngine.Experimental.Rendering.GraphicsFormat,System.Boolean)
+  isSpec: 
+  fullName: UnityEngine.Device.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(UnityEngine.Experimental.Rendering.GraphicsFormat, bool)
+  fullName.vb: UnityEngine.Device.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(UnityEngine.Experimental.Rendering.GraphicsFormat, Boolean)
+  nameWithType: SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(GraphicsFormat, bool)
+  nameWithType.vb: SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(GraphicsFormat, Boolean)
 - uid: UnityEngine.Device.SystemInfo.SupportsVertexAttributeFormat(UnityEngine.Rendering.VertexAttributeFormat,System.Int32)
   name: SupportsVertexAttributeFormat(VertexAttributeFormat, int)
   name.vb: SupportsVertexAttributeFormat(VertexAttributeFormat, Integer)
@@ -195301,6 +195781,16 @@ references:
   fullName.vb: 
   nameWithType: SystemInfo.maxTextureSize
   nameWithType.vb: 
+- uid: UnityEngine.Device.SystemInfo.maxTiledPixelStorageSize
+  name: maxTiledPixelStorageSize
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Device.SystemInfo-maxTiledPixelStorageSize.html
+  commentId: P:UnityEngine.Device.SystemInfo.maxTiledPixelStorageSize
+  isSpec: 
+  fullName: UnityEngine.Device.SystemInfo.maxTiledPixelStorageSize
+  fullName.vb: 
+  nameWithType: SystemInfo.maxTiledPixelStorageSize
+  nameWithType.vb: 
 - uid: UnityEngine.Device.SystemInfo.npotSupport
   name: npotSupport
   name.vb: 
@@ -195550,6 +196040,16 @@ references:
   fullName: UnityEngine.Device.SystemInfo.supportsDepthFetchInRenderPass
   fullName.vb: 
   nameWithType: SystemInfo.supportsDepthFetchInRenderPass
+  nameWithType.vb: 
+- uid: UnityEngine.Device.SystemInfo.supportsDynamicResolution
+  name: supportsDynamicResolution
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Device.SystemInfo-supportsDynamicResolution.html
+  commentId: P:UnityEngine.Device.SystemInfo.supportsDynamicResolution
+  isSpec: 
+  fullName: UnityEngine.Device.SystemInfo.supportsDynamicResolution
+  fullName.vb: 
+  nameWithType: SystemInfo.supportsDynamicResolution
   nameWithType.vb: 
 - uid: UnityEngine.Device.SystemInfo.supportsGeometryShaders
   name: supportsGeometryShaders
@@ -218351,6 +218851,56 @@ references:
   fullName.vb: 
   nameWithType: IconAttribute.path
   nameWithType.vb: 
+- uid: UnityEngine.Identifiers
+  name: UnityEngine.Identifiers
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/index.html
+  commentId: N:UnityEngine.Identifiers
+  isSpec: 
+  fullName: UnityEngine.Identifiers
+  fullName.vb: 
+  nameWithType: UnityEngine.Identifiers
+  nameWithType.vb: 
+- uid: UnityEngine.Identifiers.Identifiers
+  name: Identifiers
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Identifiers.Identifiers.html
+  commentId: T:UnityEngine.Identifiers.Identifiers
+  isSpec: 
+  fullName: UnityEngine.Identifiers.Identifiers
+  fullName.vb: 
+  nameWithType: Identifiers
+  nameWithType.vb: 
+- uid: UnityEngine.Identifiers.Identifiers.installationId
+  name: installationId
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Identifiers.Identifiers-installationId.html
+  commentId: P:UnityEngine.Identifiers.Identifiers.installationId
+  isSpec: 
+  fullName: UnityEngine.Identifiers.Identifiers.installationId
+  fullName.vb: 
+  nameWithType: Identifiers.installationId
+  nameWithType.vb: 
+- uid: UnityEngine.Identifiers.Identifiers.userId
+  name: userId
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Identifiers.Identifiers-userId.html
+  commentId: P:UnityEngine.Identifiers.Identifiers.userId
+  isSpec: 
+  fullName: UnityEngine.Identifiers.Identifiers.userId
+  fullName.vb: 
+  nameWithType: Identifiers.userId
+  nameWithType.vb: 
+- uid: UnityEngine.Identifiers.Identifiers.userIdChanged
+  name: userIdChanged
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Identifiers.Identifiers.userIdChanged.html
+  commentId: E:UnityEngine.Identifiers.Identifiers.userIdChanged
+  isSpec: 
+  fullName: UnityEngine.Identifiers.Identifiers.userIdChanged
+  fullName.vb: 
+  nameWithType: Identifiers.userIdChanged
+  nameWithType.vb: 
 - uid: UnityEngine.ImageConversion
   name: ImageConversion
   name.vb: 
@@ -219310,6 +219860,16 @@ references:
   fullName: UnityEngine.InstantiateParameters
   fullName.vb: 
   nameWithType: InstantiateParameters
+  nameWithType.vb: 
+- uid: UnityEngine.InstantiateParameters.originalImmutable
+  name: originalImmutable
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/InstantiateParameters-originalImmutable.html
+  commentId: F:UnityEngine.InstantiateParameters.originalImmutable
+  isSpec: 
+  fullName: UnityEngine.InstantiateParameters.originalImmutable
+  fullName.vb: 
+  nameWithType: InstantiateParameters.originalImmutable
   nameWithType.vb: 
 - uid: UnityEngine.InstantiateParameters.parent
   name: parent
@@ -254981,6 +255541,16 @@ references:
   fullName.vb: UnityEngine.PhysicsScene.Raycast(UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.RaycastHit(), Single, Integer, UnityEngine.QueryTriggerInteraction)
   nameWithType: PhysicsScene.Raycast(Vector3, Vector3, RaycastHit[], float, int, QueryTriggerInteraction)
   nameWithType.vb: PhysicsScene.Raycast(Vector3, Vector3, RaycastHit(), Single, Integer, QueryTriggerInteraction)
+- uid: UnityEngine.PhysicsScene.ReleaseLastSimulationStepBuffers
+  name: ReleaseLastSimulationStepBuffers()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PhysicsScene.ReleaseLastSimulationStepBuffers.html
+  commentId: M:UnityEngine.PhysicsScene.ReleaseLastSimulationStepBuffers
+  isSpec: 
+  fullName: UnityEngine.PhysicsScene.ReleaseLastSimulationStepBuffers()
+  fullName.vb: 
+  nameWithType: PhysicsScene.ReleaseLastSimulationStepBuffers()
+  nameWithType.vb: 
 - uid: UnityEngine.PhysicsScene.ResetInterpolationPoses
   name: ResetInterpolationPoses()
   name.vb: 
@@ -259211,6 +259781,16 @@ references:
   fullName.vb: 
   nameWithType: EarlyUpdate.GpuTimestamp
   nameWithType.vb: 
+- uid: UnityEngine.PlayerLoop.EarlyUpdate.InsightsUpdate
+  name: EarlyUpdate.InsightsUpdate
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PlayerLoop.EarlyUpdate.InsightsUpdate.html
+  commentId: T:UnityEngine.PlayerLoop.EarlyUpdate.InsightsUpdate
+  isSpec: 
+  fullName: UnityEngine.PlayerLoop.EarlyUpdate.InsightsUpdate
+  fullName.vb: 
+  nameWithType: EarlyUpdate.InsightsUpdate
+  nameWithType.vb: 
 - uid: UnityEngine.PlayerLoop.EarlyUpdate.PerformanceAnalyticsUpdate
   name: EarlyUpdate.PerformanceAnalyticsUpdate
   name.vb: 
@@ -259360,6 +259940,16 @@ references:
   fullName: UnityEngine.PlayerLoop.EarlyUpdate.TangoUpdate
   fullName.vb: 
   nameWithType: EarlyUpdate.TangoUpdate
+  nameWithType.vb: 
+- uid: UnityEngine.PlayerLoop.EarlyUpdate.TilemapRendererEarlyUpdate
+  name: EarlyUpdate.TilemapRendererEarlyUpdate
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/PlayerLoop.EarlyUpdate.TilemapRendererEarlyUpdate.html
+  commentId: T:UnityEngine.PlayerLoop.EarlyUpdate.TilemapRendererEarlyUpdate
+  isSpec: 
+  fullName: UnityEngine.PlayerLoop.EarlyUpdate.TilemapRendererEarlyUpdate
+  fullName.vb: 
+  nameWithType: EarlyUpdate.TilemapRendererEarlyUpdate
   nameWithType.vb: 
 - uid: UnityEngine.PlayerLoop.EarlyUpdate.UnityWebRequestUpdate
   name: EarlyUpdate.UnityWebRequestUpdate
@@ -266510,6 +267100,16 @@ references:
   fullName: UnityEngine.RectTransform.rect
   fullName.vb: 
   nameWithType: RectTransform.rect
+  nameWithType.vb: 
+- uid: UnityEngine.RectTransform.sendChildDimensionsChange
+  name: sendChildDimensionsChange
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RectTransform-sendChildDimensionsChange.html
+  commentId: P:UnityEngine.RectTransform.sendChildDimensionsChange
+  isSpec: 
+  fullName: UnityEngine.RectTransform.sendChildDimensionsChange
+  fullName.vb: 
+  nameWithType: RectTransform.sendChildDimensionsChange
   nameWithType.vb: 
 - uid: UnityEngine.RectTransform.sizeDelta
   name: sizeDelta
@@ -273901,6 +274501,26 @@ references:
   fullName.vb: 
   nameWithType: BuiltinShaderDefine.SHADER_API_GLES30
   nameWithType.vb: 
+- uid: UnityEngine.Rendering.BuiltinShaderDefine.SHADER_API_GLES31
+  name: SHADER_API_GLES31
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.BuiltinShaderDefine.SHADER_API_GLES31.html
+  commentId: F:UnityEngine.Rendering.BuiltinShaderDefine.SHADER_API_GLES31
+  isSpec: 
+  fullName: UnityEngine.Rendering.BuiltinShaderDefine.SHADER_API_GLES31
+  fullName.vb: 
+  nameWithType: BuiltinShaderDefine.SHADER_API_GLES31
+  nameWithType.vb: 
+- uid: UnityEngine.Rendering.BuiltinShaderDefine.SHADER_API_GLES32
+  name: SHADER_API_GLES32
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.BuiltinShaderDefine.SHADER_API_GLES32.html
+  commentId: F:UnityEngine.Rendering.BuiltinShaderDefine.SHADER_API_GLES32
+  isSpec: 
+  fullName: UnityEngine.Rendering.BuiltinShaderDefine.SHADER_API_GLES32
+  fullName.vb: 
+  nameWithType: BuiltinShaderDefine.SHADER_API_GLES32
+  nameWithType.vb: 
 - uid: UnityEngine.Rendering.BuiltinShaderDefine.SHADER_API_MOBILE
   name: SHADER_API_MOBILE
   name.vb: 
@@ -280081,16 +280701,6 @@ references:
   fullName.vb: 
   nameWithType: GraphicsDeviceType.PlayStationVita
   nameWithType.vb: 
-- uid: UnityEngine.Rendering.GraphicsDeviceType.ReservedCFE
-  name: ReservedCFE
-  name.vb: 
-  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.GraphicsDeviceType.ReservedCFE.html
-  commentId: F:UnityEngine.Rendering.GraphicsDeviceType.ReservedCFE
-  isSpec: 
-  fullName: UnityEngine.Rendering.GraphicsDeviceType.ReservedCFE
-  fullName.vb: 
-  nameWithType: GraphicsDeviceType.ReservedCFE
-  nameWithType.vb: 
 - uid: UnityEngine.Rendering.GraphicsDeviceType.Switch
   name: Switch
   name.vb: 
@@ -280100,6 +280710,16 @@ references:
   fullName: UnityEngine.Rendering.GraphicsDeviceType.Switch
   fullName.vb: 
   nameWithType: GraphicsDeviceType.Switch
+  nameWithType.vb: 
+- uid: UnityEngine.Rendering.GraphicsDeviceType.Switch2
+  name: Switch2
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.GraphicsDeviceType.Switch2.html
+  commentId: F:UnityEngine.Rendering.GraphicsDeviceType.Switch2
+  isSpec: 
+  fullName: UnityEngine.Rendering.GraphicsDeviceType.Switch2
+  fullName.vb: 
+  nameWithType: GraphicsDeviceType.Switch2
   nameWithType.vb: 
 - uid: UnityEngine.Rendering.GraphicsDeviceType.Vulkan
   name: Vulkan
@@ -280371,6 +280991,16 @@ references:
   fullName.vb: UnityEngine.Rendering.GraphicsSettings.TryGetRenderPipelineSettings(Of T)(T)
   nameWithType: GraphicsSettings.TryGetRenderPipelineSettings<T>(out T)
   nameWithType.vb: GraphicsSettings.TryGetRenderPipelineSettings(Of T)(T)
+- uid: UnityEngine.Rendering.GraphicsSettings.TrySetCurrentRenderPipelineGlobalSettings(UnityEngine.Rendering.RenderPipelineGlobalSettings)
+  name: TrySetCurrentRenderPipelineGlobalSettings(RenderPipelineGlobalSettings)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.GraphicsSettings.TrySetCurrentRenderPipelineGlobalSettings.html
+  commentId: M:UnityEngine.Rendering.GraphicsSettings.TrySetCurrentRenderPipelineGlobalSettings(UnityEngine.Rendering.RenderPipelineGlobalSettings)
+  isSpec: 
+  fullName: UnityEngine.Rendering.GraphicsSettings.TrySetCurrentRenderPipelineGlobalSettings(UnityEngine.Rendering.RenderPipelineGlobalSettings)
+  fullName.vb: 
+  nameWithType: GraphicsSettings.TrySetCurrentRenderPipelineGlobalSettings(RenderPipelineGlobalSettings)
+  nameWithType.vb: 
 - uid: UnityEngine.Rendering.GraphicsSettings.UnregisterRenderPipelineSettings(System.Type)
   name: UnregisterRenderPipelineSettings(Type)
   name.vb: 
@@ -285941,6 +286571,16 @@ references:
   fullName.vb: 
   nameWithType: RenderPipelineAsset.renderingLayerMaskNames
   nameWithType.vb: 
+- uid: UnityEngine.Rendering.RenderPipelineAsset.requiresCompatibleRenderPipelineGlobalSettings
+  name: requiresCompatibleRenderPipelineGlobalSettings
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.RenderPipelineAsset-requiresCompatibleRenderPipelineGlobalSettings.html
+  commentId: P:UnityEngine.Rendering.RenderPipelineAsset.requiresCompatibleRenderPipelineGlobalSettings
+  isSpec: 
+  fullName: UnityEngine.Rendering.RenderPipelineAsset.requiresCompatibleRenderPipelineGlobalSettings
+  fullName.vb: 
+  nameWithType: RenderPipelineAsset.requiresCompatibleRenderPipelineGlobalSettings
+  nameWithType.vb: 
 - uid: UnityEngine.Rendering.RenderPipelineAsset.terrainBrushPassIndex
   name: terrainBrushPassIndex
   name.vb: 
@@ -289280,6 +289920,16 @@ references:
   fullName: UnityEngine.Rendering.ShaderKeywordSet.IsEnabled(UnityEngine.Rendering.ShaderKeyword)
   fullName.vb: 
   nameWithType: ShaderKeywordSet.IsEnabled(ShaderKeyword)
+  nameWithType.vb: 
+- uid: UnityEngine.Rendering.ShaderKeywordSet.ToString
+  name: ToString()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rendering.ShaderKeywordSet.ToString.html
+  commentId: M:UnityEngine.Rendering.ShaderKeywordSet.ToString
+  isSpec: 
+  fullName: UnityEngine.Rendering.ShaderKeywordSet.ToString()
+  fullName.vb: 
+  nameWithType: ShaderKeywordSet.ToString()
   nameWithType.vb: 
 - uid: UnityEngine.Rendering.ShaderKeywordType
   name: ShaderKeywordType
@@ -297331,26 +297981,6 @@ references:
   fullName.vb: 
   nameWithType: RuntimePlatform.IPhonePlayer
   nameWithType.vb: 
-- uid: UnityEngine.RuntimePlatform.KeplerArm64
-  name: KeplerArm64
-  name.vb: 
-  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RuntimePlatform.KeplerArm64.html
-  commentId: F:UnityEngine.RuntimePlatform.KeplerArm64
-  isSpec: 
-  fullName: UnityEngine.RuntimePlatform.KeplerArm64
-  fullName.vb: 
-  nameWithType: RuntimePlatform.KeplerArm64
-  nameWithType.vb: 
-- uid: UnityEngine.RuntimePlatform.KeplerX64
-  name: KeplerX64
-  name.vb: 
-  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RuntimePlatform.KeplerX64.html
-  commentId: F:UnityEngine.RuntimePlatform.KeplerX64
-  isSpec: 
-  fullName: UnityEngine.RuntimePlatform.KeplerX64
-  fullName.vb: 
-  nameWithType: RuntimePlatform.KeplerX64
-  nameWithType.vb: 
 - uid: UnityEngine.RuntimePlatform.LinuxEditor
   name: LinuxEditor
   name.vb: 
@@ -297581,16 +298211,6 @@ references:
   fullName.vb: 
   nameWithType: RuntimePlatform.QNXX86
   nameWithType.vb: 
-- uid: UnityEngine.RuntimePlatform.ReservedCFE
-  name: ReservedCFE
-  name.vb: 
-  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RuntimePlatform.ReservedCFE.html
-  commentId: F:UnityEngine.RuntimePlatform.ReservedCFE
-  isSpec: 
-  fullName: UnityEngine.RuntimePlatform.ReservedCFE
-  fullName.vb: 
-  nameWithType: RuntimePlatform.ReservedCFE
-  nameWithType.vb: 
 - uid: UnityEngine.RuntimePlatform.SamsungTVPlayer
   name: SamsungTVPlayer
   name.vb: 
@@ -297620,6 +298240,16 @@ references:
   fullName: UnityEngine.RuntimePlatform.Switch
   fullName.vb: 
   nameWithType: RuntimePlatform.Switch
+  nameWithType.vb: 
+- uid: UnityEngine.RuntimePlatform.Switch2
+  name: Switch2
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RuntimePlatform.Switch2.html
+  commentId: F:UnityEngine.RuntimePlatform.Switch2
+  isSpec: 
+  fullName: UnityEngine.RuntimePlatform.Switch2
+  fullName.vb: 
+  nameWithType: RuntimePlatform.Switch2
   nameWithType.vb: 
 - uid: UnityEngine.RuntimePlatform.TizenPlayer
   name: TizenPlayer
@@ -307421,6 +308051,16 @@ references:
   fullName.vb: 
   nameWithType: SystemInfo.GetRenderTextureSupportedMSAASampleCount(RenderTextureDescriptor)
   nameWithType.vb: 
+- uid: UnityEngine.SystemInfo.GetTiledRenderTargetStorageSize(UnityEngine.Experimental.Rendering.GraphicsFormat,System.Int32)
+  name: GetTiledRenderTargetStorageSize(GraphicsFormat, int)
+  name.vb: GetTiledRenderTargetStorageSize(GraphicsFormat, Integer)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/SystemInfo.GetTiledRenderTargetStorageSize.html
+  commentId: M:UnityEngine.SystemInfo.GetTiledRenderTargetStorageSize(UnityEngine.Experimental.Rendering.GraphicsFormat,System.Int32)
+  isSpec: 
+  fullName: UnityEngine.SystemInfo.GetTiledRenderTargetStorageSize(UnityEngine.Experimental.Rendering.GraphicsFormat, int)
+  fullName.vb: UnityEngine.SystemInfo.GetTiledRenderTargetStorageSize(UnityEngine.Experimental.Rendering.GraphicsFormat, Integer)
+  nameWithType: SystemInfo.GetTiledRenderTargetStorageSize(GraphicsFormat, int)
+  nameWithType.vb: SystemInfo.GetTiledRenderTargetStorageSize(GraphicsFormat, Integer)
 - uid: UnityEngine.SystemInfo.IsFormatSupported(UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.FormatUsage)
   name: IsFormatSupported(GraphicsFormat, FormatUsage)
   name.vb: 
@@ -307481,6 +308121,16 @@ references:
   fullName.vb: 
   nameWithType: SystemInfo.SupportsTextureFormat(TextureFormat)
   nameWithType.vb: 
+- uid: UnityEngine.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(UnityEngine.Experimental.Rendering.GraphicsFormat,System.Boolean)
+  name: SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(GraphicsFormat, bool)
+  name.vb: SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(GraphicsFormat, Boolean)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat.html
+  commentId: M:UnityEngine.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(UnityEngine.Experimental.Rendering.GraphicsFormat,System.Boolean)
+  isSpec: 
+  fullName: UnityEngine.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(UnityEngine.Experimental.Rendering.GraphicsFormat, bool)
+  fullName.vb: UnityEngine.SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(UnityEngine.Experimental.Rendering.GraphicsFormat, Boolean)
+  nameWithType: SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(GraphicsFormat, bool)
+  nameWithType.vb: SystemInfo.SupportsTypedUAVShaderLoadStoreOnGraphicsFormat(GraphicsFormat, Boolean)
 - uid: UnityEngine.SystemInfo.SupportsVertexAttributeFormat(UnityEngine.Rendering.VertexAttributeFormat,System.Int32)
   name: SupportsVertexAttributeFormat(VertexAttributeFormat, int)
   name.vb: SupportsVertexAttributeFormat(VertexAttributeFormat, Integer)
@@ -307911,6 +308561,16 @@ references:
   fullName.vb: 
   nameWithType: SystemInfo.maxTextureSize
   nameWithType.vb: 
+- uid: UnityEngine.SystemInfo.maxTiledPixelStorageSize
+  name: maxTiledPixelStorageSize
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/SystemInfo-maxTiledPixelStorageSize.html
+  commentId: P:UnityEngine.SystemInfo.maxTiledPixelStorageSize
+  isSpec: 
+  fullName: UnityEngine.SystemInfo.maxTiledPixelStorageSize
+  fullName.vb: 
+  nameWithType: SystemInfo.maxTiledPixelStorageSize
+  nameWithType.vb: 
 - uid: UnityEngine.SystemInfo.minConstantBufferOffsetAlignment
   name: minConstantBufferOffsetAlignment
   name.vb: 
@@ -308170,6 +308830,16 @@ references:
   fullName: UnityEngine.SystemInfo.supportsDepthFetchInRenderPass
   fullName.vb: 
   nameWithType: SystemInfo.supportsDepthFetchInRenderPass
+  nameWithType.vb: 
+- uid: UnityEngine.SystemInfo.supportsDynamicResolution
+  name: supportsDynamicResolution
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/SystemInfo-supportsDynamicResolution.html
+  commentId: P:UnityEngine.SystemInfo.supportsDynamicResolution
+  isSpec: 
+  fullName: UnityEngine.SystemInfo.supportsDynamicResolution
+  fullName.vb: 
+  nameWithType: SystemInfo.supportsDynamicResolution
   nameWithType.vb: 
 - uid: UnityEngine.SystemInfo.supportsGPUFence
   name: supportsGPUFence
@@ -309520,6 +310190,16 @@ references:
   fullName: UnityEngine.Terrain.editorRenderFlags
   fullName.vb: 
   nameWithType: Terrain.editorRenderFlags
+  nameWithType.vb: 
+- uid: UnityEngine.Terrain.enableHeightmapLODFrustumCulling
+  name: enableHeightmapLODFrustumCulling
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Terrain-enableHeightmapLODFrustumCulling.html
+  commentId: P:UnityEngine.Terrain.enableHeightmapLODFrustumCulling
+  isSpec: 
+  fullName: UnityEngine.Terrain.enableHeightmapLODFrustumCulling
+  fullName.vb: 
+  nameWithType: Terrain.enableHeightmapLODFrustumCulling
   nameWithType.vb: 
 - uid: UnityEngine.Terrain.enableHeightmapRayTracing
   name: enableHeightmapRayTracing
@@ -314310,6 +314990,16 @@ references:
   fullName: UnityEngine.TextCore.LowLevel.GlyphRenderMode.COLOR_HINTED
   fullName.vb: 
   nameWithType: GlyphRenderMode.COLOR_HINTED
+  nameWithType.vb: 
+- uid: UnityEngine.TextCore.LowLevel.GlyphRenderMode.DEFAULT
+  name: DEFAULT
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/TextCore.LowLevel.GlyphRenderMode.DEFAULT.html
+  commentId: F:UnityEngine.TextCore.LowLevel.GlyphRenderMode.DEFAULT
+  isSpec: 
+  fullName: UnityEngine.TextCore.LowLevel.GlyphRenderMode.DEFAULT
+  fullName.vb: 
+  nameWithType: GlyphRenderMode.DEFAULT
   nameWithType.vb: 
 - uid: UnityEngine.TextCore.LowLevel.GlyphRenderMode.RASTER
   name: RASTER
@@ -343071,6 +343761,16 @@ references:
   fullName.vb: 
   nameWithType: ITextEdition.hidePlaceholderOnFocus
   nameWithType.vb: 
+- uid: UnityEngine.UIElements.ITextEdition.hideSoftKeyboard
+  name: hideSoftKeyboard
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.ITextEdition-hideSoftKeyboard.html
+  commentId: P:UnityEngine.UIElements.ITextEdition.hideSoftKeyboard
+  isSpec: 
+  fullName: UnityEngine.UIElements.ITextEdition.hideSoftKeyboard
+  fullName.vb: 
+  nameWithType: ITextEdition.hideSoftKeyboard
+  nameWithType.vb: 
 - uid: UnityEngine.UIElements.ITextEdition.isDelayed
   name: isDelayed
   name.vb: 
@@ -344880,6 +345580,46 @@ references:
   fullName: UnityEngine.UIElements.LengthUnit.Pixel
   fullName.vb: 
   nameWithType: LengthUnit.Pixel
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.LibraryVisibility
+  name: LibraryVisibility
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.LibraryVisibility.html
+  commentId: T:UnityEngine.UIElements.LibraryVisibility
+  isSpec: 
+  fullName: UnityEngine.UIElements.LibraryVisibility
+  fullName.vb: 
+  nameWithType: LibraryVisibility
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.LibraryVisibility.Default
+  name: Default
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.LibraryVisibility.Default.html
+  commentId: F:UnityEngine.UIElements.LibraryVisibility.Default
+  isSpec: 
+  fullName: UnityEngine.UIElements.LibraryVisibility.Default
+  fullName.vb: 
+  nameWithType: LibraryVisibility.Default
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.LibraryVisibility.Hidden
+  name: Hidden
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.LibraryVisibility.Hidden.html
+  commentId: F:UnityEngine.UIElements.LibraryVisibility.Hidden
+  isSpec: 
+  fullName: UnityEngine.UIElements.LibraryVisibility.Hidden
+  fullName.vb: 
+  nameWithType: LibraryVisibility.Hidden
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.LibraryVisibility.Visible
+  name: Visible
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.LibraryVisibility.Visible.html
+  commentId: F:UnityEngine.UIElements.LibraryVisibility.Visible
+  isSpec: 
+  fullName: UnityEngine.UIElements.LibraryVisibility.Visible
+  fullName.vb: 
+  nameWithType: LibraryVisibility.Visible
   nameWithType.vb: 
 - uid: UnityEngine.UIElements.LineCap
   name: LineCap
@@ -347281,6 +348021,36 @@ references:
   fullName.vb: 
   nameWithType: MultiColumnTreeViewController.Dispose()
   nameWithType.vb: 
+- uid: UnityEngine.UIElements.MultiColumnTreeViewController.GetIdForIndex(System.Int32)
+  name: GetIdForIndex(int)
+  name.vb: GetIdForIndex(Integer)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.MultiColumnTreeViewController.GetIdForIndex.html
+  commentId: M:UnityEngine.UIElements.MultiColumnTreeViewController.GetIdForIndex(System.Int32)
+  isSpec: 
+  fullName: UnityEngine.UIElements.MultiColumnTreeViewController.GetIdForIndex(int)
+  fullName.vb: UnityEngine.UIElements.MultiColumnTreeViewController.GetIdForIndex(Integer)
+  nameWithType: MultiColumnTreeViewController.GetIdForIndex(int)
+  nameWithType.vb: MultiColumnTreeViewController.GetIdForIndex(Integer)
+- uid: UnityEngine.UIElements.MultiColumnTreeViewController.GetIndexForId(System.Int32)
+  name: GetIndexForId(int)
+  name.vb: GetIndexForId(Integer)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.MultiColumnTreeViewController.GetIndexForId.html
+  commentId: M:UnityEngine.UIElements.MultiColumnTreeViewController.GetIndexForId(System.Int32)
+  isSpec: 
+  fullName: UnityEngine.UIElements.MultiColumnTreeViewController.GetIndexForId(int)
+  fullName.vb: UnityEngine.UIElements.MultiColumnTreeViewController.GetIndexForId(Integer)
+  nameWithType: MultiColumnTreeViewController.GetIndexForId(int)
+  nameWithType.vb: MultiColumnTreeViewController.GetIndexForId(Integer)
+- uid: UnityEngine.UIElements.MultiColumnTreeViewController.GetItemForIndex(System.Int32)
+  name: GetItemForIndex(int)
+  name.vb: GetItemForIndex(Integer)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.MultiColumnTreeViewController.GetItemForIndex.html
+  commentId: M:UnityEngine.UIElements.MultiColumnTreeViewController.GetItemForIndex(System.Int32)
+  isSpec: 
+  fullName: UnityEngine.UIElements.MultiColumnTreeViewController.GetItemForIndex(int)
+  fullName.vb: UnityEngine.UIElements.MultiColumnTreeViewController.GetItemForIndex(Integer)
+  nameWithType: MultiColumnTreeViewController.GetItemForIndex(int)
+  nameWithType.vb: MultiColumnTreeViewController.GetItemForIndex(Integer)
 - uid: UnityEngine.UIElements.MultiColumnTreeViewController.MakeItem
   name: MakeItem()
   name.vb: 
@@ -347941,6 +348711,36 @@ references:
   fullName.vb: UnityEngine.UIElements.PanelChangedEventBase(Of T).originPanel
   nameWithType: PanelChangedEventBase<T>.originPanel
   nameWithType.vb: PanelChangedEventBase(Of T).originPanel
+- uid: UnityEngine.UIElements.PanelRenderMode
+  name: PanelRenderMode
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.PanelRenderMode.html
+  commentId: T:UnityEngine.UIElements.PanelRenderMode
+  isSpec: 
+  fullName: UnityEngine.UIElements.PanelRenderMode
+  fullName.vb: 
+  nameWithType: PanelRenderMode
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.PanelRenderMode.ScreenSpaceOverlay
+  name: ScreenSpaceOverlay
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.PanelRenderMode.ScreenSpaceOverlay.html
+  commentId: F:UnityEngine.UIElements.PanelRenderMode.ScreenSpaceOverlay
+  isSpec: 
+  fullName: UnityEngine.UIElements.PanelRenderMode.ScreenSpaceOverlay
+  fullName.vb: 
+  nameWithType: PanelRenderMode.ScreenSpaceOverlay
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.PanelRenderMode.WorldSpace
+  name: WorldSpace
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.PanelRenderMode.WorldSpace.html
+  commentId: F:UnityEngine.UIElements.PanelRenderMode.WorldSpace
+  isSpec: 
+  fullName: UnityEngine.UIElements.PanelRenderMode.WorldSpace
+  fullName.vb: 
+  nameWithType: PanelRenderMode.WorldSpace
+  nameWithType.vb: 
 - uid: UnityEngine.UIElements.PanelScaleMode
   name: PanelScaleMode
   name.vb: 
@@ -348170,6 +348970,16 @@ references:
   fullName: UnityEngine.UIElements.PanelSettings.referenceSpritePixelsPerUnit
   fullName.vb: 
   nameWithType: PanelSettings.referenceSpritePixelsPerUnit
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.PanelSettings.renderMode
+  name: renderMode
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.PanelSettings-renderMode.html
+  commentId: P:UnityEngine.UIElements.PanelSettings.renderMode
+  isSpec: 
+  fullName: UnityEngine.UIElements.PanelSettings.renderMode
+  fullName.vb: 
+  nameWithType: PanelSettings.renderMode
   nameWithType.vb: 
 - uid: UnityEngine.UIElements.PanelSettings.scale
   name: scale
@@ -355531,6 +356341,16 @@ references:
   fullName.vb: 
   nameWithType: TextElement.HandleEventBubbleUp(EventBase)
   nameWithType.vb: 
+- uid: UnityEngine.UIElements.TextElement.MarkDirtyText
+  name: MarkDirtyText()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.TextElement.MarkDirtyText.html
+  commentId: M:UnityEngine.UIElements.TextElement.MarkDirtyText
+  isSpec: 
+  fullName: UnityEngine.UIElements.TextElement.MarkDirtyText()
+  fullName.vb: 
+  nameWithType: TextElement.MarkDirtyText()
+  nameWithType.vb: 
 - uid: UnityEngine.UIElements.TextElement.MeasureTextSize(System.String,System.Single,UnityEngine.UIElements.VisualElement.MeasureMode,System.Single,UnityEngine.UIElements.VisualElement.MeasureMode)
   name: MeasureTextSize(string, float, MeasureMode, float, MeasureMode)
   name.vb: MeasureTextSize(String, Single, MeasureMode, Single, MeasureMode)
@@ -355931,6 +356751,16 @@ references:
   fullName.vb: UnityEngine.UIElements.TextInputBaseField(Of TValueType).SelectRange(Integer, Integer)
   nameWithType: TextInputBaseField<TValueType>.SelectRange(int, int)
   nameWithType.vb: TextInputBaseField(Of TValueType).SelectRange(Integer, Integer)
+- uid: UnityEngine.UIElements.TextInputBaseField`1.SetValueWithoutNotify(`0)
+  name: SetValueWithoutNotify(TValueType)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.TextInputBaseField_1.SetValueWithoutNotify.html
+  commentId: M:UnityEngine.UIElements.TextInputBaseField`1.SetValueWithoutNotify(`0)
+  isSpec: 
+  fullName: UnityEngine.UIElements.TextInputBaseField<TValueType>.SetValueWithoutNotify(TValueType)
+  fullName.vb: UnityEngine.UIElements.TextInputBaseField(Of TValueType).SetValueWithoutNotify(TValueType)
+  nameWithType: TextInputBaseField<TValueType>.SetValueWithoutNotify(TValueType)
+  nameWithType.vb: TextInputBaseField(Of TValueType).SetValueWithoutNotify(TValueType)
 - uid: UnityEngine.UIElements.TextInputBaseField`1.SetVerticalScrollerVisibility(UnityEngine.UIElements.ScrollerVisibility)
   name: SetVerticalScrollerVisibility(ScrollerVisibility)
   name.vb: 
@@ -356301,6 +357131,16 @@ references:
   fullName.vb: UnityEngine.UIElements.TextInputBaseField(Of TValueType).hideMobileInput
   nameWithType: TextInputBaseField<TValueType>.hideMobileInput
   nameWithType.vb: TextInputBaseField(Of TValueType).hideMobileInput
+- uid: UnityEngine.UIElements.TextInputBaseField`1.hideSoftKeyboard
+  name: hideSoftKeyboard
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.TextInputBaseField_1-hideSoftKeyboard.html
+  commentId: P:UnityEngine.UIElements.TextInputBaseField`1.hideSoftKeyboard
+  isSpec: 
+  fullName: UnityEngine.UIElements.TextInputBaseField<TValueType>.hideSoftKeyboard
+  fullName.vb: UnityEngine.UIElements.TextInputBaseField(Of TValueType).hideSoftKeyboard
+  nameWithType: TextInputBaseField<TValueType>.hideSoftKeyboard
+  nameWithType.vb: TextInputBaseField(Of TValueType).hideSoftKeyboard
 - uid: UnityEngine.UIElements.TextInputBaseField`1.inputUssClassName
   name: inputUssClassName
   name.vb: 
@@ -356791,6 +357631,16 @@ references:
   fullName.vb: UnityEngine.UIElements.TextValueField(Of TValueType).ApplyInputDeviceDelta(UnityEngine.Vector3, UnityEngine.UIElements.DeltaSpeed, TValueType)
   nameWithType: TextValueField<TValueType>.ApplyInputDeviceDelta(Vector3, DeltaSpeed, TValueType)
   nameWithType.vb: TextValueField(Of TValueType).ApplyInputDeviceDelta(Vector3, DeltaSpeed, TValueType)
+- uid: UnityEngine.UIElements.TextValueField`1.ClearValue
+  name: ClearValue()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.TextValueField_1.ClearValue.html
+  commentId: M:UnityEngine.UIElements.TextValueField`1.ClearValue
+  isSpec: 
+  fullName: UnityEngine.UIElements.TextValueField<TValueType>.ClearValue()
+  fullName.vb: UnityEngine.UIElements.TextValueField(Of TValueType).ClearValue()
+  nameWithType: TextValueField<TValueType>.ClearValue()
+  nameWithType.vb: TextValueField(Of TValueType).ClearValue()
 - uid: UnityEngine.UIElements.TextValueField`1.HandleEventBubbleUp(UnityEngine.UIElements.EventBase)
   name: HandleEventBubbleUp(EventBase)
   name.vb: 
@@ -360661,6 +361511,26 @@ references:
   fullName.vb: UnityEngine.UIElements.UxmlElementAttribute.New(String)
   nameWithType: UxmlElementAttribute.UxmlElementAttribute(string)
   nameWithType.vb: UxmlElementAttribute.New(String)
+- uid: UnityEngine.UIElements.UxmlElementAttribute.#ctor(System.String,System.Type[])
+  name: UxmlElementAttribute(string, params Type[])
+  name.vb: New(String, ParamArray Type())
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.UxmlElementAttribute-ctor.html
+  commentId: M:UnityEngine.UIElements.UxmlElementAttribute.#ctor(System.String,System.Type[])
+  isSpec: 
+  fullName: UnityEngine.UIElements.UxmlElementAttribute.UxmlElementAttribute(string, params System.Type[])
+  fullName.vb: UnityEngine.UIElements.UxmlElementAttribute.New(String, ParamArray System.Type())
+  nameWithType: UxmlElementAttribute.UxmlElementAttribute(string, params Type[])
+  nameWithType.vb: UxmlElementAttribute.New(String, ParamArray Type())
+- uid: UnityEngine.UIElements.UxmlElementAttribute.libraryPath
+  name: libraryPath
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.UxmlElementAttribute-libraryPath.html
+  commentId: F:UnityEngine.UIElements.UxmlElementAttribute.libraryPath
+  isSpec: 
+  fullName: UnityEngine.UIElements.UxmlElementAttribute.libraryPath
+  fullName.vb: 
+  nameWithType: UxmlElementAttribute.libraryPath
+  nameWithType.vb: 
 - uid: UnityEngine.UIElements.UxmlElementAttribute.name
   name: name
   name.vb: 
@@ -360670,6 +361540,16 @@ references:
   fullName: UnityEngine.UIElements.UxmlElementAttribute.name
   fullName.vb: 
   nameWithType: UxmlElementAttribute.name
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.UxmlElementAttribute.visibility
+  name: visibility
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UIElements.UxmlElementAttribute-visibility.html
+  commentId: F:UnityEngine.UIElements.UxmlElementAttribute.visibility
+  isSpec: 
+  fullName: UnityEngine.UIElements.UxmlElementAttribute.visibility
+  fullName.vb: 
+  nameWithType: UxmlElementAttribute.visibility
   nameWithType.vb: 
 - uid: UnityEngine.UIElements.UxmlEnumAttributeDescription`1
   name: UxmlEnumAttributeDescription<T>
@@ -364821,6 +365701,146 @@ references:
   fullName.vb: 
   nameWithType: UnityAPICompatibilityVersionAttribute.version
   nameWithType.vb: 
+- uid: UnityEngine.UnityConsent
+  name: UnityEngine.UnityConsent
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/index.html
+  commentId: N:UnityEngine.UnityConsent
+  isSpec: 
+  fullName: UnityEngine.UnityConsent
+  fullName.vb: 
+  nameWithType: UnityEngine.UnityConsent
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentState
+  name: ConsentState
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentState.html
+  commentId: T:UnityEngine.UnityConsent.ConsentState
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState
+  fullName.vb: 
+  nameWithType: ConsentState
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentState.#ctor
+  name: ConsentState()
+  name.vb: New()
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentState-ctor.html
+  commentId: M:UnityEngine.UnityConsent.ConsentState.#ctor
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState.ConsentState()
+  fullName.vb: UnityEngine.UnityConsent.ConsentState.New()
+  nameWithType: ConsentState.ConsentState()
+  nameWithType.vb: ConsentState.New()
+- uid: UnityEngine.UnityConsent.ConsentState.AdsIntent
+  name: AdsIntent
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentState.AdsIntent.html
+  commentId: F:UnityEngine.UnityConsent.ConsentState.AdsIntent
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState.AdsIntent
+  fullName.vb: 
+  nameWithType: ConsentState.AdsIntent
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentState.AnalyticsIntent
+  name: AnalyticsIntent
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentState.AnalyticsIntent.html
+  commentId: F:UnityEngine.UnityConsent.ConsentState.AnalyticsIntent
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState.AnalyticsIntent
+  fullName.vb: 
+  nameWithType: ConsentState.AnalyticsIntent
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentState.ToString
+  name: ToString()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentState.ToString.html
+  commentId: M:UnityEngine.UnityConsent.ConsentState.ToString
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState.ToString()
+  fullName.vb: 
+  nameWithType: ConsentState.ToString()
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentStatus
+  name: ConsentStatus
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentStatus.html
+  commentId: T:UnityEngine.UnityConsent.ConsentStatus
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentStatus
+  fullName.vb: 
+  nameWithType: ConsentStatus
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentStatus.Denied
+  name: Denied
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentStatus.Denied.html
+  commentId: F:UnityEngine.UnityConsent.ConsentStatus.Denied
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentStatus.Denied
+  fullName.vb: 
+  nameWithType: ConsentStatus.Denied
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentStatus.Granted
+  name: Granted
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentStatus.Granted.html
+  commentId: F:UnityEngine.UnityConsent.ConsentStatus.Granted
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentStatus.Granted
+  fullName.vb: 
+  nameWithType: ConsentStatus.Granted
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentStatus.Unspecified
+  name: Unspecified
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.ConsentStatus.Unspecified.html
+  commentId: F:UnityEngine.UnityConsent.ConsentStatus.Unspecified
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentStatus.Unspecified
+  fullName.vb: 
+  nameWithType: ConsentStatus.Unspecified
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.EndUserConsent
+  name: EndUserConsent
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.EndUserConsent.html
+  commentId: T:UnityEngine.UnityConsent.EndUserConsent
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.EndUserConsent
+  fullName.vb: 
+  nameWithType: EndUserConsent
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.EndUserConsent.GetConsentState
+  name: GetConsentState()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.EndUserConsent.GetConsentState.html
+  commentId: M:UnityEngine.UnityConsent.EndUserConsent.GetConsentState
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.EndUserConsent.GetConsentState()
+  fullName.vb: 
+  nameWithType: EndUserConsent.GetConsentState()
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.EndUserConsent.SetConsentState(UnityEngine.UnityConsent.ConsentState)
+  name: SetConsentState(ConsentState)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.EndUserConsent.SetConsentState.html
+  commentId: M:UnityEngine.UnityConsent.EndUserConsent.SetConsentState(UnityEngine.UnityConsent.ConsentState)
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.EndUserConsent.SetConsentState(UnityEngine.UnityConsent.ConsentState)
+  fullName.vb: 
+  nameWithType: EndUserConsent.SetConsentState(ConsentState)
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.EndUserConsent.consentStateChanged
+  name: consentStateChanged
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/UnityConsent.EndUserConsent.consentStateChanged.html
+  commentId: E:UnityEngine.UnityConsent.EndUserConsent.consentStateChanged
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.EndUserConsent.consentStateChanged
+  fullName.vb: 
+  nameWithType: EndUserConsent.consentStateChanged
+  nameWithType.vb: 
 - uid: UnityEngine.UnityEventAwaitableExtensions
   name: UnityEventAwaitableExtensions
   name.vb: 
@@ -366110,6 +367130,16 @@ references:
   fullName: UnityEngine.VFX.VFXManager.ProcessCameraCommand(UnityEngine.Camera, UnityEngine.Rendering.CommandBuffer, UnityEngine.VFX.VFXCameraXRSettings, UnityEngine.Rendering.CullingResults)
   fullName.vb: 
   nameWithType: VFXManager.ProcessCameraCommand(Camera, CommandBuffer, VFXCameraXRSettings, CullingResults)
+  nameWithType.vb: 
+- uid: UnityEngine.VFX.VFXManager.ProcessCameraCommand(UnityEngine.Camera,UnityEngine.Rendering.CommandBuffer,UnityEngine.VFX.VFXCameraXRSettings,UnityEngine.Rendering.CullingResults,UnityEngine.Rendering.CullingResults)
+  name: ProcessCameraCommand(Camera, CommandBuffer, VFXCameraXRSettings, CullingResults, CullingResults)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/VFX.VFXManager.ProcessCameraCommand.html
+  commentId: M:UnityEngine.VFX.VFXManager.ProcessCameraCommand(UnityEngine.Camera,UnityEngine.Rendering.CommandBuffer,UnityEngine.VFX.VFXCameraXRSettings,UnityEngine.Rendering.CullingResults,UnityEngine.Rendering.CullingResults)
+  isSpec: 
+  fullName: UnityEngine.VFX.VFXManager.ProcessCameraCommand(UnityEngine.Camera, UnityEngine.Rendering.CommandBuffer, UnityEngine.VFX.VFXCameraXRSettings, UnityEngine.Rendering.CullingResults, UnityEngine.Rendering.CullingResults)
+  fullName.vb: 
+  nameWithType: VFXManager.ProcessCameraCommand(Camera, CommandBuffer, VFXCameraXRSettings, CullingResults, CullingResults)
   nameWithType.vb: 
 - uid: UnityEngine.VFX.VFXManager.RequestRtasAabbConstruction
   name: RequestRtasAabbConstruction()
@@ -381471,6 +382501,26 @@ references:
   fullName.vb: 
   nameWithType: XRDisplaySubsystem.XRRenderPass.shouldFillOutDepth
   nameWithType.vb: 
+- uid: UnityEngine.XR.XRDisplaySubsystem.XRRenderPass.spaceWarpRightHandedNDC
+  name: spaceWarpRightHandedNDC
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/XR.XRDisplaySubsystem.XRRenderPass-spaceWarpRightHandedNDC.html
+  commentId: F:UnityEngine.XR.XRDisplaySubsystem.XRRenderPass.spaceWarpRightHandedNDC
+  isSpec: 
+  fullName: UnityEngine.XR.XRDisplaySubsystem.XRRenderPass.spaceWarpRightHandedNDC
+  fullName.vb: 
+  nameWithType: XRDisplaySubsystem.XRRenderPass.spaceWarpRightHandedNDC
+  nameWithType.vb: 
+- uid: UnityEngine.XR.XRDisplaySubsystem.appliedViewportScale
+  name: appliedViewportScale
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/XR.XRDisplaySubsystem-appliedViewportScale.html
+  commentId: P:UnityEngine.XR.XRDisplaySubsystem.appliedViewportScale
+  isSpec: 
+  fullName: UnityEngine.XR.XRDisplaySubsystem.appliedViewportScale
+  fullName.vb: 
+  nameWithType: XRDisplaySubsystem.appliedViewportScale
+  nameWithType.vb: 
 - uid: UnityEngine.XR.XRDisplaySubsystem.contentProtectionEnabled
   name: contentProtectionEnabled
   name.vb: 
@@ -383381,6 +384431,46 @@ references:
   fullName.vb: 
   nameWithType: DeviceGeneration.iPhone16e
   nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone17
+  name: iPhone17
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone17.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone17
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone17
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone17
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone17Pro
+  name: iPhone17Pro
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone17Pro.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone17Pro
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone17Pro
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone17Pro
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone17ProMax
+  name: iPhone17ProMax
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone17ProMax.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone17ProMax
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone17ProMax
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone17ProMax
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone17e
+  name: iPhone17e
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone17e.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone17e
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone17e
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone17e
+  nameWithType.vb: 
 - uid: UnityEngine.iOS.DeviceGeneration.iPhone3G
   name: iPhone3G
   name.vb: 
@@ -383530,6 +384620,16 @@ references:
   fullName: UnityEngine.iOS.DeviceGeneration.iPhone8Plus
   fullName.vb: 
   nameWithType: DeviceGeneration.iPhone8Plus
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhoneAir
+  name: iPhoneAir
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/iOS.DeviceGeneration-iPhoneAir.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhoneAir
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhoneAir
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhoneAir
   nameWithType.vb: 
 - uid: UnityEngine.iOS.DeviceGeneration.iPhoneSE1Gen
   name: iPhoneSE1Gen
