@@ -24831,6 +24831,16 @@ references:
   fullName.vb: 
   nameWithType: AssetImporterEditor.ApplyRevertGUI()
   nameWithType.vb: 
+- uid: UnityEditor.AssetImporters.AssetImporterEditor.AreImporterTargetsValid
+  name: AreImporterTargetsValid()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AssetImporters.AssetImporterEditor.AreImporterTargetsValid.html
+  commentId: M:UnityEditor.AssetImporters.AssetImporterEditor.AreImporterTargetsValid
+  isSpec: 
+  fullName: UnityEditor.AssetImporters.AssetImporterEditor.AreImporterTargetsValid()
+  fullName.vb: 
+  nameWithType: AssetImporterEditor.AreImporterTargetsValid()
+  nameWithType.vb: 
 - uid: UnityEditor.AssetImporters.AssetImporterEditor.Awake
   name: Awake()
   name.vb: 
@@ -267691,6 +267701,16 @@ references:
   fullName.vb: 
   nameWithType: RefreshRate.CompareTo(RefreshRate)
   nameWithType.vb: 
+- uid: UnityEngine.RefreshRate.Equals(System.Object)
+  name: Equals(object)
+  name.vb: Equals(Object)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RefreshRate.Equals.html
+  commentId: M:UnityEngine.RefreshRate.Equals(System.Object)
+  isSpec: 
+  fullName: UnityEngine.RefreshRate.Equals(object)
+  fullName.vb: UnityEngine.RefreshRate.Equals(Object)
+  nameWithType: RefreshRate.Equals(object)
+  nameWithType.vb: RefreshRate.Equals(Object)
 - uid: UnityEngine.RefreshRate.Equals(UnityEngine.RefreshRate)
   name: Equals(RefreshRate)
   name.vb: 
@@ -267700,6 +267720,16 @@ references:
   fullName: UnityEngine.RefreshRate.Equals(UnityEngine.RefreshRate)
   fullName.vb: 
   nameWithType: RefreshRate.Equals(RefreshRate)
+  nameWithType.vb: 
+- uid: UnityEngine.RefreshRate.GetHashCode
+  name: GetHashCode()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RefreshRate.GetHashCode.html
+  commentId: M:UnityEngine.RefreshRate.GetHashCode
+  isSpec: 
+  fullName: UnityEngine.RefreshRate.GetHashCode()
+  fullName.vb: 
+  nameWithType: RefreshRate.GetHashCode()
   nameWithType.vb: 
 - uid: UnityEngine.RefreshRate.ToString
   name: ToString()
@@ -267731,6 +267761,26 @@ references:
   fullName.vb: 
   nameWithType: RefreshRate.numerator
   nameWithType.vb: 
+- uid: UnityEngine.RefreshRate.op_Equality(UnityEngine.RefreshRate,UnityEngine.RefreshRate)
+  name: operator ==(RefreshRate, RefreshRate)
+  name.vb: =(RefreshRate, RefreshRate)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RefreshRate-operator_eq.html
+  commentId: M:UnityEngine.RefreshRate.op_Equality(UnityEngine.RefreshRate,UnityEngine.RefreshRate)
+  isSpec: 
+  fullName: UnityEngine.RefreshRate.operator ==(UnityEngine.RefreshRate, UnityEngine.RefreshRate)
+  fullName.vb: UnityEngine.RefreshRate.=(UnityEngine.RefreshRate, UnityEngine.RefreshRate)
+  nameWithType: RefreshRate.operator ==(RefreshRate, RefreshRate)
+  nameWithType.vb: RefreshRate.=(RefreshRate, RefreshRate)
+- uid: UnityEngine.RefreshRate.op_Inequality(UnityEngine.RefreshRate,UnityEngine.RefreshRate)
+  name: operator !=(RefreshRate, RefreshRate)
+  name.vb: <>(RefreshRate, RefreshRate)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RefreshRate-operator_Inequality.html
+  commentId: M:UnityEngine.RefreshRate.op_Inequality(UnityEngine.RefreshRate,UnityEngine.RefreshRate)
+  isSpec: 
+  fullName: UnityEngine.RefreshRate.operator !=(UnityEngine.RefreshRate, UnityEngine.RefreshRate)
+  fullName.vb: UnityEngine.RefreshRate.<>(UnityEngine.RefreshRate, UnityEngine.RefreshRate)
+  nameWithType: RefreshRate.operator !=(RefreshRate, RefreshRate)
+  nameWithType.vb: RefreshRate.<>(RefreshRate, RefreshRate)
 - uid: UnityEngine.RefreshRate.value
   name: value
   name.vb: 
@@ -295301,6 +295351,36 @@ references:
   fullName.vb: 
   nameWithType: Resolution
   nameWithType.vb: 
+- uid: UnityEngine.Resolution.Equals(System.Object)
+  name: Equals(object)
+  name.vb: Equals(Object)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Resolution.Equals.html
+  commentId: M:UnityEngine.Resolution.Equals(System.Object)
+  isSpec: 
+  fullName: UnityEngine.Resolution.Equals(object)
+  fullName.vb: UnityEngine.Resolution.Equals(Object)
+  nameWithType: Resolution.Equals(object)
+  nameWithType.vb: Resolution.Equals(Object)
+- uid: UnityEngine.Resolution.Equals(UnityEngine.Resolution)
+  name: Equals(Resolution)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Resolution.Equals.html
+  commentId: M:UnityEngine.Resolution.Equals(UnityEngine.Resolution)
+  isSpec: 
+  fullName: UnityEngine.Resolution.Equals(UnityEngine.Resolution)
+  fullName.vb: 
+  nameWithType: Resolution.Equals(Resolution)
+  nameWithType.vb: 
+- uid: UnityEngine.Resolution.GetHashCode
+  name: GetHashCode()
+  name.vb: 
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Resolution.GetHashCode.html
+  commentId: M:UnityEngine.Resolution.GetHashCode
+  isSpec: 
+  fullName: UnityEngine.Resolution.GetHashCode()
+  fullName.vb: 
+  nameWithType: Resolution.GetHashCode()
+  nameWithType.vb: 
 - uid: UnityEngine.Resolution.ToString
   name: ToString()
   name.vb: 
@@ -295321,6 +295401,26 @@ references:
   fullName.vb: 
   nameWithType: Resolution.height
   nameWithType.vb: 
+- uid: UnityEngine.Resolution.op_Equality(UnityEngine.Resolution,UnityEngine.Resolution)
+  name: operator ==(Resolution, Resolution)
+  name.vb: =(Resolution, Resolution)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Resolution-operator_eq.html
+  commentId: M:UnityEngine.Resolution.op_Equality(UnityEngine.Resolution,UnityEngine.Resolution)
+  isSpec: 
+  fullName: UnityEngine.Resolution.operator ==(UnityEngine.Resolution, UnityEngine.Resolution)
+  fullName.vb: UnityEngine.Resolution.=(UnityEngine.Resolution, UnityEngine.Resolution)
+  nameWithType: Resolution.operator ==(Resolution, Resolution)
+  nameWithType.vb: Resolution.=(Resolution, Resolution)
+- uid: UnityEngine.Resolution.op_Inequality(UnityEngine.Resolution,UnityEngine.Resolution)
+  name: operator !=(Resolution, Resolution)
+  name.vb: <>(Resolution, Resolution)
+  href: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Resolution-operator_Inequality.html
+  commentId: M:UnityEngine.Resolution.op_Inequality(UnityEngine.Resolution,UnityEngine.Resolution)
+  isSpec: 
+  fullName: UnityEngine.Resolution.operator !=(UnityEngine.Resolution, UnityEngine.Resolution)
+  fullName.vb: UnityEngine.Resolution.<>(UnityEngine.Resolution, UnityEngine.Resolution)
+  nameWithType: Resolution.operator !=(Resolution, Resolution)
+  nameWithType.vb: Resolution.<>(Resolution, Resolution)
 - uid: UnityEngine.Resolution.refreshRateRatio
   name: refreshRateRatio
   name.vb: 
