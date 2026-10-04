@@ -47571,36 +47571,36 @@ references:
   fullName.vb: 
   nameWithType: HierarchyGameObjectHandler.OnUnbindItem(HierarchyViewItem)
   nameWithType.vb: 
-- uid: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor)
-  name: SearchBegin(HierarchySearchQueryDescriptor)
+- uid: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor,Unity.Hierarchy.HierarchyViewModel)
+  name: SearchBegin(HierarchySearchQueryDescriptor, HierarchyViewModel)
   name.vb: 
   href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchBegin.html
-  commentId: M:Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor)
+  commentId: M:Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor,Unity.Hierarchy.HierarchyViewModel)
   isSpec: 
-  fullName: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor)
+  fullName: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor, Unity.Hierarchy.HierarchyViewModel)
   fullName.vb: 
-  nameWithType: HierarchyGameObjectHandler.SearchBegin(HierarchySearchQueryDescriptor)
+  nameWithType: HierarchyGameObjectHandler.SearchBegin(HierarchySearchQueryDescriptor, HierarchyViewModel)
   nameWithType.vb: 
-- uid: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchEnd
-  name: SearchEnd()
+- uid: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchEnd(Unity.Hierarchy.HierarchyViewModel)
+  name: SearchEnd(HierarchyViewModel)
   name.vb: 
   href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchEnd.html
-  commentId: M:Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchEnd
+  commentId: M:Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchEnd(Unity.Hierarchy.HierarchyViewModel)
   isSpec: 
-  fullName: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchEnd()
+  fullName: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchEnd(Unity.Hierarchy.HierarchyViewModel)
   fullName.vb: 
-  nameWithType: HierarchyGameObjectHandler.SearchEnd()
+  nameWithType: HierarchyGameObjectHandler.SearchEnd(HierarchyViewModel)
   nameWithType.vb: 
-- uid: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch(Unity.Hierarchy.HierarchyNode@)
-  name: SearchMatch(in HierarchyNode)
-  name.vb: SearchMatch(HierarchyNode)
+- uid: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch(Unity.Hierarchy.HierarchyNode@,Unity.Hierarchy.HierarchyViewModel)
+  name: SearchMatch(in HierarchyNode, HierarchyViewModel)
+  name.vb: SearchMatch(HierarchyNode, HierarchyViewModel)
   href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch.html
-  commentId: M:Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch(Unity.Hierarchy.HierarchyNode@)
+  commentId: M:Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch(Unity.Hierarchy.HierarchyNode@,Unity.Hierarchy.HierarchyViewModel)
   isSpec: 
-  fullName: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch(in Unity.Hierarchy.HierarchyNode)
-  fullName.vb: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch(Unity.Hierarchy.HierarchyNode)
-  nameWithType: HierarchyGameObjectHandler.SearchMatch(in HierarchyNode)
-  nameWithType.vb: HierarchyGameObjectHandler.SearchMatch(HierarchyNode)
+  fullName: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch(in Unity.Hierarchy.HierarchyNode, Unity.Hierarchy.HierarchyViewModel)
+  fullName.vb: Unity.Hierarchy.Editor.HierarchyGameObjectHandler.SearchMatch(Unity.Hierarchy.HierarchyNode, Unity.Hierarchy.HierarchyViewModel)
+  nameWithType: HierarchyGameObjectHandler.SearchMatch(in HierarchyNode, HierarchyViewModel)
+  nameWithType.vb: HierarchyGameObjectHandler.SearchMatch(HierarchyNode, HierarchyViewModel)
 - uid: Unity.Hierarchy.Editor.HierarchySceneHandler
   name: HierarchySceneHandler
   name.vb: 
@@ -48141,6 +48141,26 @@ references:
   fullName.vb: 
   nameWithType: Hierarchy.Count
   nameWithType.vb: 
+- uid: Unity.Hierarchy.Hierarchy.Detach(Unity.Hierarchy.HierarchyNode@)
+  name: Detach(in HierarchyNode)
+  name.vb: Detach(HierarchyNode)
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.Hierarchy.Detach.html
+  commentId: M:Unity.Hierarchy.Hierarchy.Detach(Unity.Hierarchy.HierarchyNode@)
+  isSpec: 
+  fullName: Unity.Hierarchy.Hierarchy.Detach(in Unity.Hierarchy.HierarchyNode)
+  fullName.vb: Unity.Hierarchy.Hierarchy.Detach(Unity.Hierarchy.HierarchyNode)
+  nameWithType: Hierarchy.Detach(in HierarchyNode)
+  nameWithType.vb: Hierarchy.Detach(HierarchyNode)
+- uid: Unity.Hierarchy.Hierarchy.DetachChildren(Unity.Hierarchy.HierarchyNode@)
+  name: DetachChildren(in HierarchyNode)
+  name.vb: DetachChildren(HierarchyNode)
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.Hierarchy.DetachChildren.html
+  commentId: M:Unity.Hierarchy.Hierarchy.DetachChildren(Unity.Hierarchy.HierarchyNode@)
+  isSpec: 
+  fullName: Unity.Hierarchy.Hierarchy.DetachChildren(in Unity.Hierarchy.HierarchyNode)
+  fullName.vb: Unity.Hierarchy.Hierarchy.DetachChildren(Unity.Hierarchy.HierarchyNode)
+  nameWithType: Hierarchy.DetachChildren(in HierarchyNode)
+  nameWithType.vb: Hierarchy.DetachChildren(HierarchyNode)
 - uid: Unity.Hierarchy.Hierarchy.Dispose
   name: Dispose()
   name.vb: 
@@ -48711,6 +48731,26 @@ references:
   fullName.vb: Unity.Hierarchy.HierarchyCommandList.ClearProperty(Of T)(Unity.Hierarchy.HierarchyPropertyUnmanaged(Of T), Unity.Hierarchy.HierarchyNode)
   nameWithType: HierarchyCommandList.ClearProperty<T>(in HierarchyPropertyUnmanaged<T>, in HierarchyNode)
   nameWithType.vb: HierarchyCommandList.ClearProperty(Of T)(HierarchyPropertyUnmanaged(Of T), HierarchyNode)
+- uid: Unity.Hierarchy.HierarchyCommandList.Detach(Unity.Hierarchy.HierarchyNode@)
+  name: Detach(in HierarchyNode)
+  name.vb: Detach(HierarchyNode)
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyCommandList.Detach.html
+  commentId: M:Unity.Hierarchy.HierarchyCommandList.Detach(Unity.Hierarchy.HierarchyNode@)
+  isSpec: 
+  fullName: Unity.Hierarchy.HierarchyCommandList.Detach(in Unity.Hierarchy.HierarchyNode)
+  fullName.vb: Unity.Hierarchy.HierarchyCommandList.Detach(Unity.Hierarchy.HierarchyNode)
+  nameWithType: HierarchyCommandList.Detach(in HierarchyNode)
+  nameWithType.vb: HierarchyCommandList.Detach(HierarchyNode)
+- uid: Unity.Hierarchy.HierarchyCommandList.DetachChildren(Unity.Hierarchy.HierarchyNode@)
+  name: DetachChildren(in HierarchyNode)
+  name.vb: DetachChildren(HierarchyNode)
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyCommandList.DetachChildren.html
+  commentId: M:Unity.Hierarchy.HierarchyCommandList.DetachChildren(Unity.Hierarchy.HierarchyNode@)
+  isSpec: 
+  fullName: Unity.Hierarchy.HierarchyCommandList.DetachChildren(in Unity.Hierarchy.HierarchyNode)
+  fullName.vb: Unity.Hierarchy.HierarchyCommandList.DetachChildren(Unity.Hierarchy.HierarchyNode)
+  nameWithType: HierarchyCommandList.DetachChildren(in HierarchyNode)
+  nameWithType.vb: HierarchyCommandList.DetachChildren(HierarchyNode)
 - uid: Unity.Hierarchy.HierarchyCommandList.Dispose
   name: Dispose()
   name.vb: 
@@ -50011,36 +50051,36 @@ references:
   fullName.vb: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.ReadUIDs(Unity.Hierarchy.HierarchyUIDInfo, System.ReadOnlySpan(Of Byte), System.Span(Of Unity.Hierarchy.HierarchyNode))
   nameWithType: HierarchyNodeTypeHandlerBase.ReadUIDs(in HierarchyUIDInfo, ReadOnlySpan<byte>, Span<HierarchyNode>)
   nameWithType.vb: HierarchyNodeTypeHandlerBase.ReadUIDs(HierarchyUIDInfo, ReadOnlySpan(Of Byte), Span(Of HierarchyNode))
-- uid: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor)
-  name: SearchBegin(HierarchySearchQueryDescriptor)
+- uid: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor,Unity.Hierarchy.HierarchyViewModel)
+  name: SearchBegin(HierarchySearchQueryDescriptor, HierarchyViewModel)
   name.vb: 
   href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchBegin.html
-  commentId: M:Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor)
+  commentId: M:Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor,Unity.Hierarchy.HierarchyViewModel)
   isSpec: 
-  fullName: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor)
+  fullName: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchBegin(Unity.Hierarchy.HierarchySearchQueryDescriptor, Unity.Hierarchy.HierarchyViewModel)
   fullName.vb: 
-  nameWithType: HierarchyNodeTypeHandlerBase.SearchBegin(HierarchySearchQueryDescriptor)
+  nameWithType: HierarchyNodeTypeHandlerBase.SearchBegin(HierarchySearchQueryDescriptor, HierarchyViewModel)
   nameWithType.vb: 
-- uid: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchEnd
-  name: SearchEnd()
+- uid: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchEnd(Unity.Hierarchy.HierarchyViewModel)
+  name: SearchEnd(HierarchyViewModel)
   name.vb: 
   href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchEnd.html
-  commentId: M:Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchEnd
+  commentId: M:Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchEnd(Unity.Hierarchy.HierarchyViewModel)
   isSpec: 
-  fullName: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchEnd()
+  fullName: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchEnd(Unity.Hierarchy.HierarchyViewModel)
   fullName.vb: 
-  nameWithType: HierarchyNodeTypeHandlerBase.SearchEnd()
+  nameWithType: HierarchyNodeTypeHandlerBase.SearchEnd(HierarchyViewModel)
   nameWithType.vb: 
-- uid: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch(Unity.Hierarchy.HierarchyNode@)
-  name: SearchMatch(in HierarchyNode)
-  name.vb: SearchMatch(HierarchyNode)
+- uid: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch(Unity.Hierarchy.HierarchyNode@,Unity.Hierarchy.HierarchyViewModel)
+  name: SearchMatch(in HierarchyNode, HierarchyViewModel)
+  name.vb: SearchMatch(HierarchyNode, HierarchyViewModel)
   href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch.html
-  commentId: M:Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch(Unity.Hierarchy.HierarchyNode@)
+  commentId: M:Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch(Unity.Hierarchy.HierarchyNode@,Unity.Hierarchy.HierarchyViewModel)
   isSpec: 
-  fullName: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch(in Unity.Hierarchy.HierarchyNode)
-  fullName.vb: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch(Unity.Hierarchy.HierarchyNode)
-  nameWithType: HierarchyNodeTypeHandlerBase.SearchMatch(in HierarchyNode)
-  nameWithType.vb: HierarchyNodeTypeHandlerBase.SearchMatch(HierarchyNode)
+  fullName: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch(in Unity.Hierarchy.HierarchyNode, Unity.Hierarchy.HierarchyViewModel)
+  fullName.vb: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SearchMatch(Unity.Hierarchy.HierarchyNode, Unity.Hierarchy.HierarchyViewModel)
+  nameWithType: HierarchyNodeTypeHandlerBase.SearchMatch(in HierarchyNode, HierarchyViewModel)
+  nameWithType.vb: HierarchyNodeTypeHandlerBase.SearchMatch(HierarchyNode, HierarchyViewModel)
 - uid: Unity.Hierarchy.HierarchyNodeTypeHandlerBase.SetSearchAlwaysVisible(System.Boolean)
   name: SetSearchAlwaysVisible(bool)
   name.vb: SetSearchAlwaysVisible(Boolean)
@@ -52581,6 +52621,16 @@ references:
   fullName.vb: 
   nameWithType: HierarchyViewModel.Count
   nameWithType.vb: 
+- uid: Unity.Hierarchy.HierarchyViewModel.DestroyHandlerState(Unity.Hierarchy.HierarchyNodeType)
+  name: DestroyHandlerState(HierarchyNodeType)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyViewModel.DestroyHandlerState.html
+  commentId: M:Unity.Hierarchy.HierarchyViewModel.DestroyHandlerState(Unity.Hierarchy.HierarchyNodeType)
+  isSpec: 
+  fullName: Unity.Hierarchy.HierarchyViewModel.DestroyHandlerState(Unity.Hierarchy.HierarchyNodeType)
+  fullName.vb: 
+  nameWithType: HierarchyViewModel.DestroyHandlerState(HierarchyNodeType)
+  nameWithType.vb: 
 - uid: Unity.Hierarchy.HierarchyViewModel.Dispose
   name: Dispose()
   name.vb: 
@@ -52901,6 +52951,16 @@ references:
   fullName.vb: Unity.Hierarchy.HierarchyViewModel.GetNodesWithoutFlags(Unity.Hierarchy.HierarchyNodeFlags, System.Span(Of Unity.Hierarchy.HierarchyNode))
   nameWithType: HierarchyViewModel.GetNodesWithoutFlags(HierarchyNodeFlags, Span<HierarchyNode>)
   nameWithType.vb: HierarchyViewModel.GetNodesWithoutFlags(HierarchyNodeFlags, Span(Of HierarchyNode))
+- uid: Unity.Hierarchy.HierarchyViewModel.GetOrCreateHandlerState``1(Unity.Hierarchy.HierarchyNodeType)
+  name: GetOrCreateHandlerState<T>(HierarchyNodeType)
+  name.vb: GetOrCreateHandlerState(Of T)(HierarchyNodeType)
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyViewModel.GetOrCreateHandlerState.html
+  commentId: M:Unity.Hierarchy.HierarchyViewModel.GetOrCreateHandlerState``1(Unity.Hierarchy.HierarchyNodeType)
+  isSpec: 
+  fullName: Unity.Hierarchy.HierarchyViewModel.GetOrCreateHandlerState<T>(Unity.Hierarchy.HierarchyNodeType)
+  fullName.vb: Unity.Hierarchy.HierarchyViewModel.GetOrCreateHandlerState(Of T)(Unity.Hierarchy.HierarchyNodeType)
+  nameWithType: HierarchyViewModel.GetOrCreateHandlerState<T>(HierarchyNodeType)
+  nameWithType.vb: HierarchyViewModel.GetOrCreateHandlerState(Of T)(HierarchyNodeType)
 - uid: Unity.Hierarchy.HierarchyViewModel.GetParent(Unity.Hierarchy.HierarchyNode@)
   name: GetParent(in HierarchyNode)
   name.vb: GetParent(HierarchyNode)
@@ -53131,6 +53191,16 @@ references:
   fullName.vb: Unity.Hierarchy.HierarchyViewModel.ToggleFlagsRecursive(Unity.Hierarchy.HierarchyNode, Unity.Hierarchy.HierarchyNodeFlags, Unity.Hierarchy.HierarchyTraversalDirection)
   nameWithType: HierarchyViewModel.ToggleFlagsRecursive(in HierarchyNode, HierarchyNodeFlags, HierarchyTraversalDirection)
   nameWithType.vb: HierarchyViewModel.ToggleFlagsRecursive(HierarchyNode, HierarchyNodeFlags, HierarchyTraversalDirection)
+- uid: Unity.Hierarchy.HierarchyViewModel.TryGetHandlerState``1(Unity.Hierarchy.HierarchyNodeType,``0@)
+  name: TryGetHandlerState<T>(HierarchyNodeType, out T)
+  name.vb: TryGetHandlerState(Of T)(HierarchyNodeType, T)
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyViewModel.TryGetHandlerState.html
+  commentId: M:Unity.Hierarchy.HierarchyViewModel.TryGetHandlerState``1(Unity.Hierarchy.HierarchyNodeType,``0@)
+  isSpec: 
+  fullName: Unity.Hierarchy.HierarchyViewModel.TryGetHandlerState<T>(Unity.Hierarchy.HierarchyNodeType, out T)
+  fullName.vb: Unity.Hierarchy.HierarchyViewModel.TryGetHandlerState(Of T)(Unity.Hierarchy.HierarchyNodeType, T)
+  nameWithType: HierarchyViewModel.TryGetHandlerState<T>(HierarchyNodeType, out T)
+  nameWithType.vb: HierarchyViewModel.TryGetHandlerState(Of T)(HierarchyNodeType, T)
 - uid: Unity.Hierarchy.HierarchyViewModel.Update
   name: Update()
   name.vb: 
@@ -53500,6 +53570,16 @@ references:
   fullName: Unity.Hierarchy.HierarchyViewState.ViewModelState
   fullName.vb: 
   nameWithType: HierarchyViewState.ViewModelState
+  nameWithType.vb: 
+- uid: Unity.Hierarchy.IHierarchyNodeTypeHandlerViewModelState
+  name: IHierarchyNodeTypeHandlerViewModelState
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.IHierarchyNodeTypeHandlerViewModelState.html
+  commentId: T:Unity.Hierarchy.IHierarchyNodeTypeHandlerViewModelState
+  isSpec: 
+  fullName: Unity.Hierarchy.IHierarchyNodeTypeHandlerViewModelState
+  fullName.vb: 
+  nameWithType: IHierarchyNodeTypeHandlerViewModelState
   nameWithType.vb: 
 - uid: Unity.Hierarchy.IHierarchyProperty`1
   name: IHierarchyProperty<T>
