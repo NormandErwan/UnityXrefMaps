@@ -532261,6 +532261,16 @@ references:
   fullName.vb: UnityEngine.UIElements.TextElement.DoMeasure(Single, UnityEngine.UIElements.VisualElement.MeasureMode, Single, UnityEngine.UIElements.VisualElement.MeasureMode)
   nameWithType: TextElement.DoMeasure(float, VisualElement.MeasureMode, float, VisualElement.MeasureMode)
   nameWithType.vb: TextElement.DoMeasure(Single, VisualElement.MeasureMode, Single, VisualElement.MeasureMode)
+- uid: UnityEngine.UIElements.TextElement.EnsureTextCapacity(System.Int32)
+  name: EnsureTextCapacity(int)
+  name.vb: EnsureTextCapacity(Integer)
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/UIElements.TextElement.EnsureTextCapacity.html
+  commentId: M:UnityEngine.UIElements.TextElement.EnsureTextCapacity(System.Int32)
+  isSpec: 
+  fullName: UnityEngine.UIElements.TextElement.EnsureTextCapacity(int)
+  fullName.vb: UnityEngine.UIElements.TextElement.EnsureTextCapacity(Integer)
+  nameWithType: TextElement.EnsureTextCapacity(int)
+  nameWithType.vb: TextElement.EnsureTextCapacity(Integer)
 - uid: UnityEngine.UIElements.TextElement.Glyph
   name: TextElement.Glyph
   name.vb: 
@@ -532531,6 +532541,16 @@ references:
   fullName.vb: 
   nameWithType: TextElement.SetText(StringBuilder)
   nameWithType.vb: 
+- uid: UnityEngine.UIElements.TextElement.SetTextUtf8(System.ReadOnlySpan{System.Byte})
+  name: SetTextUtf8(ReadOnlySpan<byte>)
+  name.vb: SetTextUtf8(ReadOnlySpan(Of Byte))
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/UIElements.TextElement.SetTextUtf8.html
+  commentId: M:UnityEngine.UIElements.TextElement.SetTextUtf8(System.ReadOnlySpan{System.Byte})
+  isSpec: 
+  fullName: UnityEngine.UIElements.TextElement.SetTextUtf8(System.ReadOnlySpan<byte>)
+  fullName.vb: UnityEngine.UIElements.TextElement.SetTextUtf8(System.ReadOnlySpan(Of Byte))
+  nameWithType: TextElement.SetTextUtf8(ReadOnlySpan<byte>)
+  nameWithType.vb: TextElement.SetTextUtf8(ReadOnlySpan(Of Byte))
 - uid: UnityEngine.UIElements.TextElement.displayTooltipWhenElided
   name: displayTooltipWhenElided
   name.vb: 
