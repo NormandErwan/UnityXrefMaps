@@ -66,11 +66,11 @@ internal static class Utils
     /// </summary>
     /// <param name="uri">The URI to request.</param>
     /// <returns><c>true</c> if the response status code is in the range 200-299.</returns>
-    public static async Task<bool> TestUriExists(string? uri, ILogger logger, CancellationToken cancellationToken = default)
+    public static async Task<bool> TestUriExists(string? uri, ILogger logger, CancellationToken cancellationToken = default, HttpClient? httpClient = null)
     {
         try
         {
-            HttpResponseMessage response = await s_httpClient.SendAsync(new(HttpMethod.Head, uri), cancellationToken);
+            HttpResponseMessage response = await (httpClient ?? s_httpClient).SendAsync(new(HttpMethod.Head, uri), cancellationToken);
 
             if (!response.IsSuccessStatusCode && response.StatusCode != System.Net.HttpStatusCode.NotFound)
             {

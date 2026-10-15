@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.CommandLine;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Meziantou.Extensions.Logging.Xunit.v3;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +16,14 @@ namespace UnityXrefMaps.Tests
 {
     public class CommandTests(ITestOutputHelper output) : IAsyncLifetime, IAsyncDisposable
     {
+        private sealed class SuccessfulResponseHandler : HttpMessageHandler
+        {
+            protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
+            {
+                return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK));
+            }
+        }
+
         private string? _repositoryDirectoryPath;
         private string? _xrefDirectoryPath;
         private string? _docFxFilePath;
@@ -127,7 +137,8 @@ apiRules:
                 }
             }
 
-            TestCommand testCommand = new(loggerFactory);
+            using HttpClient httpClient = new(new SuccessfulResponseHandler());
+            TestCommand testCommand = new(loggerFactory, httpClient);
 
             foreach (string testedVersion in testedVersions)
             {
@@ -260,7 +271,8 @@ apiRules:
                 }
             }
 
-            TestCommand testCommand = new(loggerFactory);
+            using HttpClient httpClient = new(new SuccessfulResponseHandler());
+            TestCommand testCommand = new(loggerFactory, httpClient);
 
             foreach (string testedVersion in testedVersions)
             {
