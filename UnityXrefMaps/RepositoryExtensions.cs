@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using LibGit2Sharp;
 using Microsoft.Extensions.Logging;
+using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace UnityXrefMaps;
 
@@ -31,7 +32,10 @@ internal static partial class RepositoryExtensions
     /// <param name="commit">The name of the commit where to reset <paramref name="repository"/>.</param>
     public static void HardReset(this Repository repository, string commit, ILogger logger)
     {
-        logger.LogInformation("Hard reset to {Commit}", commit);
+        if (logger.IsEnabled(LogLevel.Information))
+        {
+            logger.LogInformation("Hard reset to {Commit}", commit);
+        }
 
         repository.Reset(ResetMode.Hard, commit);
 
