@@ -101,7 +101,7 @@ internal sealed partial class BuildCommand : RootCommand
 
             using Stream docFxStream = File.OpenRead(docFxFilePath!);
 
-            DocFxConfiguration? docFxConfiguration = await JsonSerializer.DeserializeAsync<DocFxConfiguration>(docFxStream, cancellationToken: cancellationToken);
+            DocFxConfiguration? docFxConfiguration = await JsonSerializer.DeserializeAsync(docFxStream, DocFxJsonSerializerContext.Default.DocFxConfiguration, cancellationToken: cancellationToken);
 
             string docFxFileDirectoryPath = Path.GetDirectoryName(docFxFilePath)!;
 
