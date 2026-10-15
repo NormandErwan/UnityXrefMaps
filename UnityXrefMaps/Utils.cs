@@ -39,7 +39,7 @@ internal static class Utils
     /// <param name="arguments">The arguments of the command.</param>
     /// <param name="output">The function to call with the output data of the command.</param>
     /// <param name="error">The function to call with the error data of the command.</param>
-    public static async Task RunCommand(string command, string arguments, Action<string?> output, Action<string?> error, CancellationToken cancellationToken = default)
+    public static async Task<int> RunCommand(string command, string arguments, Action<string?> output, Action<string?> error, CancellationToken cancellationToken = default)
     {
         using var process = new Process();
         process.StartInfo = new ProcessStartInfo(command, arguments)
@@ -58,6 +58,8 @@ internal static class Utils
         process.BeginErrorReadLine();
 
         await process.WaitForExitAsync(cancellationToken);
+
+        return process.ExitCode;
     }
 
     /// <summary>

@@ -149,7 +149,7 @@ internal sealed partial class BuildCommand : RootCommand
                     logger.LogInformation("Running DocFX on '{RepositoryTag}'", repositoryTag);
                 }
 
-                await Utils.RunCommand(
+                int exitCode = await Utils.RunCommand(
                     "docfx", docFxArguments,
                     value =>
                     {
@@ -172,6 +172,18 @@ internal sealed partial class BuildCommand : RootCommand
                         }
                     },
                     cancellationToken);
+
+                if (exitCode != 0)
+                {
+                    result = false;
+
+                    if (logger.IsEnabled(LogLevel.Error))
+                    {
+                        logger.LogError("DocFX exited with code {ExitCode} for Unity '{RepositoryTag}'", exitCode, repositoryTag);
+                    }
+
+                    continue;
+                }
 
                 if (!File.Exists(generatedXrefMapPath))
                 {
