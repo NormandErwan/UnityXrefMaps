@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="UnityXrefMaps.Tests/UnityXrefMaps.Tests.csproj" />
+  <Project Path="UnityXrefMaps/UnityXrefMaps.csproj" />
+</Solution>
