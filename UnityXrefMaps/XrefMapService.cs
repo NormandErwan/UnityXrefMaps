@@ -24,7 +24,7 @@ namespace UnityXrefMaps
             string xrefMapText = await File.ReadAllTextAsync(filePath, cancellationToken);
 
             // Remove `0:` strings on the xrefmap that make crash Deserializer
-            xrefMapText = ZeroStringsRegex().Replace(xrefMapText, "$1");
+            xrefMapText = ZeroStringsRegex().Replace(xrefMapText, "0");
 
             return _deserializer.Deserialize<XrefMap>(xrefMapText);
         }
@@ -70,7 +70,7 @@ namespace UnityXrefMaps
             await File.WriteAllTextAsync(filePath, xrefMapText, cancellationToken);
         }
 
-        [GeneratedRegex(@"(\d):")]
+        [GeneratedRegex(@"\b0:")]
         private static partial Regex ZeroStringsRegex();
     }
 }
