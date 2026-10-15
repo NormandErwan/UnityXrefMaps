@@ -1,7 +1,4 @@
 <Project>
-  <!-- Central Package Management for UnityXrefMaps -->
-  <!-- This file centralizes NuGet package versions across all projects -->
-
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
