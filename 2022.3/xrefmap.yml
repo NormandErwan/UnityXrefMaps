@@ -13081,6 +13081,36 @@ references:
   fullName.vb: 
   nameWithType: AndroidCreateSymbols.Public
   nameWithType.vb: 
+- uid: UnityEditor.AndroidDisplayOptions
+  name: AndroidDisplayOptions
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AndroidDisplayOptions.html
+  commentId: T:UnityEditor.AndroidDisplayOptions
+  isSpec: 
+  fullName: UnityEditor.AndroidDisplayOptions
+  fullName.vb: 
+  nameWithType: AndroidDisplayOptions
+  nameWithType.vb: 
+- uid: UnityEditor.AndroidDisplayOptions.DetectPresentationDisplay
+  name: DetectPresentationDisplay
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AndroidDisplayOptions.DetectPresentationDisplay.html
+  commentId: F:UnityEditor.AndroidDisplayOptions.DetectPresentationDisplay
+  isSpec: 
+  fullName: UnityEditor.AndroidDisplayOptions.DetectPresentationDisplay
+  fullName.vb: 
+  nameWithType: AndroidDisplayOptions.DetectPresentationDisplay
+  nameWithType.vb: 
+- uid: UnityEditor.AndroidDisplayOptions.None
+  name: None
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AndroidDisplayOptions.None.html
+  commentId: F:UnityEditor.AndroidDisplayOptions.None
+  isSpec: 
+  fullName: UnityEditor.AndroidDisplayOptions.None
+  fullName.vb: 
+  nameWithType: AndroidDisplayOptions.None
+  nameWithType.vb: 
 - uid: UnityEditor.AndroidETC2Fallback
   name: AndroidETC2Fallback
   name.vb: 
@@ -13250,6 +13280,36 @@ references:
   fullName: UnityEditor.AndroidMinification.Proguard
   fullName.vb: 
   nameWithType: AndroidMinification.Proguard
+  nameWithType.vb: 
+- uid: UnityEditor.AndroidPreferredDataLocation
+  name: AndroidPreferredDataLocation
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AndroidPreferredDataLocation.html
+  commentId: T:UnityEditor.AndroidPreferredDataLocation
+  isSpec: 
+  fullName: UnityEditor.AndroidPreferredDataLocation
+  fullName.vb: 
+  nameWithType: AndroidPreferredDataLocation
+  nameWithType.vb: 
+- uid: UnityEditor.AndroidPreferredDataLocation.ForceInternal
+  name: ForceInternal
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AndroidPreferredDataLocation.ForceInternal.html
+  commentId: F:UnityEditor.AndroidPreferredDataLocation.ForceInternal
+  isSpec: 
+  fullName: UnityEditor.AndroidPreferredDataLocation.ForceInternal
+  fullName.vb: 
+  nameWithType: AndroidPreferredDataLocation.ForceInternal
+  nameWithType.vb: 
+- uid: UnityEditor.AndroidPreferredDataLocation.PreferExternal
+  name: PreferExternal
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/AndroidPreferredDataLocation.PreferExternal.html
+  commentId: F:UnityEditor.AndroidPreferredDataLocation.PreferExternal
+  isSpec: 
+  fullName: UnityEditor.AndroidPreferredDataLocation.PreferExternal
+  fullName.vb: 
+  nameWithType: AndroidPreferredDataLocation.PreferExternal
   nameWithType.vb: 
 - uid: UnityEditor.AndroidPreferredInstallLocation
   name: AndroidPreferredInstallLocation
@@ -34891,6 +34951,16 @@ references:
   fullName.vb: UnityEditor.EditorAnalytics.RegisterEventWithLimit(String, Integer, Integer, String, Integer)
   nameWithType: EditorAnalytics.RegisterEventWithLimit(string, int, int, string, int)
   nameWithType.vb: EditorAnalytics.RegisterEventWithLimit(String, Integer, Integer, String, Integer)
+- uid: UnityEditor.EditorAnalytics.SendAnalytic(UnityEngine.Analytics.IAnalytic)
+  name: SendAnalytic(IAnalytic)
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/EditorAnalytics.SendAnalytic.html
+  commentId: M:UnityEditor.EditorAnalytics.SendAnalytic(UnityEngine.Analytics.IAnalytic)
+  isSpec: 
+  fullName: UnityEditor.EditorAnalytics.SendAnalytic(UnityEngine.Analytics.IAnalytic)
+  fullName.vb: 
+  nameWithType: EditorAnalytics.SendAnalytic(IAnalytic)
+  nameWithType.vb: 
 - uid: UnityEditor.EditorAnalytics.SendEventWithLimit(System.String,System.Object)
   name: SendEventWithLimit(string, object)
   name.vb: SendEventWithLimit(String, Object)
@@ -47000,6 +47070,36 @@ references:
   fullName: UnityEditor.EmbeddedLinuxArchitecture.X86
   fullName.vb: 
   nameWithType: EmbeddedLinuxArchitecture.X86
+  nameWithType.vb: 
+- uid: UnityEditor.EngineDiagnostics
+  name: UnityEditor.EngineDiagnostics
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/index.html
+  commentId: N:UnityEditor.EngineDiagnostics
+  isSpec: 
+  fullName: UnityEditor.EngineDiagnostics
+  fullName.vb: 
+  nameWithType: UnityEditor.EngineDiagnostics
+  nameWithType.vb: 
+- uid: UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings
+  name: EngineDiagnosticsSettings
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/EngineDiagnostics.EngineDiagnosticsSettings.html
+  commentId: T:UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings
+  isSpec: 
+  fullName: UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings
+  fullName.vb: 
+  nameWithType: EngineDiagnosticsSettings
+  nameWithType.vb: 
+- uid: UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings.enabled
+  name: enabled
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/EngineDiagnostics.EngineDiagnosticsSettings-enabled.html
+  commentId: P:UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings.enabled
+  isSpec: 
+  fullName: UnityEditor.EngineDiagnostics.EngineDiagnosticsSettings.enabled
+  fullName.vb: 
+  nameWithType: EngineDiagnosticsSettings.enabled
   nameWithType.vb: 
 - uid: UnityEditor.EnterPlayModeOptions
   name: EnterPlayModeOptions
@@ -82001,6 +82101,16 @@ references:
   fullName.vb: 
   nameWithType: PlayerSettings.Android.disableDepthAndStencilBuffers
   nameWithType.vb: 
+- uid: UnityEditor.PlayerSettings.Android.displayOptions
+  name: displayOptions
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/PlayerSettings.Android-displayOptions.html
+  commentId: P:UnityEditor.PlayerSettings.Android.displayOptions
+  isSpec: 
+  fullName: UnityEditor.PlayerSettings.Android.displayOptions
+  fullName.vb: 
+  nameWithType: PlayerSettings.Android.displayOptions
+  nameWithType.vb: 
 - uid: UnityEditor.PlayerSettings.Android.enableArmv9SecurityFeatures
   name: enableArmv9SecurityFeatures
   name.vb: 
@@ -82180,6 +82290,16 @@ references:
   fullName: UnityEditor.PlayerSettings.Android.predictiveBackSupport
   fullName.vb: 
   nameWithType: PlayerSettings.Android.predictiveBackSupport
+  nameWithType.vb: 
+- uid: UnityEditor.PlayerSettings.Android.preferredDataLocation
+  name: preferredDataLocation
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/PlayerSettings.Android-preferredDataLocation.html
+  commentId: P:UnityEditor.PlayerSettings.Android.preferredDataLocation
+  isSpec: 
+  fullName: UnityEditor.PlayerSettings.Android.preferredDataLocation
+  fullName.vb: 
+  nameWithType: PlayerSettings.Android.preferredDataLocation
   nameWithType.vb: 
 - uid: UnityEditor.PlayerSettings.Android.preferredInstallLocation
   name: preferredInstallLocation
@@ -144341,6 +144461,76 @@ references:
   fullName.vb: 
   nameWithType: AnalyticsCommon.ugsAnalyticsEnabled
   nameWithType.vb: 
+- uid: UnityEngine.Analytics.AnalyticsEventBase
+  name: AnalyticsEventBase
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.AnalyticsEventBase.html
+  commentId: T:UnityEngine.Analytics.AnalyticsEventBase
+  isSpec: 
+  fullName: UnityEngine.Analytics.AnalyticsEventBase
+  fullName.vb: 
+  nameWithType: AnalyticsEventBase
+  nameWithType.vb: 
+- uid: UnityEngine.Analytics.AnalyticsEventBase.#ctor
+  name: AnalyticsEventBase()
+  name.vb: New()
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.AnalyticsEventBase-ctor.html
+  commentId: M:UnityEngine.Analytics.AnalyticsEventBase.#ctor
+  isSpec: 
+  fullName: UnityEngine.Analytics.AnalyticsEventBase.AnalyticsEventBase()
+  fullName.vb: UnityEngine.Analytics.AnalyticsEventBase.New()
+  nameWithType: AnalyticsEventBase.AnalyticsEventBase()
+  nameWithType.vb: AnalyticsEventBase.New()
+- uid: UnityEngine.Analytics.AnalyticsEventBase.#ctor(System.String,System.Int32,UnityEngine.Analytics.SendEventOptions,System.String)
+  name: AnalyticsEventBase(string, int, SendEventOptions, string)
+  name.vb: New(String, Integer, SendEventOptions, String)
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.AnalyticsEventBase-ctor.html
+  commentId: M:UnityEngine.Analytics.AnalyticsEventBase.#ctor(System.String,System.Int32,UnityEngine.Analytics.SendEventOptions,System.String)
+  isSpec: 
+  fullName: UnityEngine.Analytics.AnalyticsEventBase.AnalyticsEventBase(string, int, UnityEngine.Analytics.SendEventOptions, string)
+  fullName.vb: UnityEngine.Analytics.AnalyticsEventBase.New(String, Integer, UnityEngine.Analytics.SendEventOptions, String)
+  nameWithType: AnalyticsEventBase.AnalyticsEventBase(string, int, SendEventOptions, string)
+  nameWithType.vb: AnalyticsEventBase.New(String, Integer, SendEventOptions, String)
+- uid: UnityEngine.Analytics.AnalyticsEventBase.#ctor(UnityEngine.Analytics.AnalyticsEventBase)
+  name: AnalyticsEventBase(AnalyticsEventBase)
+  name.vb: New(AnalyticsEventBase)
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.AnalyticsEventBase-ctor.html
+  commentId: M:UnityEngine.Analytics.AnalyticsEventBase.#ctor(UnityEngine.Analytics.AnalyticsEventBase)
+  isSpec: 
+  fullName: UnityEngine.Analytics.AnalyticsEventBase.AnalyticsEventBase(UnityEngine.Analytics.AnalyticsEventBase)
+  fullName.vb: UnityEngine.Analytics.AnalyticsEventBase.New(UnityEngine.Analytics.AnalyticsEventBase)
+  nameWithType: AnalyticsEventBase.AnalyticsEventBase(AnalyticsEventBase)
+  nameWithType.vb: AnalyticsEventBase.New(AnalyticsEventBase)
+- uid: UnityEngine.Analytics.AnalyticsEventBase.EventName
+  name: EventName()
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.AnalyticsEventBase.EventName.html
+  commentId: M:UnityEngine.Analytics.AnalyticsEventBase.EventName
+  isSpec: 
+  fullName: UnityEngine.Analytics.AnalyticsEventBase.EventName()
+  fullName.vb: 
+  nameWithType: AnalyticsEventBase.EventName()
+  nameWithType.vb: 
+- uid: UnityEngine.Analytics.AnalyticsEventBase.EventPrefix
+  name: EventPrefix()
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.AnalyticsEventBase.EventPrefix.html
+  commentId: M:UnityEngine.Analytics.AnalyticsEventBase.EventPrefix
+  isSpec: 
+  fullName: UnityEngine.Analytics.AnalyticsEventBase.EventPrefix()
+  fullName.vb: 
+  nameWithType: AnalyticsEventBase.EventPrefix()
+  nameWithType.vb: 
+- uid: UnityEngine.Analytics.AnalyticsEventBase.EventVersion
+  name: EventVersion()
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.AnalyticsEventBase.EventVersion.html
+  commentId: M:UnityEngine.Analytics.AnalyticsEventBase.EventVersion
+  isSpec: 
+  fullName: UnityEngine.Analytics.AnalyticsEventBase.EventVersion()
+  fullName.vb: 
+  nameWithType: AnalyticsEventBase.EventVersion()
+  nameWithType.vb: 
 - uid: UnityEngine.Analytics.AnalyticsEventPriority
   name: AnalyticsEventPriority
   name.vb: 
@@ -144830,6 +145020,46 @@ references:
   fullName: UnityEngine.Analytics.PerformanceReporting.graphicsInitializationFinishTime
   fullName.vb: 
   nameWithType: PerformanceReporting.graphicsInitializationFinishTime
+  nameWithType.vb: 
+- uid: UnityEngine.Analytics.SendEventOptions
+  name: SendEventOptions
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.SendEventOptions.html
+  commentId: T:UnityEngine.Analytics.SendEventOptions
+  isSpec: 
+  fullName: UnityEngine.Analytics.SendEventOptions
+  fullName.vb: 
+  nameWithType: SendEventOptions
+  nameWithType.vb: 
+- uid: UnityEngine.Analytics.SendEventOptions.kAppendBuildGuid
+  name: kAppendBuildGuid
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.SendEventOptions-kAppendBuildGuid.html
+  commentId: F:UnityEngine.Analytics.SendEventOptions.kAppendBuildGuid
+  isSpec: 
+  fullName: UnityEngine.Analytics.SendEventOptions.kAppendBuildGuid
+  fullName.vb: 
+  nameWithType: SendEventOptions.kAppendBuildGuid
+  nameWithType.vb: 
+- uid: UnityEngine.Analytics.SendEventOptions.kAppendBuildTarget
+  name: kAppendBuildTarget
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.SendEventOptions-kAppendBuildTarget.html
+  commentId: F:UnityEngine.Analytics.SendEventOptions.kAppendBuildTarget
+  isSpec: 
+  fullName: UnityEngine.Analytics.SendEventOptions.kAppendBuildTarget
+  fullName.vb: 
+  nameWithType: SendEventOptions.kAppendBuildTarget
+  nameWithType.vb: 
+- uid: UnityEngine.Analytics.SendEventOptions.kAppendNone
+  name: kAppendNone
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Analytics.SendEventOptions-kAppendNone.html
+  commentId: F:UnityEngine.Analytics.SendEventOptions.kAppendNone
+  isSpec: 
+  fullName: UnityEngine.Analytics.SendEventOptions.kAppendNone
+  fullName.vb: 
+  nameWithType: SendEventOptions.kAppendNone
   nameWithType.vb: 
 - uid: UnityEngine.Analytics.UGSAnalyticsInternalTools
   name: UGSAnalyticsInternalTools
@@ -205221,6 +205451,36 @@ references:
   fullName.vb: 
   nameWithType: IconAttribute.path
   nameWithType.vb: 
+- uid: UnityEngine.Identifiers
+  name: UnityEngine.Identifiers
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/index.html
+  commentId: N:UnityEngine.Identifiers
+  isSpec: 
+  fullName: UnityEngine.Identifiers
+  fullName.vb: 
+  nameWithType: UnityEngine.Identifiers
+  nameWithType.vb: 
+- uid: UnityEngine.Identifiers.Identifiers
+  name: Identifiers
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Identifiers.Identifiers.html
+  commentId: T:UnityEngine.Identifiers.Identifiers
+  isSpec: 
+  fullName: UnityEngine.Identifiers.Identifiers
+  fullName.vb: 
+  nameWithType: Identifiers
+  nameWithType.vb: 
+- uid: UnityEngine.Identifiers.Identifiers.installationId
+  name: installationId
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Identifiers.Identifiers-installationId.html
+  commentId: P:UnityEngine.Identifiers.Identifiers.installationId
+  isSpec: 
+  fullName: UnityEngine.Identifiers.Identifiers.installationId
+  fullName.vb: 
+  nameWithType: Identifiers.installationId
+  nameWithType.vb: 
 - uid: UnityEngine.ImageConversion
   name: ImageConversion
   name.vb: 
@@ -243420,6 +243680,16 @@ references:
   fullName: UnityEngine.PlayerLoop.EarlyUpdate.GpuTimestamp
   fullName.vb: 
   nameWithType: EarlyUpdate.GpuTimestamp
+  nameWithType.vb: 
+- uid: UnityEngine.PlayerLoop.EarlyUpdate.InsightsUpdate
+  name: EarlyUpdate.InsightsUpdate
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/PlayerLoop.EarlyUpdate.InsightsUpdate.html
+  commentId: T:UnityEngine.PlayerLoop.EarlyUpdate.InsightsUpdate
+  isSpec: 
+  fullName: UnityEngine.PlayerLoop.EarlyUpdate.InsightsUpdate
+  fullName.vb: 
+  nameWithType: EarlyUpdate.InsightsUpdate
   nameWithType.vb: 
 - uid: UnityEngine.PlayerLoop.EarlyUpdate.PerformanceAnalyticsUpdate
   name: EarlyUpdate.PerformanceAnalyticsUpdate
@@ -336951,6 +337221,146 @@ references:
   fullName.vb: 
   nameWithType: UnityAPICompatibilityVersionAttribute.version
   nameWithType.vb: 
+- uid: UnityEngine.UnityConsent
+  name: UnityEngine.UnityConsent
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/index.html
+  commentId: N:UnityEngine.UnityConsent
+  isSpec: 
+  fullName: UnityEngine.UnityConsent
+  fullName.vb: 
+  nameWithType: UnityEngine.UnityConsent
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentState
+  name: ConsentState
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentState.html
+  commentId: T:UnityEngine.UnityConsent.ConsentState
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState
+  fullName.vb: 
+  nameWithType: ConsentState
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentState.#ctor
+  name: ConsentState()
+  name.vb: New()
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentState-ctor.html
+  commentId: M:UnityEngine.UnityConsent.ConsentState.#ctor
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState.ConsentState()
+  fullName.vb: UnityEngine.UnityConsent.ConsentState.New()
+  nameWithType: ConsentState.ConsentState()
+  nameWithType.vb: ConsentState.New()
+- uid: UnityEngine.UnityConsent.ConsentState.AdsIntent
+  name: AdsIntent
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentState.AdsIntent.html
+  commentId: F:UnityEngine.UnityConsent.ConsentState.AdsIntent
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState.AdsIntent
+  fullName.vb: 
+  nameWithType: ConsentState.AdsIntent
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentState.AnalyticsIntent
+  name: AnalyticsIntent
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentState.AnalyticsIntent.html
+  commentId: F:UnityEngine.UnityConsent.ConsentState.AnalyticsIntent
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState.AnalyticsIntent
+  fullName.vb: 
+  nameWithType: ConsentState.AnalyticsIntent
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentState.ToString
+  name: ToString()
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentState.ToString.html
+  commentId: M:UnityEngine.UnityConsent.ConsentState.ToString
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentState.ToString()
+  fullName.vb: 
+  nameWithType: ConsentState.ToString()
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentStatus
+  name: ConsentStatus
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentStatus.html
+  commentId: T:UnityEngine.UnityConsent.ConsentStatus
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentStatus
+  fullName.vb: 
+  nameWithType: ConsentStatus
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentStatus.Denied
+  name: Denied
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentStatus.Denied.html
+  commentId: F:UnityEngine.UnityConsent.ConsentStatus.Denied
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentStatus.Denied
+  fullName.vb: 
+  nameWithType: ConsentStatus.Denied
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentStatus.Granted
+  name: Granted
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentStatus.Granted.html
+  commentId: F:UnityEngine.UnityConsent.ConsentStatus.Granted
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentStatus.Granted
+  fullName.vb: 
+  nameWithType: ConsentStatus.Granted
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.ConsentStatus.Unspecified
+  name: Unspecified
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.ConsentStatus.Unspecified.html
+  commentId: F:UnityEngine.UnityConsent.ConsentStatus.Unspecified
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.ConsentStatus.Unspecified
+  fullName.vb: 
+  nameWithType: ConsentStatus.Unspecified
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.EndUserConsent
+  name: EndUserConsent
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.EndUserConsent.html
+  commentId: T:UnityEngine.UnityConsent.EndUserConsent
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.EndUserConsent
+  fullName.vb: 
+  nameWithType: EndUserConsent
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.EndUserConsent.GetConsentState
+  name: GetConsentState()
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.EndUserConsent.GetConsentState.html
+  commentId: M:UnityEngine.UnityConsent.EndUserConsent.GetConsentState
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.EndUserConsent.GetConsentState()
+  fullName.vb: 
+  nameWithType: EndUserConsent.GetConsentState()
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.EndUserConsent.SetConsentState(UnityEngine.UnityConsent.ConsentState)
+  name: SetConsentState(ConsentState)
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.EndUserConsent.SetConsentState.html
+  commentId: M:UnityEngine.UnityConsent.EndUserConsent.SetConsentState(UnityEngine.UnityConsent.ConsentState)
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.EndUserConsent.SetConsentState(UnityEngine.UnityConsent.ConsentState)
+  fullName.vb: 
+  nameWithType: EndUserConsent.SetConsentState(ConsentState)
+  nameWithType.vb: 
+- uid: UnityEngine.UnityConsent.EndUserConsent.consentStateChanged
+  name: consentStateChanged
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityConsent.EndUserConsent.consentStateChanged.html
+  commentId: E:UnityEngine.UnityConsent.EndUserConsent.consentStateChanged
+  isSpec: 
+  fullName: UnityEngine.UnityConsent.EndUserConsent.consentStateChanged
+  fullName.vb: 
+  nameWithType: EndUserConsent.consentStateChanged
+  nameWithType.vb: 
 - uid: UnityEngine.UnityEventQueueSystem
   name: UnityEventQueueSystem
   name.vb: 
@@ -353321,6 +353731,16 @@ references:
   fullName.vb: 
   nameWithType: XRDisplaySubsystem.XRRenderPass.shouldFillOutDepth
   nameWithType.vb: 
+- uid: UnityEngine.XR.XRDisplaySubsystem.appliedViewportScale
+  name: appliedViewportScale
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/XR.XRDisplaySubsystem-appliedViewportScale.html
+  commentId: P:UnityEngine.XR.XRDisplaySubsystem.appliedViewportScale
+  isSpec: 
+  fullName: UnityEngine.XR.XRDisplaySubsystem.appliedViewportScale
+  fullName.vb: 
+  nameWithType: XRDisplaySubsystem.appliedViewportScale
+  nameWithType.vb: 
 - uid: UnityEngine.XR.XRDisplaySubsystem.contentProtectionEnabled
   name: contentProtectionEnabled
   name.vb: 
@@ -355191,6 +355611,36 @@ references:
   fullName.vb: 
   nameWithType: DeviceGeneration.iPhone16e
   nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone17
+  name: iPhone17
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone17.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone17
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone17
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone17
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone17Pro
+  name: iPhone17Pro
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone17Pro.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone17Pro
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone17Pro
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone17Pro
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone17ProMax
+  name: iPhone17ProMax
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone17ProMax.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone17ProMax
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone17ProMax
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone17ProMax
+  nameWithType.vb: 
 - uid: UnityEngine.iOS.DeviceGeneration.iPhone3G
   name: iPhone3G
   name.vb: 
@@ -355340,6 +355790,16 @@ references:
   fullName: UnityEngine.iOS.DeviceGeneration.iPhone8Plus
   fullName.vb: 
   nameWithType: DeviceGeneration.iPhone8Plus
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhoneAir
+  name: iPhoneAir
+  name.vb: 
+  href: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/iOS.DeviceGeneration-iPhoneAir.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhoneAir
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhoneAir
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhoneAir
   nameWithType.vb: 
 - uid: UnityEngine.iOS.DeviceGeneration.iPhoneSE1Gen
   name: iPhoneSE1Gen

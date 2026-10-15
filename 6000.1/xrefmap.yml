@@ -22881,6 +22881,26 @@ references:
   fullName.vb: UnityEditor.AssetDatabase.ExtractAsset(UnityEngine.Object, String)
   nameWithType: AssetDatabase.ExtractAsset(Object, string)
   nameWithType.vb: AssetDatabase.ExtractAsset(Object, String)
+- uid: UnityEditor.AssetDatabase.FindAssetGUIDs(System.String)
+  name: FindAssetGUIDs(string)
+  name.vb: FindAssetGUIDs(String)
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/AssetDatabase.FindAssetGUIDs.html
+  commentId: M:UnityEditor.AssetDatabase.FindAssetGUIDs(System.String)
+  isSpec: 
+  fullName: UnityEditor.AssetDatabase.FindAssetGUIDs(string)
+  fullName.vb: UnityEditor.AssetDatabase.FindAssetGUIDs(String)
+  nameWithType: AssetDatabase.FindAssetGUIDs(string)
+  nameWithType.vb: AssetDatabase.FindAssetGUIDs(String)
+- uid: UnityEditor.AssetDatabase.FindAssetGUIDs(System.String,System.String[])
+  name: FindAssetGUIDs(string, string[])
+  name.vb: FindAssetGUIDs(String, String())
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/AssetDatabase.FindAssetGUIDs.html
+  commentId: M:UnityEditor.AssetDatabase.FindAssetGUIDs(System.String,System.String[])
+  isSpec: 
+  fullName: UnityEditor.AssetDatabase.FindAssetGUIDs(string, string[])
+  fullName.vb: UnityEditor.AssetDatabase.FindAssetGUIDs(String, String())
+  nameWithType: AssetDatabase.FindAssetGUIDs(string, string[])
+  nameWithType.vb: AssetDatabase.FindAssetGUIDs(String, String())
 - uid: UnityEditor.AssetDatabase.FindAssets(System.String)
   name: FindAssets(string)
   name.vb: FindAssets(String)
@@ -23741,6 +23761,26 @@ references:
   fullName.vb: UnityEditor.AssetDatabase.LoadAssetAtPath(Of T)(String)
   nameWithType: AssetDatabase.LoadAssetAtPath<T>(string)
   nameWithType.vb: AssetDatabase.LoadAssetAtPath(Of T)(String)
+- uid: UnityEditor.AssetDatabase.LoadAssetByGUID(UnityEditor.GUID,System.Type)
+  name: LoadAssetByGUID(GUID, Type)
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/AssetDatabase.LoadAssetByGUID.html
+  commentId: M:UnityEditor.AssetDatabase.LoadAssetByGUID(UnityEditor.GUID,System.Type)
+  isSpec: 
+  fullName: UnityEditor.AssetDatabase.LoadAssetByGUID(UnityEditor.GUID, System.Type)
+  fullName.vb: 
+  nameWithType: AssetDatabase.LoadAssetByGUID(GUID, Type)
+  nameWithType.vb: 
+- uid: UnityEditor.AssetDatabase.LoadAssetByGUID``1(UnityEditor.GUID)
+  name: LoadAssetByGUID<T>(GUID)
+  name.vb: LoadAssetByGUID(Of T)(GUID)
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/AssetDatabase.LoadAssetByGUID.html
+  commentId: M:UnityEditor.AssetDatabase.LoadAssetByGUID``1(UnityEditor.GUID)
+  isSpec: 
+  fullName: UnityEditor.AssetDatabase.LoadAssetByGUID<T>(UnityEditor.GUID)
+  fullName.vb: UnityEditor.AssetDatabase.LoadAssetByGUID(Of T)(UnityEditor.GUID)
+  nameWithType: AssetDatabase.LoadAssetByGUID<T>(GUID)
+  nameWithType.vb: AssetDatabase.LoadAssetByGUID(Of T)(GUID)
 - uid: UnityEditor.AssetDatabase.LoadMainAssetAtPath(System.String)
   name: LoadMainAssetAtPath(string)
   name.vb: LoadMainAssetAtPath(String)
@@ -67201,6 +67241,16 @@ references:
   fullName.vb: 
   nameWithType: HierarchyProperty.ancestors
   nameWithType.vb: 
+- uid: UnityEditor.HierarchyProperty.assetGUID
+  name: assetGUID
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/HierarchyProperty-assetGUID.html
+  commentId: P:UnityEditor.HierarchyProperty.assetGUID
+  isSpec: 
+  fullName: UnityEditor.HierarchyProperty.assetGUID
+  fullName.vb: 
+  nameWithType: HierarchyProperty.assetGUID
+  nameWithType.vb: 
 - uid: UnityEditor.HierarchyProperty.colorCode
   name: colorCode
   name.vb: 
@@ -89200,6 +89250,16 @@ references:
   fullName: UnityEditor.PlayerSettings.Android.androidVulkanDeviceFilterListAsset
   fullName.vb: 
   nameWithType: PlayerSettings.Android.androidVulkanDeviceFilterListAsset
+  nameWithType.vb: 
+- uid: UnityEditor.PlayerSettings.Android.appCategory
+  name: appCategory
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/PlayerSettings.Android-appCategory.html
+  commentId: P:UnityEditor.PlayerSettings.Android.appCategory
+  isSpec: 
+  fullName: UnityEditor.PlayerSettings.Android.appCategory
+  fullName.vb: 
+  nameWithType: PlayerSettings.Android.appCategory
   nameWithType.vb: 
 - uid: UnityEditor.PlayerSettings.Android.applicationEntry
   name: applicationEntry
@@ -144570,6 +144630,16 @@ references:
   fullName: UnityEditor.UnityStats.ibUploads
   fullName.vb: 
   nameWithType: UnityStats.ibUploads
+  nameWithType.vb: 
+- uid: UnityEditor.UnityStats.indirectDrawCalls
+  name: indirectDrawCalls
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/UnityStats-indirectDrawCalls.html
+  commentId: P:UnityEditor.UnityStats.indirectDrawCalls
+  isSpec: 
+  fullName: UnityEditor.UnityStats.indirectDrawCalls
+  fullName.vb: 
+  nameWithType: UnityStats.indirectDrawCalls
   nameWithType.vb: 
 - uid: UnityEditor.UnityStats.instancedBatchedDrawCalls
   name: instancedBatchedDrawCalls
@@ -221000,6 +221070,16 @@ references:
   fullName: UnityEngine.InstantiateParameters
   fullName.vb: 
   nameWithType: InstantiateParameters
+  nameWithType.vb: 
+- uid: UnityEngine.InstantiateParameters.originalImmutable
+  name: originalImmutable
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/InstantiateParameters-originalImmutable.html
+  commentId: F:UnityEngine.InstantiateParameters.originalImmutable
+  isSpec: 
+  fullName: UnityEngine.InstantiateParameters.originalImmutable
+  fullName.vb: 
+  nameWithType: InstantiateParameters.originalImmutable
   nameWithType.vb: 
 - uid: UnityEngine.InstantiateParameters.parent
   name: parent
@@ -348311,6 +348391,46 @@ references:
   fullName.vb: 
   nameWithType: LengthUnit.Pixel
   nameWithType.vb: 
+- uid: UnityEngine.UIElements.LibraryVisibility
+  name: LibraryVisibility
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/UIElements.LibraryVisibility.html
+  commentId: T:UnityEngine.UIElements.LibraryVisibility
+  isSpec: 
+  fullName: UnityEngine.UIElements.LibraryVisibility
+  fullName.vb: 
+  nameWithType: LibraryVisibility
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.LibraryVisibility.Default
+  name: Default
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/UIElements.LibraryVisibility.Default.html
+  commentId: F:UnityEngine.UIElements.LibraryVisibility.Default
+  isSpec: 
+  fullName: UnityEngine.UIElements.LibraryVisibility.Default
+  fullName.vb: 
+  nameWithType: LibraryVisibility.Default
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.LibraryVisibility.Hidden
+  name: Hidden
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/UIElements.LibraryVisibility.Hidden.html
+  commentId: F:UnityEngine.UIElements.LibraryVisibility.Hidden
+  isSpec: 
+  fullName: UnityEngine.UIElements.LibraryVisibility.Hidden
+  fullName.vb: 
+  nameWithType: LibraryVisibility.Hidden
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.LibraryVisibility.Visible
+  name: Visible
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/UIElements.LibraryVisibility.Visible.html
+  commentId: F:UnityEngine.UIElements.LibraryVisibility.Visible
+  isSpec: 
+  fullName: UnityEngine.UIElements.LibraryVisibility.Visible
+  fullName.vb: 
+  nameWithType: LibraryVisibility.Visible
+  nameWithType.vb: 
 - uid: UnityEngine.UIElements.LineCap
   name: LineCap
   name.vb: 
@@ -364121,6 +364241,16 @@ references:
   fullName.vb: UnityEngine.UIElements.UxmlElementAttribute.New(String)
   nameWithType: UxmlElementAttribute.UxmlElementAttribute(string)
   nameWithType.vb: UxmlElementAttribute.New(String)
+- uid: UnityEngine.UIElements.UxmlElementAttribute.libraryPath
+  name: libraryPath
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/UIElements.UxmlElementAttribute-libraryPath.html
+  commentId: F:UnityEngine.UIElements.UxmlElementAttribute.libraryPath
+  isSpec: 
+  fullName: UnityEngine.UIElements.UxmlElementAttribute.libraryPath
+  fullName.vb: 
+  nameWithType: UxmlElementAttribute.libraryPath
+  nameWithType.vb: 
 - uid: UnityEngine.UIElements.UxmlElementAttribute.name
   name: name
   name.vb: 
@@ -364130,6 +364260,16 @@ references:
   fullName: UnityEngine.UIElements.UxmlElementAttribute.name
   fullName.vb: 
   nameWithType: UxmlElementAttribute.name
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.UxmlElementAttribute.visibility
+  name: visibility
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/UIElements.UxmlElementAttribute-visibility.html
+  commentId: F:UnityEngine.UIElements.UxmlElementAttribute.visibility
+  isSpec: 
+  fullName: UnityEngine.UIElements.UxmlElementAttribute.visibility
+  fullName.vb: 
+  nameWithType: UxmlElementAttribute.visibility
   nameWithType.vb: 
 - uid: UnityEngine.UIElements.UxmlEnumAttributeDescription`1
   name: UxmlEnumAttributeDescription<T>
@@ -385150,6 +385290,16 @@ references:
   fullName: UnityEngine.XR.XRDisplaySubsystem.XRRenderPass.shouldFillOutDepth
   fullName.vb: 
   nameWithType: XRDisplaySubsystem.XRRenderPass.shouldFillOutDepth
+  nameWithType.vb: 
+- uid: UnityEngine.XR.XRDisplaySubsystem.XRRenderPass.spaceWarpRightHandedNDC
+  name: spaceWarpRightHandedNDC
+  name.vb: 
+  href: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/XR.XRDisplaySubsystem.XRRenderPass-spaceWarpRightHandedNDC.html
+  commentId: F:UnityEngine.XR.XRDisplaySubsystem.XRRenderPass.spaceWarpRightHandedNDC
+  isSpec: 
+  fullName: UnityEngine.XR.XRDisplaySubsystem.XRRenderPass.spaceWarpRightHandedNDC
+  fullName.vb: 
+  nameWithType: XRDisplaySubsystem.XRRenderPass.spaceWarpRightHandedNDC
   nameWithType.vb: 
 - uid: UnityEngine.XR.XRDisplaySubsystem.contentProtectionEnabled
   name: contentProtectionEnabled
