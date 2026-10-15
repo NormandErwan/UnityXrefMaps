@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -9,17 +9,10 @@ using YamlDotNet.Serialization;
 
 namespace UnityXrefMaps
 {
-    internal sealed partial class XrefMapService
+    internal sealed partial class XrefMapService(ILogger<XrefMapService> logger)
     {
         private readonly Deserializer _deserializer = new();
         private readonly Serializer _serializer = new();
-
-        private readonly ILogger<XrefMapService> _logger;
-
-        public XrefMapService(ILogger<XrefMapService> logger)
-        {
-            _logger = logger;
-        }
 
         /// <summary>
         /// Loads a <see cref="XrefMap"/> from a file.
@@ -59,7 +52,7 @@ namespace UnityXrefMaps
                 }
                 catch (Exception e)
                 {
-                    _logger.LogWarning(e, "Error fixing href: {Uid}", reference.Uid);
+                    logger.LogWarning(e, "Error fixing href: {Uid}", reference.Uid);
                 }
             }
 

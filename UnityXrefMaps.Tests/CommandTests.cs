@@ -12,40 +12,24 @@ using UnityXrefMaps.Commands;
 
 namespace UnityXrefMaps.Tests
 {
-    public class CommandTests : IAsyncLifetime, IAsyncDisposable
+    public class CommandTests(ITestOutputHelper output) : IAsyncLifetime, IAsyncDisposable
     {
         private string? _repositoryDirectoryPath;
         private string? _xrefDirectoryPath;
         private string? _docFxFilePath;
         private string? _docFxFilterFilePath;
 
-        private class CustomStringWriter : StringWriter
+        private class CustomStringWriter(ILogger logger, LogLevel logLevel) : StringWriter
         {
-            private readonly ILogger _logger;
-            private readonly LogLevel _logLevel;
-
-            public CustomStringWriter(ILogger logger, LogLevel logLevel)
-            {
-                _logger = logger;
-                _logLevel = logLevel;
-            }
-
             public override void Write(string? value)
             {
                 base.Write(value);
 
-                if (_logger.IsEnabled(_logLevel))
+                if (logger.IsEnabled(logLevel))
                 {
-                    _logger.Log(_logLevel, "{Message}", value);
+                    logger.Log(logLevel, "{Message}", value);
                 }
             }
-        }
-
-        private readonly ITestOutputHelper _output;
-
-        public CommandTests(ITestOutputHelper output)
-        {
-            _output = output;
         }
 
         [Fact]
@@ -78,7 +62,7 @@ apiRules:
             {
                 builder.SetMinimumLevel(LogLevel.Trace);
                 builder.AddFakeLogging();
-                builder.Services.AddSingleton<ILoggerProvider>(new XUnitLoggerProvider(_output, appendScope: false));
+                builder.Services.AddSingleton<ILoggerProvider>(new XUnitLoggerProvider(output, appendScope: false));
             });
 
             await using ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
@@ -209,7 +193,7 @@ apiRules:
             {
                 builder.SetMinimumLevel(LogLevel.Trace);
                 builder.AddFakeLogging();
-                builder.Services.AddSingleton<ILoggerProvider>(new XUnitLoggerProvider(_output, appendScope: false));
+                builder.Services.AddSingleton<ILoggerProvider>(new XUnitLoggerProvider(output, appendScope: false));
             });
 
             await using ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
@@ -364,29 +348,29 @@ apiRules:
             {
                 try
                 {
-                    _output.WriteLine($"Trying to delete directory: {directoryPath}");
+                    output.WriteLine($"Trying to delete directory: {directoryPath}");
 
                     DeleteDirectory(directoryPath);
 
-                    _output.WriteLine($"Directory deleted: {directoryPath}");
+                    output.WriteLine($"Directory deleted: {directoryPath}");
 
                     break;
                 }
                 catch (Exception e)
                 {
-                    _output.WriteLine($"Error deleting directory: {directoryPath}. Error: {e}");
+                    output.WriteLine($"Error deleting directory: {directoryPath}. Error: {e}");
 
                     retries++;
 
                     if (retries < maxRetries)
                     {
-                        _output.WriteLine($"Retrying in {delay}ms...");
+                        output.WriteLine($"Retrying in {delay}ms...");
 
                         await Task.Delay(delay);
                     }
                     else
                     {
-                        _output.WriteLine("Retry limit reached.");
+                        output.WriteLine("Retry limit reached.");
                     }
                 }
             }

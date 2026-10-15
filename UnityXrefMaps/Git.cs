@@ -1,6 +1,7 @@
 using System.IO;
 using LibGit2Sharp;
 using Microsoft.Extensions.Logging;
+using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace UnityXrefMaps;
 
@@ -18,9 +19,13 @@ internal static class Git
     {
         // Clone this repository to the specified branch if it doesn't exist
         bool clone = !Directory.Exists(path);
+
         if (clone)
         {
-            logger.LogInformation("Cloning {SourceUrl} to {Path}", sourceUrl, path);
+            if (logger.IsEnabled(LogLevel.Information))
+            {
+                logger.LogInformation("Cloning {SourceUrl} to {Path}", sourceUrl, path);
+            }
 
             var options = new CloneOptions() { BranchName = branch };
             Repository.Clone(sourceUrl, path, options);
@@ -31,15 +36,27 @@ internal static class Git
         // Otherwise fetch changes and checkout to the specified branch
         if (!clone)
         {
-            logger.LogInformation("Hard reset '{Path}' to HEAD", path);
+            if (logger.IsEnabled(LogLevel.Information))
+            {
+                logger.LogInformation("Hard reset '{Path}' to HEAD", path);
+            }
+
             repository.Reset(ResetMode.Hard);
             repository.RemoveUntrackedFiles();
 
-            logger.LogInformation("Fetching changes from 'origin' in '{Path}'", path);
+            if (logger.IsEnabled(LogLevel.Information))
+            {
+                logger.LogInformation("Fetching changes from 'origin' in '{Path}'", path);
+            }
+
             Remote remote = repository.Network.Remotes["origin"];
             LibGit2Sharp.Commands.Fetch(repository, remote.Name, [], null, null); // WTF is this API libgit2sharp?
 
-            logger.LogInformation("Checking out '{Path}' to '{Branch}' branch", path, branch);
+            if (logger.IsEnabled(LogLevel.Information))
+            {
+                logger.LogInformation("Checking out '{Path}' to '{Branch}' branch", path, branch);
+            }
+
             string remoteBranch = $"origin/{branch}";
             LibGit2Sharp.Commands.Checkout(repository, remoteBranch);
         }
