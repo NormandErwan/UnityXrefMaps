@@ -1,17 +1,12 @@
 using System.CommandLine;
-using System.Net.Http;
 using Microsoft.Extensions.Logging;
 
 namespace UnityXrefMaps.Commands;
 
 internal sealed class TestCommand : Command
 {
-    private readonly HttpClient? _httpClient;
-
-    public TestCommand(ILoggerFactory loggerFactory, HttpClient? httpClient = null) : base("test", $"Check that the links in the {Constants.DefaultXrefMapFileName} file are valid.")
+    public TestCommand(ILoggerFactory loggerFactory) : base("test", $"Check that the links in the {Constants.DefaultXrefMapFileName} file are valid.")
     {
-        _httpClient = httpClient;
-
         Option<string> xrefPathOption = new("--xrefPath")
         {
             Description = $"The path to the {Constants.DefaultXrefMapFileName} file.",
@@ -34,7 +29,7 @@ internal sealed class TestCommand : Command
 
             foreach (XrefMapReference reference in xrefMap.References!)
             {
-                if (!await Utils.TestUriExists(reference.Href, logger, cancellationToken, _httpClient))
+                if (!await Utils.TestUriExists(reference.Href, logger, cancellationToken))
                 {
                     result = false;
 
