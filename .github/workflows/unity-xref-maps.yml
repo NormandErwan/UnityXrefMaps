@@ -225,7 +225,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: xref_${{ matrix.shortVersion }}
           path: ${{ runner.temp }}/_site
@@ -240,7 +240,7 @@ jobs:
 
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           pattern: xref_*
           path: ${{ runner.temp }}/xref_artifacts
