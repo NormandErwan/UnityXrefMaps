@@ -16,6 +16,21 @@ internal static class Utils
     private static readonly HttpClient s_httpClient = new();
 
     /// <summary>
+    /// Delay waited before the first retry when the server sends no Retry-After header.
+    /// </summary>
+    private static readonly TimeSpan s_initialRetryDelay = TimeSpan.FromSeconds(1);
+
+    /// <summary>
+    /// Upper bound of the delay waited between two requests, whatever the server asks in Retry-After.
+    /// </summary>
+    private static readonly TimeSpan s_maxRetryDelay = TimeSpan.FromSeconds(60);
+
+    /// <summary>
+    /// Factor applied to the delay after each retry when the server sends no Retry-After header.
+    /// </summary>
+    private const double RetryBackoffFactor = 2;
+
+    /// <summary>
     /// Copy a source file to a destination file. Intermediate folders will be automatically created.
     /// </summary>
     /// <param name="sourcePath">The path of the source file to copy.</param>
@@ -63,11 +78,6 @@ internal static class Utils
     }
 
     /// <summary>
-    /// Upper bound of the delay waited between two requests, whatever the server asks in Retry-After.
-    /// </summary>
-    private static readonly TimeSpan s_maxRetryDelay = TimeSpan.FromSeconds(60);
-
-    /// <summary>
     /// Requests the specified URI with <see cref="s_httpClient"/> and returns if the response status code is in the
     /// range 200-299. Rate-limited (429) or unavailable (503) responses are retried, honoring Retry-After or
     /// backing off exponentially.
@@ -108,14 +118,17 @@ internal static class Utils
         statusCode is System.Net.HttpStatusCode.TooManyRequests or System.Net.HttpStatusCode.ServiceUnavailable;
 
     /// <summary>
-    /// Returns the delay asked by the Retry-After header, or 1s, 2s, 4s... when absent, capped at
-    /// <see cref="s_maxRetryDelay"/>.
+    /// Returns the delay asked by the Retry-After header, or an exponential backoff from
+    /// <see cref="s_initialRetryDelay"/> when absent, capped at <see cref="s_maxRetryDelay"/>.
     /// </summary>
     private static TimeSpan GetRetryDelay(HttpResponseMessage response, int attempt)
     {
+        // Math.Min in seconds: Math.Pow may reach infinity on high attempts, TimeSpan would overflow.
         TimeSpan delay = response.Headers.RetryAfter?.Delta
             ?? (response.Headers.RetryAfter?.Date - DateTimeOffset.UtcNow)
-            ?? TimeSpan.FromSeconds(1 << (attempt - 1));
+            ?? TimeSpan.FromSeconds(Math.Min(
+                s_initialRetryDelay.TotalSeconds * Math.Pow(RetryBackoffFactor, attempt - 1),
+                s_maxRetryDelay.TotalSeconds));
 
         return delay < TimeSpan.Zero ? TimeSpan.Zero : delay > s_maxRetryDelay ? s_maxRetryDelay : delay;
     }
