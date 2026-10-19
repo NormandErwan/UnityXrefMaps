@@ -3,6 +3,11 @@ namespace UnityXrefMaps;
 internal static class Constants
 {
     /// <summary>
+    /// The default maximum number of requests sent for a single URI when the server answers 429 or 503.
+    /// </summary>
+    public const int DefaultMaxAttempts = 5;
+
+    /// <summary>
     /// Gets the default URL of the online API documentation of Unity.
     /// </summary>
     public const string DefaultUnityApiUrl = "https://docs.unity3d.com/{0}/Documentation/ScriptReference/";
