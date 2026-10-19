@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.CommandLine;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,12 @@ namespace UnityXrefMaps.Tests
 {
     public class CommandTests(ITestOutputHelper output) : IAsyncLifetime, IAsyncDisposable
     {
+        /// <summary>
+        /// docs.unity3d.com rate-limits GitHub runners longer than the default attempts cover (1+2+4+8 s of
+        /// backoff); 8 attempts wait up to 1+2+4+8+16+32+60 s per link.
+        /// </summary>
+        private const int TestMaxAttempts = 8;
+
         private string? _repositoryDirectoryPath;
         private string? _xrefDirectoryPath;
         private string? _docFxFilePath;
@@ -145,7 +152,9 @@ apiRules:
 
                 string[] testArgs = [
                     "--xrefPath",
-                    xrefFilePath
+                    xrefFilePath,
+                    "--maxAttempts",
+                    TestMaxAttempts.ToString(CultureInfo.InvariantCulture)
                 ];
 
                 Assert.Equal(
@@ -274,7 +283,9 @@ apiRules:
 
                 string[] testArgs = [
                     "--xrefPath",
-                    xrefFilePath
+                    xrefFilePath,
+                    "--maxAttempts",
+                    TestMaxAttempts.ToString(CultureInfo.InvariantCulture)
                 ];
 
                 Assert.Equal(
