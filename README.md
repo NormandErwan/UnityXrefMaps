@@ -92,6 +92,8 @@ unityxrefmaps \
 
 Providing an `xrefmap.yml` file will check each `href` element to see if it is a valid URL.
 
+Links answering 429 (Too Many Requests) or 503 (Service Unavailable) are retried, waiting as asked by the `Retry-After` header or with an exponential backoff. `--maxAttempts` sets the maximum number of requests per link (default: 5).
+
 Example:
 
 ```bash
