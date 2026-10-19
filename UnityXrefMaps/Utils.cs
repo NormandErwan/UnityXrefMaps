@@ -63,8 +63,19 @@ internal static class Utils
     }
 
     /// <summary>
+    /// Maximum number of requests sent for a single URI when the server answers 429 or 503.
+    /// </summary>
+    private const int MaxAttempts = 5;
+
+    /// <summary>
+    /// Upper bound of the delay waited between two requests, whatever the server asks in Retry-After.
+    /// </summary>
+    private static readonly TimeSpan s_maxRetryDelay = TimeSpan.FromSeconds(60);
+
+    /// <summary>
     /// Requests the specified URI with <see cref="s_httpClient"/> and returns if the response status code is in the
-    /// range 200-299.
+    /// range 200-299. Rate-limited (429) or unavailable (503) responses are retried up to <see cref="MaxAttempts"/>
+    /// times, honoring Retry-After or backing off exponentially.
     /// </summary>
     /// <param name="uri">The URI to request.</param>
     /// <returns><c>true</c> if the response status code is in the range 200-299.</returns>
@@ -73,6 +84,14 @@ internal static class Utils
         try
         {
             HttpResponseMessage response = await s_httpClient.SendAsync(new(HttpMethod.Head, uri), cancellationToken);
+
+            for (int attempt = 1; attempt < MaxAttempts && IsTransient(response.StatusCode); attempt++)
+            {
+                await Task.Delay(GetRetryDelay(response, attempt), cancellationToken);
+
+                response.Dispose();
+                response = await s_httpClient.SendAsync(new(HttpMethod.Head, uri), cancellationToken);
+            }
 
             if (!response.IsSuccessStatusCode && response.StatusCode != System.Net.HttpStatusCode.NotFound)
             {
@@ -87,5 +106,21 @@ internal static class Utils
 
             return false;
         }
+    }
+
+    private static bool IsTransient(System.Net.HttpStatusCode statusCode) =>
+        statusCode is System.Net.HttpStatusCode.TooManyRequests or System.Net.HttpStatusCode.ServiceUnavailable;
+
+    /// <summary>
+    /// Returns the delay asked by the Retry-After header, or 1s, 2s, 4s... when absent, capped at
+    /// <see cref="s_maxRetryDelay"/>.
+    /// </summary>
+    private static TimeSpan GetRetryDelay(HttpResponseMessage response, int attempt)
+    {
+        TimeSpan delay = response.Headers.RetryAfter?.Delta
+            ?? (response.Headers.RetryAfter?.Date - DateTimeOffset.UtcNow)
+            ?? TimeSpan.FromSeconds(1 << (attempt - 1));
+
+        return delay < TimeSpan.Zero ? TimeSpan.Zero : delay > s_maxRetryDelay ? s_maxRetryDelay : delay;
     }
 }
