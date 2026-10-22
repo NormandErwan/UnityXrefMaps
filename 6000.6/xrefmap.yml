@@ -52041,6 +52041,16 @@ references:
   fullName.vb: 
   nameWithType: HierarchyViewColumnDescriptor.MakeHeader
   nameWithType.vb: 
+- uid: Unity.Hierarchy.HierarchyViewColumnDescriptor.MinWidth
+  name: MinWidth
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Unity.Hierarchy.HierarchyViewColumnDescriptor.MinWidth.html
+  commentId: P:Unity.Hierarchy.HierarchyViewColumnDescriptor.MinWidth
+  isSpec: 
+  fullName: Unity.Hierarchy.HierarchyViewColumnDescriptor.MinWidth
+  fullName.vb: 
+  nameWithType: HierarchyViewColumnDescriptor.MinWidth
+  nameWithType.vb: 
 - uid: Unity.Hierarchy.HierarchyViewColumnDescriptor.Title
   name: Title
   name.vb: 
@@ -526851,6 +526861,36 @@ references:
   fullName.vb: 
   nameWithType: ScrollView.TouchScrollBehavior.Unrestricted
   nameWithType.vb: 
+- uid: UnityEngine.UIElements.ScrollView.TouchScrollDirection
+  name: ScrollView.TouchScrollDirection
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/UIElements.ScrollView.TouchScrollDirection.html
+  commentId: T:UnityEngine.UIElements.ScrollView.TouchScrollDirection
+  isSpec: 
+  fullName: UnityEngine.UIElements.ScrollView.TouchScrollDirection
+  fullName.vb: 
+  nameWithType: ScrollView.TouchScrollDirection
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.ScrollView.TouchScrollDirection.Inverted
+  name: Inverted
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/UIElements.ScrollView.TouchScrollDirection.Inverted.html
+  commentId: F:UnityEngine.UIElements.ScrollView.TouchScrollDirection.Inverted
+  isSpec: 
+  fullName: UnityEngine.UIElements.ScrollView.TouchScrollDirection.Inverted
+  fullName.vb: 
+  nameWithType: ScrollView.TouchScrollDirection.Inverted
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.ScrollView.TouchScrollDirection.Natural
+  name: Natural
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/UIElements.ScrollView.TouchScrollDirection.Natural.html
+  commentId: F:UnityEngine.UIElements.ScrollView.TouchScrollDirection.Natural
+  isSpec: 
+  fullName: UnityEngine.UIElements.ScrollView.TouchScrollDirection.Natural
+  fullName.vb: 
+  nameWithType: ScrollView.TouchScrollDirection.Natural
+  nameWithType.vb: 
 - uid: UnityEngine.UIElements.ScrollView.contentAndVerticalScrollUssClassName
   name: contentAndVerticalScrollUssClassName
   name.vb: 
@@ -527080,6 +527120,16 @@ references:
   fullName: UnityEngine.UIElements.ScrollView.touchScrollBehavior
   fullName.vb: 
   nameWithType: ScrollView.touchScrollBehavior
+  nameWithType.vb: 
+- uid: UnityEngine.UIElements.ScrollView.touchScrollDirection
+  name: touchScrollDirection
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/UIElements.ScrollView-touchScrollDirection.html
+  commentId: P:UnityEngine.UIElements.ScrollView.touchScrollDirection
+  isSpec: 
+  fullName: UnityEngine.UIElements.ScrollView.touchScrollDirection
+  fullName.vb: 
+  nameWithType: ScrollView.touchScrollDirection
   nameWithType.vb: 
 - uid: UnityEngine.UIElements.ScrollView.ussClassName
   name: ussClassName

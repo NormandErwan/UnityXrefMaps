@@ -56531,6 +56531,16 @@ references:
   fullName.vb: 
   nameWithType: EditorUserBuildSettings.switchNVNAftermath
   nameWithType.vb: 
+- uid: UnityEditor.EditorUserBuildSettings.switchNVNAftermathLevel
+  name: switchNVNAftermathLevel
+  name.vb: 
+  href: https://docs.unity3d.com/6000.3/Documentation/ScriptReference/EditorUserBuildSettings-switchNVNAftermathLevel.html
+  commentId: P:UnityEditor.EditorUserBuildSettings.switchNVNAftermathLevel
+  isSpec: 
+  fullName: UnityEditor.EditorUserBuildSettings.switchNVNAftermathLevel
+  fullName.vb: 
+  nameWithType: EditorUserBuildSettings.switchNVNAftermathLevel
+  nameWithType.vb: 
 - uid: UnityEditor.EditorUserBuildSettings.switchNVNDrawValidation
   name: switchNVNDrawValidation
   name.vb: 
