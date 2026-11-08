@@ -562311,6 +562311,26 @@ references:
   fullName.vb: 
   nameWithType: DeviceGeneration.iPhone17e
   nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone18Pro
+  name: iPhone18Pro
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone18Pro.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone18Pro
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone18Pro
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone18Pro
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhone18ProMax
+  name: iPhone18ProMax
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/iOS.DeviceGeneration-iPhone18ProMax.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhone18ProMax
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhone18ProMax
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhone18ProMax
+  nameWithType.vb: 
 - uid: UnityEngine.iOS.DeviceGeneration.iPhone3G
   name: iPhone3G
   name.vb: 
@@ -562470,6 +562490,16 @@ references:
   fullName: UnityEngine.iOS.DeviceGeneration.iPhoneAir
   fullName.vb: 
   nameWithType: DeviceGeneration.iPhoneAir
+  nameWithType.vb: 
+- uid: UnityEngine.iOS.DeviceGeneration.iPhoneDuo
+  name: iPhoneDuo
+  name.vb: 
+  href: https://docs.unity3d.com/6000.6/Documentation/ScriptReference/iOS.DeviceGeneration-iPhoneDuo.html
+  commentId: F:UnityEngine.iOS.DeviceGeneration.iPhoneDuo
+  isSpec: 
+  fullName: UnityEngine.iOS.DeviceGeneration.iPhoneDuo
+  fullName.vb: 
+  nameWithType: DeviceGeneration.iPhoneDuo
   nameWithType.vb: 
 - uid: UnityEngine.iOS.DeviceGeneration.iPhoneSE1Gen
   name: iPhoneSE1Gen
